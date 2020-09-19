@@ -25,7 +25,7 @@ SECRET_KEY = '+1$#4%s2fljwq8h0d$t)14qp*#l80km500vo)ynqqp8)8_-dbk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,9 +85,9 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'FOKO',       # 수정한 부분
+        'NAME': 'test',       # 수정한 부분
         'USER': 'testUser',
-        'PASSWORD': 'test',
+        'PASSWORD': 'Test1234@',
         'HOST': 'localhost',
         'PORT': '3306',
     }
