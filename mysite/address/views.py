@@ -4,7 +4,19 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Address
 from .serializers import AddressSerializer
 from rest_framework.parsers import JSONParser
+from PIL import Image
+import pytesseract
+
+
 # Create your views here.
+
+@csrf_exempt
+def imageUpload(request):
+    if request.method == 'POST':
+        im = request.FILE[0]
+        text = pytesseract.image_to_string(im, lang="Hangul")
+        print(text)
+        return JsonResponse(text, status=201)
 
 
 @csrf_exempt
@@ -12,9 +24,12 @@ def address_list(request):
     if request.method == 'GET':
         query_set = Address.objects.all()
         serializer = AddressSerializer(query_set, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return JsonResponse(serializer.data, content_type=u"application/json; charset=utf-8", safe=False)
 
-    elif request.method == 'POST':
+    elif request.method == 'POST':  #
+        # im = Image.open("1.png") # REST로 받아야 됨
+        # text = pytesseract.image_to_string(im, lang="Hangul")
+
         data = JSONParser().parse(request)
         serializer = AddressSerializer(data=data)
         if serializer.is_valid():

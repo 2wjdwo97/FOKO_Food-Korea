@@ -7,5 +7,6 @@ from address import views
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^address/', views.address_list),
+    url(r'^imageUpload/', views.imageUpload),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
