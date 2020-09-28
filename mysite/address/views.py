@@ -5,6 +5,7 @@ from .models import Address
 from .serializers import AddressSerializer
 from rest_framework.parsers import JSONParser
 from PIL import Image
+from .forms import ReceiveImageForm
 import pytesseract
 
 
@@ -13,10 +14,10 @@ import pytesseract
 @csrf_exempt
 def imageUpload(request):
     if request.method == 'POST':
-        im = request.FILE[0]
+        form = ReceiveImageForm(request.POST, request.FILES)
+        im = Image.open(request.FILES['file'])
         text = pytesseract.image_to_string(im, lang="Hangul")
-        print(text)
-        return JsonResponse(text, status=201)
+        return JsonResponse(text, safe=False, status=201)
 
 
 @csrf_exempt
