@@ -8,12 +8,14 @@ from PIL import Image
 from .forms import ReceiveImageForm
 import pytesseract
 
-
 # Create your views here.
 
 @csrf_exempt
 def imageUpload(request):
     if request.method == 'POST':
+        # CRAFT
+
+        # Tesseract
         form = ReceiveImageForm(request.POST, request.FILES)
         im = Image.open(request.FILES['file'])
         text = pytesseract.image_to_string(im, lang="Hangul")
