@@ -4,7 +4,8 @@ import os
 import sys
 import mysite.settings
 
-DATABASES = mysite.settings.DATABASES # 수정한 부분
+DATABASES = mysite.settings.DATABASES  # 수정한 부분
+
 
 def main():
     """Run administrative tasks."""
