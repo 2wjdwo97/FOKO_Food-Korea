@@ -10,15 +10,6 @@ class Classes(models.Model):
         db_table = 'data_classes'
 
 
-class Countries(models.Model):
-    country_no = models.AutoField(primary_key=True)
-    country_ko_name = models.CharField(max_length=50)
-    country_en_name = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = 'data_countries'
-
-
 class Foods(models.Model):
     food_no = models.AutoField(primary_key=True)
     class_no = models.ForeignKey(Classes, on_delete=models.CASCADE)

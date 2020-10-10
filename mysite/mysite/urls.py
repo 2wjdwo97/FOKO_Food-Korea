@@ -7,7 +7,7 @@ from foods import views
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
+    path('users/', include('users.urls')),
     path('foods/', include('foods.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

@@ -1,4 +1,5 @@
 from pathlib import Path
+from . import setting_secret
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,7 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+1$#4%s2fljwq8h0d$t)14qp*#l80km500vo)ynqqp8)8_-dbk'
+SECRET_KEY = setting_secret.secret_dict['SECRET_KEY']
+# '+1$#4%s2fljwq8h0d$t)14qp*#l80km500vo)ynqqp8)8_-dbk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,7 +29,7 @@ INSTALLED_APPS = [  # 수정한 부분
     'django.contrib.staticfiles',
     'rest_framework',
     'foods',
-    'accounts',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -72,23 +74,7 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {  # 수정한 부분
-    # ec2
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'test',
-    #     'USER': 'testUser',
-    #     'PASSWORD': 'Test1234@',
-    #     'HOST': 'localhost',
-    #     'PORT': '3306',
-    # }
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'foko',
-        'USER': 'foko_user',
-        'PASSWORD': 'foko123',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
+    'default': setting_secret.secret_dict['DATABASE_PKM']
 }
 
 
