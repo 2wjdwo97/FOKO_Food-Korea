@@ -1,5 +1,8 @@
 from django.db import models
-from foods.models import Ingredients, Tags
+
+from foods.models import Classes, AllergyClasses
+
+DEGREE = (('1', 'very bad'), ('2', 'bad'), ('3', 'so so'), ('4', 'good'), ('5', 'very good'))
 
 
 class Countries(models.Model):
@@ -18,23 +21,23 @@ class Users(models.Model):
     user_pw = models.CharField(max_length=100)
     user_name = models.CharField(max_length=50)
     user_age = models.PositiveSmallIntegerField()
-    user_spicy = models.PositiveSmallIntegerField()
+    user_spicy = models.CharField(max_length=1, choices=DEGREE)
 
     class Meta:
         db_table = 'data_users'
 
 
-class MapUserIngre(models.Model):
-    user_no = models.ForeignKey(Users, on_delete=models.CASCADE)
-    ingre_no = models.ForeignKey(Ingredients, on_delete=models.CASCADE)
+class MapUserClass(models.Model):
+    user_no = models.ForeignKey(Users, on_delete=models.CASCADE, db_column='user_no')
+    food_class_no = models.ForeignKey(Classes, on_delete=models.CASCADE, db_column='food_class_no')
 
     class Meta:
-        db_table = 'map_user_ingre'
+        db_table = 'map_user_class'
 
 
-class MapUserTag(models.Model):
-    user_no = models.ForeignKey(Users, on_delete=models.CASCADE)
-    tag_no = models.ForeignKey(Tags, on_delete=models.CASCADE)
+class MapUserAllergy(models.Model):
+    user_no = models.ForeignKey(Users, on_delete=models.CASCADE, db_column='user_no')
+    allergy_no = models.ForeignKey(AllergyClasses, on_delete=models.CASCADE, db_column='allergy_no')
 
     class Meta:
-        db_table = 'map_user_tag'
+        db_table = 'map_user_allergy'

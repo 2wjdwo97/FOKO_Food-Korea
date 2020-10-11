@@ -10,11 +10,20 @@ class Classes(models.Model):
         db_table = 'data_classes'
 
 
+class AllergyClasses(models.Model):
+    allergy_no = models.IntegerField(primary_key=True)
+    allergy_ko_name = models.CharField(max_length=50)
+    allergy_en_name = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'data_allergy_classes'
+
+
 class Foods(models.Model):
     food_no = models.AutoField(primary_key=True)
     class_no = models.ForeignKey(Classes, on_delete=models.CASCADE)
-    food_name = models.CharField(unique=True, max_length=50)
-    food_dsc = models.TextField(blank=True, null=True)
+    food_name = models.CharField(max_length=50)
+    food_dsc = models.TextField(null=True)
 
     class Meta:
         db_table = 'data_foods'
@@ -22,33 +31,25 @@ class Foods(models.Model):
 
 class Ingredients(models.Model):
     ingre_no = models.AutoField(primary_key=True)
-    ingre_name = models.CharField(max_length=50)
-    ingre_en_name = models.CharField(max_length=50, blank=True, null=True)
-    ingre_allergy = models.BooleanField()
+    ingre_ko_name = models.CharField(max_length=50)
+    ingre_en_name = models.CharField(max_length=50, null=True)
+    allergy_no = models.ForeignKey(AllergyClasses, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'data_ingredients'
 
 
-class Tags(models.Model):
-    tag_no = models.IntegerField(primary_key=True)
-    tag_name = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = 'data_tags'
-
-
 class MapFoodIngre(models.Model):
-    food_no = models.ForeignKey(Foods, models.DO_NOTHING, db_column='food_no')
-    ingre_no = models.ForeignKey(Ingredients, models.DO_NOTHING, db_column='ingre_no')
+    food_no = models.ForeignKey(Foods, db_column='food_no', on_delete=models.CASCADE)
+    ingre_no = models.ForeignKey(Ingredients, db_column='ingre_no', on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'map_food_ingre'
 
 
-class MapFoodTag(models.Model):
-    food_no = models.ForeignKey(Foods, models.DO_NOTHING, db_column='food_no')
-    tag_no = models.ForeignKey(Tags, models.DO_NOTHING, db_column='tag_no')
+class MapFoodIngreAdd(models.Model):
+    food_no = models.ForeignKey(Foods, db_column='food_no', on_delete=models.CASCADE)
+    ingre_no = models.ForeignKey(Ingredients, db_column='ingre_no', on_delete=models.CASCADE)
 
     class Meta:
-        db_table = 'map_food_tag'
+        db_table = 'map_food_ingre_add'

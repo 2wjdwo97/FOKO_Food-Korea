@@ -30,6 +30,7 @@ INSTALLED_APPS = [  # 수정한 부분
     'rest_framework',
     'foods',
     'users',
+    'reviews',
 ]
 
 MIDDLEWARE = [

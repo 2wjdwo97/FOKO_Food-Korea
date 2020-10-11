@@ -10,9 +10,9 @@ secret_dict = {
     },
     'DATABASE_PKM': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'foko',
-        'USER': 'foko_user',
-        'PASSWORD': 'foko123',
+        'NAME': 'db_foori',
+        'USER': 'user.foori',
+        'PASSWORD': 'foori123',
         'HOST': 'localhost',
         'PORT': '3306',
     }

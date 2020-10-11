@@ -6,8 +6,10 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
+from foods.models import Classes, AllergyClasses
 from mysite.settings import SECRET_KEY
-from .models import Users, Ingredients, Countries, Tags, MapUserTag, MapUserIngre
+from reviews.models import Tags, MapUserTag
+from .models import Users, Countries, MapUserClass, MapUserAllergy
 from .serializers import UserSerializer
 
 
@@ -97,8 +99,9 @@ def set_user_taste(request):
 
         try:
             user_no = data['user_no']
-            tags = data['tags'].split(',')
-            algy_ingres = data['allergy'].split(',')
+            tags = data['tag'].split(',')
+            food_classes = data['food_class'].split(',')
+            allergy_classes = data['allergy'].split(',')
 
             for tag in tags:
                 MapUserTag(
@@ -106,10 +109,16 @@ def set_user_taste(request):
                     tag_no=Tags.objects.get(tag_no=tag),
                 ).save()
 
-            for ingre in algy_ingres:
-                MapUserIngre(
+            for food_class in food_classes:
+                MapUserClass(
                     user_no=Users.objects.get(user_no=user_no),
-                    ingre_no=Ingredients.objects.get(ingre_no=ingre),
+                    class_no=Classes.objects.get(class_no=food_class),
+                ).save()
+
+            for allergy_class in allergy_classes:
+                MapUserAllergy(
+                    user_no=Users.objects.get(user_no=user_no),
+                    allergy_no=AllergyClasses.objects.get(allergy_no=allergy_class),
                 ).save()
 
             return HttpResponse(status=200)
