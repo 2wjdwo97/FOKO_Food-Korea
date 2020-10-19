@@ -9,8 +9,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# keep the secret key in 'mysite.setting_secret'
 SECRET_KEY = setting_secret.secret_dict['SECRET_KEY']
-# '+1$#4%s2fljwq8h0d$t)14qp*#l80km500vo)ynqqp8)8_-dbk'
+
+# Specify a CUSTOM_USER_MODEL to use for authentication
+# AUTH_USER_MODEL = 'user.User'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -20,7 +23,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = [  # 수정한 부분
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,9 +31,9 @@ INSTALLED_APPS = [  # 수정한 부분
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'foods',
-    'users',
-    'reviews',
+    'food',
+    'user',
+    'review',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +68,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+    # or allow read-only access for unauthenticated user.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
@@ -73,8 +76,9 @@ REST_FRAMEWORK = {
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# keep the secret key in 'mysite.setting_secret'
 
-DATABASES = {  # 수정한 부분
+DATABASES = {
     'default': setting_secret.secret_dict['DATABASE_PKM']
 }
 
@@ -103,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Seoul'  # 수정
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 

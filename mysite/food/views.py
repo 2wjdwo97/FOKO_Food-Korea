@@ -3,13 +3,13 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from .serializers import FoodSerializer
-from .models import Foods
+from .models import Food
 
 
 @csrf_exempt
 def foods_list(request):
     if request.method == 'GET':
-        query_set = Foods.objects.all()
+        query_set = Food.objects.all()
         serializer = FoodSerializer(query_set, many=True)
         return JsonResponse(serializer.data, safe=False)
 

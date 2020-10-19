@@ -21,3 +21,6 @@ ENV/
 env.bak/
 venv.bak/
 pythonenv*
+
+# secret info
+mysite/setting_secret.py
