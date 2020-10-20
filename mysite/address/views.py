@@ -18,7 +18,8 @@ def imageUpload(request):
         # Tesseract
         form = ReceiveImageForm(request.POST, request.FILES)
         im = Image.open(request.FILES['file'])
-        text = pytesseract.image_to_string(im, lang="Hangul")
+        custom_oem_psm_config = r'--oem 3 --psm 7'
+        text = pytesseract.image_to_string(im, lang="kor", config=custom_oem_psm_config)
         return JsonResponse(text, safe=False, status=201)
 
 
