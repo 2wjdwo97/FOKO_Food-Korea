@@ -81,46 +81,46 @@ def crop(img_to_crop, arr):
 
     return warpedImage
 
+def runOCR(orig_img):
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Users\LG\AppData\Local\Tesseract-OCR\tesseract.exe'
+    menu_list = list()
+    # orig_img = Image.open('C:/Users/LG/Desktop/testImages/legend.PNG')
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\LG\AppData\Local\Tesseract-OCR\tesseract.exe'
-menu_list = list()
-orig_img = Image.open('C:/Users/LG/Desktop/testImages/legend.PNG')
+    # run CRAFT
+    text_region = runCRAFT(orig_img)
 
-# run CRAFT
-text_region = runCRAFT(orig_img)
+    arr_text_region = text_region.splitlines()
+    for i in range(len(arr_text_region)):
+        arr_text_region[i] = arr_text_region[i].split(',')
 
-arr_text_region = text_region.splitlines()
-for i in range(len(arr_text_region)):
-    arr_text_region[i] = arr_text_region[i].split(',')
+    # print(arr_text_region)
+    img = np.asarray(orig_img.convert('L'))  # Image to cv2
 
-# print(arr_text_region)
-img = np.asarray(orig_img.convert('L'))  # Image to cv2
+    # Crop image and run Tesseract
+    for i in range(len(arr_text_region)):
+        crop_img = crop(img, arr_text_region[i])
+        ret3, th1 = cv2.threshold(crop_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-# Crop image and run Tesseract
-for i in range(len(arr_text_region)):
-    crop_img = crop(img, arr_text_region[i])
-    ret3, th1 = cv2.threshold(crop_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # reverse RGB if characters are white
+        if int(th1[1, 1]) == 0:
+            th1 = cv2.bitwise_not(th1)
 
-    # reverse RGB if characters are white
-    if int(th1[1, 1]) == 0:
-        th1 = cv2.bitwise_not(th1)
+        # cv2.imshow('crop', crop_img)
+        # cv2.waitKey(0)
+        cv2.imshow('th1', th1)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
-    # cv2.imshow('crop', crop_img)
-    # cv2.waitKey(0)
-    cv2.imshow('th1', th1)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+        custom_oem_psm_config = r'--oem 3 --psm 5'
+        result = pytesseract.image_to_string(th1, lang='kor', config=custom_oem_psm_config)
+        menu_list.append(result.replace('\n', '').replace('\x0c', ''))
 
-    custom_oem_psm_config = r'--oem 3 --psm 5'
-    result = pytesseract.image_to_string(th1, lang='kor', config=custom_oem_psm_config)
-    menu_list.append(result.replace('\n', '').replace('\x0c', ''))
+    for i in range(len(menu_list)):
+        print(f"{arr_text_region[i]}")
+        print(f"{menu_list[i]}")
+        print()
 
-for i in range(len(menu_list)):
-    print(f"{arr_text_region[i]}")
-    print(f"{menu_list[i]}")
-    print()
-
-# imgfile = Image.open('C:/Users/LG/Desktop/testImages/test4_carft2.jpg')
-# imgfile = image_smoothening(imgfile)
-# img1 = cv2.imread('C:/Users/LG/Desktop/testImages/test4_carft2.jpg', 0)
-# ret3, th3 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    # imgfile = Image.open('C:/Users/LG/Desktop/testImages/test4_carft2.jpg')
+    # imgfile = image_smoothening(imgfile)
+    # img1 = cv2.imread('C:/Users/LG/Desktop/testImages/test4_carft2.jpg', 0)
+    # ret3, th3 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)

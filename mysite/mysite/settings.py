@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'food',
     'user',
     'review',
-    'OCR',
+    'ocr',
 ]
 
 MIDDLEWARE = [

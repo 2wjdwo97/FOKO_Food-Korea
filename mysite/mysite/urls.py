@@ -10,6 +10,6 @@ urlpatterns = [
     path('reviews/', include('review.urls')),
 
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-    path('imageUpload/', include('OCR.urls'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('imageupload/', include('ocr.urls')),
 ]
