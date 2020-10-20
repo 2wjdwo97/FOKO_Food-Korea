@@ -1,0 +1,32 @@
+class_no,class_ko_name,class_en_name
+1,밥류,rice
+2,깁밥/초밥류,sushi/ gimbap
+3,죽/스프류,porridge/ soup
+4,면/만두류,noodle/ dumpling
+5,떡류,rice cake
+6,빵류,bread
+7,버거류,berger
+8,피자류,pizza
+9,치킨류,chicken
+10,샌드위치류,sandwich
+11,한과류,Korean sweets
+12,음료/차류,drinks
+13,국/탕류,soup
+14,냉국류,cold soup
+15,찌개/전골류,stew
+16,찜류,steamed
+17,구이류,grilled
+18,볶음류,stir-fried
+19,조림류,boiled in seasonings(soy)
+20,튀김류,fried
+21,김치,kimchi
+22,샐러드,salad
+23,나물/숙채류,matured(cooked) vegetables
+24,생채/무침류,raw(uncooked) vegetables
+25,건포류,dried fish/shells
+26,전/적/부침류,vegetable pancakes
+27,젓갈류,salted seafood
+28,회류,sliced raw fishes
+29,장아찌/절임류,pickled vegetables
+30,장류/양념류,spicery/ seasonings
+31,기타,etc.
