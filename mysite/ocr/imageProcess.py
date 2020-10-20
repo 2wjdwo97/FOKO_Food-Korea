@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import pytesseract
 from matplotlib import pyplot as plt
-from test import runCRAFT
+from ocr.tet import runCRAFT
 
 
 def crop(img_to_crop, arr):
