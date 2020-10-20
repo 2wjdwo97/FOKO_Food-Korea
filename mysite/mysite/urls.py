@@ -1,7 +1,6 @@
 from django.urls import path, include
 from django.contrib import admin
 from rest_framework import routers, serializers, viewsets
-from food import views
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
