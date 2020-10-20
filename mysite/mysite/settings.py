@@ -79,7 +79,7 @@ REST_FRAMEWORK = {
 # keep the secret key in 'mysite.setting_secret'
 
 DATABASES = {
-    'default': setting_secret.secret_dict['DATABASE_PKM']
+    'default': setting_secret.secret_dict['DATABASE_EC2']
 }
 
 
