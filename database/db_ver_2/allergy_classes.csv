@@ -1,4 +1,4 @@
-allergy_no,allergy_name,allergy_en_name
+allergy_no,allergy_ko_name,allergy_en_name
 0,없음,NONE
 1,난류(가금류),poultry(egg)
 2,우유,milk

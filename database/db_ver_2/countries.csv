@@ -1,54 +1,54 @@
-country_no,country_ko_name,country_en_name,language
-1,오스트레일리아,Austrailia,en
-2,오스트리아,Austria,de
-3,방글라데시,Bangladesh,
-4,벨기에,Belgium,nl/fr
-5,브라질,Brazil,pt
-6,불가리아,Bulgaria,bg
-7,캄보디아,Cambodia,
-8,캐나다,Canada,en/fr
-9,중국,China,zh
-10,크로아티아,Croatia,hr
-11,덴마크,Denmark,da
-12,핀란드,Finland,fi/sv
-13,프랑스,France,fr
-14,독일,Germany,de
-15,그리스,Greece,el
-16,홍콩,Hong Kong,zh/en
-17,인도,India,hi
-18,인도네시아,Indonesia,
-19,이란,Iran,
-20,아일랜드,Ireland,en
-21,이스라엘,Israel,he
-22,이탈리아,Italy,it
-23,일본,Japan,ja
-24,카자흐스탄,Kazakhstan,
-25,마카오,Macao,zh
-26,말레이시아,Malaysia,
-27,멕시코,Mexico,es
-28,몽골,Mongolia,
-29,미얀마,Myanmar,
-30,네덜란드,Netherland,nl
-31,뉴질랜드,New Zealand,en
-32,노르웨이,Norway,
-33,파키스탄,Pakistan,en
-34,필리핀,Phillipines,en
-35,폴란드,Poland,pl
-36,포르투갈,Portugal,pt
-37,대한민국,Republic of Korea,ko
-38,루마니아,Romania,ro
-39,러시아,Russia,ru
-40,싱가포르,Singapore,en
-41,남아프리카공화국,South Africa,
-42,스페인,Spain,es
-43,스리랑카,Sri Lanka,
-44,스웨덴,Sweden,sv
-45,스위스,Swiss,de/fr/it
-46,대만,Taiwan,zh
-47,태국,Thailand,th
-48,터키,Turkey,tr
-49,영국,UK,en
-50,우크라이나,Ukraine,ru
-51,미국,USA,en
-52,우즈베키스탄,Uzbekistan,ru
-53,베트남,Vietnam,
+country_no,country_ko_name,country_en_name
+1,오스트레일리아,Austrailia
+2,오스트리아,Austria
+3,방글라데시,Bangladesh
+4,벨기에,Belgium
+5,브라질,Brazil
+6,불가리아,Bulgaria
+7,캄보디아,Cambodia
+8,캐나다,Canada
+9,중국,China
+10,크로아티아,Croatia
+11,덴마크,Denmark
+12,핀란드,Finland
+13,프랑스,France
+14,독일,Germany
+15,그리스,Greece
+16,홍콩,Hong Kong
+17,인도,India
+18,인도네시아,Indonesia
+19,이란,Iran
+20,아일랜드,Ireland
+21,이스라엘,Israel
+22,이탈리아,Italy
+23,일본,Japan
+24,카자흐스탄,Kazakhstan
+25,마카오,Macao
+26,말레이시아,Malaysia
+27,멕시코,Mexico
+28,몽골,Mongolia
+29,미얀마,Myanmar
+30,네덜란드,Netherland
+31,뉴질랜드,New Zealand
+32,노르웨이,Norway
+33,파키스탄,Pakistan
+34,필리핀,Phillipines
+35,폴란드,Poland
+36,포르투갈,Portugal
+37,대한민국,Republic of Korea
+38,루마니아,Romania
+39,러시아,Russia
+40,싱가포르,Singapore
+41,남아프리카공화국,South Africa
+42,스페인,Spain
+43,스리랑카,Sri Lanka
+44,스웨덴,Sweden
+45,스위스,Swiss
+46,대만,Taiwan
+47,태국,Thailand
+48,터키,Turkey
+49,영국,UK
+50,우크라이나,Ukraine
+51,미국,USA
+52,우즈베키스탄,Uzbekistan
+53,베트남,Vietnam
