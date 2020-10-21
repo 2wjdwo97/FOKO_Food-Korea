@@ -57,7 +57,7 @@ def signup(request):
         password_crypt = bcrypt.hashpw(password, bcrypt.gensalt())  # 암호화된 비밀번호 생성
         password_crypt = password_crypt.decode('utf-8')             # 비밀번호 암호화
         serializer.validated_data['user_pw'] = password_crypt
-        
+
         # 데이터베이스 저장
         serializer.save()
 
@@ -79,6 +79,7 @@ def login(request):
                 if bcrypt.checkpw(data['user_pw'].encode('utf-8'), account.user_pw.encode('utf-8')):
                     token = jwt.encode({'user_id': account.user_id}, settings.SECRET_KEY, algorithm='HS256')
                     token = token.decode('utf-8')
+
                     return JsonResponse({'access_token': token}, status=200)
                 else:
                     return HttpResponse(status=401)

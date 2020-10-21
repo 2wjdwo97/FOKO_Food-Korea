@@ -82,13 +82,11 @@ def crop(img_to_crop, arr):
     return warpedImage
 
 def runOCR(orig_img):
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Users\LG\AppData\Local\Tesseract-OCR\tesseract.exe'
     menu_list = list()
     # orig_img = Image.open('C:/Users/LG/Desktop/testImages/legend.PNG')
 
     # run CRAFT
     text_region = runCRAFT(orig_img)
-
     arr_text_region = text_region.splitlines()
     for i in range(len(arr_text_region)):
         arr_text_region[i] = arr_text_region[i].split(',')
@@ -107,18 +105,19 @@ def runOCR(orig_img):
 
         # cv2.imshow('crop', crop_img)
         # cv2.waitKey(0)
-        cv2.imshow('th1', th1)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        # cv2.imshow('th1', th1)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
 
-        custom_oem_psm_config = r'--oem 3 --psm 5'
-        result = pytesseract.image_to_string(th1, lang='kor', config=custom_oem_psm_config)
+        custom_oem_psm_config = r'--oem 3 --psm 7'
+        result = pytesseract.image_to_string(th1, lang='kor', config=custom_oem_psm_config
         menu_list.append(result.replace('\n', '').replace('\x0c', ''))
+    return menu_list
 
-    for i in range(len(menu_list)):
-        print(f"{arr_text_region[i]}")
-        print(f"{menu_list[i]}")
-        print()
+#    for i in range(len(menu_list)):
+#        print(f"{arr_text_region[i]}")
+#        print(f"{menu_list[i]}")
+#        print()
 
     # imgfile = Image.open('C:/Users/LG/Desktop/testImages/test4_carft2.jpg')
     # imgfile = image_smoothening(imgfile)

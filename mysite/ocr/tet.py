@@ -29,7 +29,17 @@ from ocr.craft import CRAFT
 
 from collections import OrderedDict
 
-args = None
+trained_model = '/home/ubuntu/proj/FOKO_FoodKorea/mysite/ocr/craft_mlt_25k.pth'
+text_threshold = 0.7
+low_text = 0.4
+link_threshold = 0.1
+cuda = False
+canvas_size = 1280
+mag_ratio = 1.5
+poly = False
+show_time = False
+refine = False
+refiner_model = 'craft_refiner_CTW1500.pth'
 
 def copyStateDict(state_dict):
     if list(state_dict.keys())[0].startswith("module"):
@@ -48,11 +58,12 @@ def str2bool(v):
 
 
 def test_net(net, image, text_threshold, link_threshold, low_text, cuda, refine_net=None):
-    global args
+    global canvas_size
+    global mag_ratio
     t0 = time.time()
 
     # resize
-    img_resized, target_ratio, size_heatmap = imgproc.resize_aspect_ratio(image, args.canvas_size, interpolation=cv2.INTER_LINEAR, mag_ratio=args.mag_ratio)
+    img_resized, target_ratio, size_heatmap = imgproc.resize_aspect_ratio(image, canvas_size, interpolation=cv2.INTER_LINEAR, mag_ratio=mag_ratio)
     ratio_h = ratio_w = 1 / target_ratio
 
     # preprocessing
@@ -96,32 +107,24 @@ def test_net(net, image, text_threshold, link_threshold, low_text, cuda, refine_
     # render_img = np.hstack((render_img, score_link))
     # ret_score_text = imgproc.cvt2HeatmapImg(render_img)
 
-    if args.show_time: print("\ninfer/postproc time : {:.3f}/{:.3f}".format(t0, t1))
-
     return boxes  # , polys
 
 
 def runCRAFT(img):
-    parser = argparse.ArgumentParser(description='CRAFT Text Detection')
-    parser.add_argument('--trained_model', default='craft_mlt_25k.pth', type=str, help='pretrained model')
-    parser.add_argument('--text_threshold', default=0.7, type=float, help='text confidence threshold')
-    parser.add_argument('--low_text', default=0.4, type=float, help='text low-bound score')
-    parser.add_argument('--link_threshold', default=0.1, type=float, help='link confidence threshold')
-    parser.add_argument('--cuda', default=False, type=str2bool, help='Use cuda for inference')
-    parser.add_argument('--canvas_size', default=1280, type=int, help='image size for inference')
-    parser.add_argument('--mag_ratio', default=1.5, type=float, help='image magnification ratio')
-    parser.add_argument('--poly', default=False, action='store_true', help='enable polygon type')
-    parser.add_argument('--show_time', default=False, action='store_true', help='show processing time')
-    parser.add_argument('--test_folder', default='CRAFT_image/', type=str, help='folder path to input images')
-    parser.add_argument('--refine', default=False, action='store_true', help='enable link refiner')
-    parser.add_argument('--refiner_model', default='craft_refiner_CTW1500.pth', type=str, help='pretrained refiner model')
-
-    global args
-    args = parser.parse_args()
-
+    global trained_model
+    global text_threshold
+    global low_text
+    global link_threshold
+    global cuda
+    global canvas_size
+    global mag_ratio
+    global poly
+    global show_time
+    global refine
+    global refiner_model
 
     """ For test images in a folder """
-    image_list, _, _ = file_utils.get_files(args.test_folder)
+    # image_list, _, _ = file_utils.get_files(args.test_folder)
 
     # result_folder = './result/'
     # if not os.path.isdir(result_folder):
@@ -130,12 +133,12 @@ def runCRAFT(img):
     # load net
     net = CRAFT()     # initialize
 
-    if args.cuda:
-        net.load_state_dict(copyStateDict(torch.load(args.trained_model)))
+    if cuda:
+        net.load_state_dict(copyStateDict(torch.load(trained_model)))
     else:
-        net.load_state_dict(copyStateDict(torch.load(args.trained_model, map_location='cpu')))
+        net.load_state_dict(copyStateDict(torch.load(trained_model, map_location='cpu')))
 
-    if args.cuda:
+    if cuda:
         net = net.cuda()
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = False
@@ -144,20 +147,19 @@ def runCRAFT(img):
 
     # LinkRefiner
     refine_net = None
-    if args.refine:
+    if refine:
         from refinenet import RefineNet
         refine_net = RefineNet()
-        print('Loading weights of refiner from checkpoint (' + args.refiner_model + ')')
-        if args.cuda:
-            refine_net.load_state_dict(copyStateDict(torch.load(args.refiner_model)))
+        print('Loading weights of refiner from checkpoint (' + refiner_model + ')')
+        if cuda:
+            refine_net.load_state_dict(copyStateDict(torch.load(refiner_model)))
             refine_net = refine_net.cuda()
             refine_net = torch.nn.DataParallel(refine_net)
         else:
-            refine_net.load_state_dict(copyStateDict(torch.load(args.refiner_model, map_location='cpu')))
+            refine_net.load_state_dict(copyStateDict(torch.load(refiner_model, map_location='cpu')))
 
         refine_net.eval()
-        args.poly = True
-
+        poly = True
     t = time.time()
 
     # load data
@@ -172,8 +174,7 @@ def runCRAFT(img):
         img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     if img.shape[2] == 4:
         img = img[:, :, :3]
-    boxes = test_net(net, img, args.text_threshold, args.link_threshold, args.low_text, args.cuda, refine_net)
-
+    boxes = test_net(net, img, text_threshold, link_threshold, low_text, cuda, refine_net)
     # save score text
     # filename, file_ext = os.path.splitext(os.path.basename('./CRAFT_image/test6.jpg'))
     # mask_file = result_folder + "/res_" + filename + '_mask.jpg'

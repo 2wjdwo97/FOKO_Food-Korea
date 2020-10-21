@@ -9,7 +9,6 @@ urlpatterns = [
     path('foods/', include('food.urls')),
     path('reviews/', include('review.urls')),
     path('imageupload/', include('ocr.urls')),
-
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

@@ -5,7 +5,7 @@ from rest_framework.parsers import JSONParser
 from PIL import Image
 from .forms import ReceiveImageForm
 import pytesseract
-from .imageProcess import runOCR
+from ocr.imageProcess import runOCR
 
 # Create your views here.
 
@@ -16,9 +16,7 @@ def imageupload(request):
         # Tesseract
         form = ReceiveImageForm(request.POST, request.FILES)
         im = Image.open(request.FILES['file'])
-        
-        runOCR(im)
-        custom_oem_psm_config = r'--oem 3 --psm 7'
-        text = pytesseract.image_to_string(im, lang="kor", config=custom_oem_psm_config)
+        text = 'wtf' #runOCR(im)
         return JsonResponse(text, safe=False, status=201)
-
+    elif request.method == 'GET':
+        return JsonResponse('1', safe=False, status=201)
