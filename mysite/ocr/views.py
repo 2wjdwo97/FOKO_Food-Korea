@@ -16,7 +16,8 @@ def imageupload(request):
         # Tesseract
         form = ReceiveImageForm(request.POST, request.FILES)
         im = Image.open(request.FILES['file'])
-        text = 'wtf' #runOCR(im)
+        text = runOCR(im)
+
         return JsonResponse(text, safe=False, status=201)
     elif request.method == 'GET':
         return JsonResponse('1', safe=False, status=201)
