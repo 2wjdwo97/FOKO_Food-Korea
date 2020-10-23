@@ -23,12 +23,13 @@ class UserSerializer(serializers.ModelSerializer):
 
 # json example
 # {
-# 	"user_id" : "kio1015",
-# 	"user_pw" : "pkm1015",
+# 	"user_id" : "pkm1015",
+# 	"user_pw" : "1015kio",
+# 	"pw_confirm" : "1015pkm",
 # 	"user_name" : "park",
 # 	"user_age" : "24",
-# 	"user_spicy" : "2",
-# 	"country_no" : "10"
+# 	"user_spicy" : "4",
+# 	"country_no" : "37"
 # }
 
 # {
