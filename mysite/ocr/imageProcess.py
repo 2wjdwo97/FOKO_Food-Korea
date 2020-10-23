@@ -97,11 +97,11 @@ def runOCR(orig_img):
     # Crop image and run Tesseract
     for i in range(len(arr_text_region)):
         crop_img = crop(img, arr_text_region[i])
-        ret3, th1 = cv2.threshold(crop_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+#        ret3, th1 = cv2.threshold(crop_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
         # reverse RGB if characters are white
-        if int(th1[0, 0]) == 0:
-            th1 = cv2.bitwise_not(th1)
+#        if int(th1[0, 0]) == 0:
+#            th1 = cv2.bitwise_not(th1)
 
         # cv2.imshow('crop', crop_img)
         # cv2.waitKey(0)
@@ -110,7 +110,7 @@ def runOCR(orig_img):
         # cv2.destroyAllWindows()
 
         custom_oem_psm_config = r'--oem 3 --psm 7'
-        result = pytesseract.image_to_string(th1, lang='kor', config=custom_oem_psm_config)
+        result = pytesseract.image_to_string(crop_img, lang='kor', config=custom_oem_psm_config)
         menu_list.append(result.replace('\n', '').replace('\x0c', ''))
 
     return menu_list
