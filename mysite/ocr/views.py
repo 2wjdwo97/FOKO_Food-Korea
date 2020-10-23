@@ -27,6 +27,8 @@ def imageupload(request):
         # get match(between text list & food list) list
         match_list = getTheMostSimilarText(text_list, food_list)
 
-        return JsonResponse(match_list, safe=False, status=201)
+        # get food description from models.py
+      #  description = 
+        return JsonResponse(, safe=False, status=201)
     elif request.method == 'GET':
         return JsonResponse('1', safe=False, status=201)

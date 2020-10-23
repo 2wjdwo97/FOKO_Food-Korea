@@ -10,7 +10,7 @@ def splitKor(string):
     sp_list = list(string)
     result = []
     for keyword in sp_list:
-        if re.match('.*[ㄱ-ㅎㅏ-ㅣ가-힣]+.*', keyword):
+        if re.match('.*[가-힣]+.*', keyword):
             char_code = ord(keyword) - BASE_CODE
             char1 = int(char_code / CHOSUNG)
             result.append(CHOSUNG_LIST[char1])
@@ -23,19 +23,20 @@ def splitKor(string):
                 result.append(JONGSUNG_LIST[char3])
         else:
             result.append(keyword)
-    return result
+    return "".join(result)
 
 
 
-def getShingle(text, unitSize):
+def getShingle(text, unitSize, temp=-1):
     strPieces = splitKor(text)
     shingle = []
 
     # create shingle
     for i in range(len(strPieces) - (unitSize - 1)):
-        shingle.append(text[i:i+unitSize])
+        shingle.append(strPieces[i:i+unitSize])
 
-    return set(shingle)
+    temp = set(shingle)
+    return temp
 
 
 def getTextResemblance(set1, set2):
@@ -47,21 +48,16 @@ def getTheMostSimilarText(input_list, base_list, ratioLimit=0.5, unitSize=2):
     shingle_input = []
     match_list = []
 
-    f = open(f'{len(base_list)}', 'w')
-    f.close()
-
     # create base_list shingle
     for text in base_list:
         shingle_base.append(getShingle(text, unitSize))
 
-    f = open(f'{len(shingle_base)}', 'w')
-    f.close()
     # create input_list shingle
-    for text in input_list:
-        shingle_input.append(getShingle(text, unitSize))
+    for i, text in enumerate(input_list):
+        shingle_input.append(getShingle(text, unitSize, i))
 
     # match
-    for input in shingle_input:
+    for num, input in enumerate(shingle_input):
         curRatio = 0
         curText = None
 
@@ -72,7 +68,7 @@ def getTheMostSimilarText(input_list, base_list, ratioLimit=0.5, unitSize=2):
                 curText = base_list[index]
 
         # append curText to match_list when the curRatio is greater or equal to limit
-        if curRatio >= ratioLimit:
+        if curRatio >= ratioLimit and curText not in match_list:
             match_list.append(curText)
 
     return match_list
