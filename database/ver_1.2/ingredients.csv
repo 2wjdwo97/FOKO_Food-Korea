@@ -1,1162 +1,1162 @@
 ingre_no,ingre_ko_name,ingre_en_name,allergy_no
-1,ê°€ë‹¤ë‘ì–´,"katsuo/ bonito",0
-2,ê°€ë‹¤ë‘ì–´í¬,katsuobushi,0
-3,ê°€ë˜ë–¡,"rice cake",0
-4,ê°€ë¦¬ë¹„,scallop,18
-5,ê°€ë¦¬ë¹„ì‚´,hotategai,18
-6,ê°€ì‹œë³µ,harisenbon,0
-7,ê°€ì“°ì˜¤ë¶€ì‹œ,Katsuobushi,0
-8,ê°€ì˜¤ë¦¬,Stingray,0
-9,ê°€ìë¯¸,"flat fish",0
-10,ê°€ì£½ë‚˜ë¬¼,"Cedrela sinensis leaves",0
-11,ê°€ì§€,eggplant,0
-12,ê°€ì§€ì—´ë§¤,"egg plant/ brinjal/ melongena",0
-13,ê°€ì¸ ì˜¤ë¶€ì‹œ,katsuobushi,0
-14,ê°„ê³ ë“±ì–´,"salted mackerel",7
-15,ê°„ë§ˆëŠ˜,"ground garlic",0
-16,ê°„ì¥,"soy sauce",0
-17,ê°ˆë§¤ê¸°ì‚´,"skirt meat",0
-18,ê°ˆë¹„,rib,0
-19,ê°ˆì¹˜,hairtail,0
-20,ê°,persimmon,0
-21,ê°ê·¤,"unshiu orange",0
-22,ê°ì—´ë§¤,"persimmon fruit",0
-23,ê°ì,potato,0
-24,ê°ìì „ë¶„,"potato starch",0
-25,ê°ì´ˆ,"chinese liquorice",0
-26,ê°‘ì˜¤ì§•ì–´,kouika,17
-27,ê°“,"leaf mustard",0
-28,ê°“ê¹€ì¹˜,"leaf mustard kimchi",0
-29,ê°•ë‚­ì½©,"kidney bean",0
-30,ê°•ë ¥ë¶„,"Strong flour",0
-31,ê°•ì•„ì§€í’€,"green bristlegrass",0
-32,ê°•í™©,turmeric,0
-33,ê°œê³ ê¸°,"Dog meat",0
-34,ê°œë³µìˆ­ì•„,"chinese wild peach",11
-35,ê°œë¶ˆ,"spoon worm",0
-36,ê°œì•”,"hazelnut/ filbert",13
-37,ê°œì•”ê²¬ê³¼,hazelnut,13
-38,ê±°ìœ„,goose,0
-39,ê±´ëŒ€ì¶”,"Dried jujube",0
-40,ê±´ë¯¸ì—­,"Dried seaweed",0
-41,ê±´ìƒˆìš°,"Dried shrimp",9
-42,ê±´ì¡°ê¹€,laver,0
-43,ê±´ì¡°ì‚¬ê³¼,"dried apple",0
-44,ê±´ì¡°ìëª½,"dry grapefruite",0
-45,ê±´ì¡°ìºëª¨ë§ˆì¼,"dry chamomile",0
-46,ê±´ì¡°ìºëª¨ë§ˆì¼ê½ƒ,"dried chamomile flower",0
-47,ê±´ì¡°íˆë¹„ìŠ¤ì»¤ìŠ¤,"dried hibiscus",0
-48,ê±´í¬ë„,raisin,0
-49,ê²€ì€ê¹¨,"Black sesame",0
-50,ê²€ì€ì½©,"Black beans",0
-51,ê²€ì •ì½©,"black beans",0
-52,ê²Œ,crab,8
-53,ê²Œë§›ì‚´,"Crab stick",8
-54,ê²Œì‚´,crab,8
-55,ê²¨ì,mustard,0
-56,"ê²¨ì ì†ŒìŠ¤","mustard sauce",0
-57,ê²¬ê³¼ë¥˜,nuts,13
-58,ê²°ëª…ì,"senna tora",0
-59,ê²°ëª…ìì—´ë§¤,sicklepod,0
-60,ê³„ë€,egg,1
-61,ê³„ë€í°ì,"egg whites",1
-62,ê³„í”¼,cinnamon,0
-63,ê³„í•ê°€ë£¨,"Cinnamon powder",0
-64,ê³ êµ¬ë§ˆ,"sweet potato",0
-65,"ê³ ê¸° ì†ŒìŠ¤","meat sauce",0
-66,ê³ ê¸°ì‚°ì ,"Korean Shish kebab",0
-67,ê³ ë‹ˆ,"tundra swan",0
-68,ê³ ë“¤ë¹¼ê¸°,"lactuca bungeana",0
-69,ê³ ë“±ì–´,"chub mackerel",7
-70,ê³ ë¼ë‹ˆ,"inermis/ water deer",0
-71,ê³ ì‚¬ë¦¬,bracken,0
-72,ê³ ì‚¬ë¦¬ì–´ë¦°ìˆœ,braken,0
-73,ê³ ìˆ˜,"coriandrum sativum",0
-74,ê³ ìˆ˜ì,"coriander leaf",0
-75,ê³ ìš´ê³ ì¶§ê°€ë£¨,"Fine red pepper powder",0
-76,ê³ ì¶”,"hot pepper(cayenne/ chili pepper/ red pepper)",0
-77,ê³ ì¶”ê¸°ë¦„,"Chili oil",0
-78,ê³ ì¶”ëƒ‰ì´,Wasabi,0
-79,ê³ ì¶”ì”¨,"Pepper seeds",0
-82,ê³ ì¶”ì¥,"Korean traditional red hot pepper paste",0
-83,ê³ ì¶§ê°€ë£¨,"Red pepper powder",0
-84,ê³ ì¶§ê¸°ë¦„,"Chili oil",0
-85,ê³ ì¶§ì,"Red pepper leaves",0
-86,ê³¤ì•½,"Konjac/ Devil's-tongue",0
-87,ê³¨ë“œí‚¤ìœ„,"golden kiwi fruit",0
-88,ê³¨ë±…ì´,"horn snail",0
-89,ê³¨íŒŒ,chive,0
-90,ê³°ì¹˜,utsubo,0
-91,ê³°í”¼,"gom pi/ sea weed",0
-92,ê³±ì°½,"small intestine",0
-93,ê³¶ê°,"dried persimmon",0
-94,ê³¼ë©”ê¸°,guamegi,0
-95,ê´€ì,cappesante,0
-96,ê´‘ê·¤ë‚˜ë¬´ê½ƒ,"sour orange blossom",0
-97,ê´‘ì–´,Flatfish,0
-98,êµ¬ê¸°ì,"chinese matrimony vine",0
-99,êµ¬ê¸°ìë‚˜ë¬´,"chinese wolfberry",0
-100,êµ¬ê¸°ìë‚˜ë¬´ì—´ë§¤,"chinese wolfberry fruit",0
-101,êµ¬ê¸°ìë‚˜ë¬´ì,"chinese wolfberry leaf",0
-102,êµ¬ìš´ê¹€,laver,0
-103,êµ¬ìš´ê½ì¹˜,"pacific saury",0
-104,êµ¬ìš´ë°¤,"roasted chestnut",0
-105,êµ¬ì ˆì´ˆ,siberian-chrysanthemum,0
-106,êµ¬ì ˆì´ˆì,"siberian-chrysanthemum leaf",0
-107,êµ­ê°„ì¥,"Soup soy sauce",0
-108,êµ­ë©¸ì¹˜,Anchovy,0
-109,êµ­ìˆ˜,noodle,0
-110,êµ­í™”,chrysanthemum,0
-111,êµ­í™”ê½ƒ,"chrysanthemum flower",0
-112,êµ´,oyster,18
-113,êµ´ë¹„,"dried yellow corvina",0
-114,êµ´ì†ŒìŠ¤,"Oyster Sauce",18
-115,êµµì€ê³ ì¶§ê°€ë£¨,"Coarse red pepper",0
-116,êµµì€ì†Œê¸ˆ,"Coarse salt",0
-117,ê·€ë¦¬,oat,0
-118,ê·€ë¦¬ì”¨,oat,0
-119,ê·¤,tangerine,0
-120,ê·¤ê½ƒ,"unishiu orange flower",0
-121,"ê·¸ë¦° ë§ê³ ","green mango",0
-122,ê·¸ë¦°ì½©ì”¨,"green bean",0
-123,ê·¼ëŒ€,"leaf beet",0
-124,ê¸ˆê·¤,"oval kumquat",0
-125,ê¸ˆë‚­í™”,"showy dicentra",0
-126,ê¸ˆì”í™”,marigold,0
-127,ê¸ˆì”í™”ê½ƒ,"marigold/ marigold flower",0
-128,ê¸°ëŸ¬ê¸°,"wild goose",0
-129,ê¸°ë¦„,oil,0
-130,ê¸°ì¥,"common millet",0
-131,ê¸°ì¥ì”¨,millet,0
-132,ê¹€,laver,0
-133,ê¹€ê°€ë£¨,"dried seaweed powder",0
-134,ê¹€ì¹˜,kimchi,0
-135,ê¹€ì¹«êµ­ë¬¼,"Kimchi soup",0
-136,ê¹Œë‚˜ë¦¬ì•¡ì “,"Canary Fish Sauce",0
-137,ê¹¨,Sesame,0
-138,ê¹¨ì†Œê¸ˆ,"Ground sesame",0
-139,ê¹»ì,"perilla leaf",0
-140,ê¼¬ë¦¬,"ox tail",0
-141,ê¼¬ë§‰,cockle,18
-142,ê½ì¹˜,"pacific saury",0
-143,ê½ƒê²Œ,"swimming crab",8
-144,ê½ƒë“±ì‹¬,"ribeye roll",0
-145,ê½ƒì‚¬ê³¼,"chinese apple",0
-146,ê½ƒì‚¬ê³¼ì—´ë§¤,"chinese apple/ plumleaf crab apple",0
-147,ê½ƒìƒì¶”,"belgian endive",0
-148,ê½ƒìƒì¶”ì,"endive/ kasini",0
-149,ê½ƒì†Œê¸ˆ,salt,0
-150,ê½ƒì–‘ë°°ì¶”,cauliflower,0
-151,ê½ƒì–‘ë°°ì¶”ê½ƒ,cauliflower,0
-152,"ê½ˆë¦¬ ê³ ì¶”","shishito peppers",0
-153,ê½ˆë¦¬ê³ ì¶”,"shishito peper",0
-154,ê¿€,honey,0
-155,ê¿€í’€,"asiatic self-heal",0
-156,ê¿©ê³ ê¸°,pheasant,0
-157,ë‚˜ë¬´ë”¸ê¸°,"berry/ brambles fruit",0
-158,ë‚˜ë¬´ë”¸ê¸°ì—´ë§¤,"raspberry fruit",0
-159,ë‚™ì§€,"long arm octopus",0
-160,ë‚ ì¹˜ì•Œ,"flyling fish roe",0
-161,ë‚¨ì²œì—´ë§¤,nandina,0
-162,ë‚¨ì²œì,nandina,0
-163,ë‚«í† ,natto,0
-164,ë§Œë‘,dumplings,0
-165,ëƒ‰ë©´,"cold noodles",0
-166,ëƒ‰ì´,"shepherd's purse",0
-167,ëƒ‰ì´ë¿Œë¦¬,"shepherd's purse",0
-168,ëƒ‰ì´ì–´ë¦°ì,"shepherd's purse",0
-169,ë„™ì¹˜,"olive flounder",0
-170,ë„¤íŠ¸ë©œë¡ ,"netted melon",0
-171,ë…„ì–´,"keta salmon",0
-172,ë…¹ê°,"a deer horn",0
-173,ë…¹ë‘,"mung beans",0
-174,ë…¹ë‘ì”¨,"green gram/ mung bean",0
-175,ë…¹ë§ê°€ë£¨,"starch powder",0
-176,ë…¹ë§ë¬¼,"starch powder",0
-177,ë…¹ìš©,"velvet antler",0
-178,ë…¹ì°¨ê°€ë£¨,"green tea flour",0
-179,ë†ì–´,"sea bass",0
-180,ëˆ„ì—,silkworm,0
-181,ëˆ„ì—ë²ˆë°ê¸°,pupa,0
-182,ëŠíƒ€ë¦¬ë²„ì„¯,"oyster mushroom",0
-183,ëŠ¥ì†Œí™”,"chinese trumpet creeper",0
-184,ëŠ¥ì´ë²„ì„¯,èƒ½è€³,0
-185,ë‹¤ë˜,"kiwi-fruit/ chinese gooseberry",0
-186,ë‹¤ìŠ¬ê¸°,kawanina,0
-187,ë‹¤ì‹œë§ˆ,kelp,0
-188,ë‹¤ì‹œë§ˆêµ­ë¬¼,"kelp stock",0
-189,ë‹¤ì‹œë§ˆìœ¡ìˆ˜,"kelp stock",0
-190,ë‹¤ì‹œë¬¼,"kelp stock",0
-191,ë‹¤ì§„ê³ ì¶”,"chopped pepper",0
-192,ë‹¤ì§„ëŒ€íŒŒ,"chopped green onion",0
-193,ë‹¤ì§„ë¼ì§€ê³ ê¸°,"minced pork",10
-194,ë‹¤ì§„ë§ˆëŠ˜,"chopped garlic",0
-196,ë‹¤ì§„ìƒê°•,"chopped ginger",0
-197,ë‹¤ì§„ì‡ ê³ ê¸°,"Minced beef",16
-198,ë‹¤ì§„ì–‘íŒŒ,"Chopped onion",0
-199,ë‹¤ì§„íŒŒ,"Chopped green onion",0
-200,ë‹¤ì§ìœ¡(ë¼ì§€ê³ ê¸°),"minced pork",10
-201,ë‹¨ê°,persimmons,0
-202,ë‹¨ë¬´ì§€,"Pickled radish",0
-203,ë‹¨í’ë‚˜ë¬´,"palmate maple",0
-204,ë‹¨í˜¸ë°•,"sweet pumpkin",0
-205,ë‹¨í˜¸ë°•ì”¨,"pumpkin/ autumn squash",0
-206,ë‹¨í˜¸ë°•ì—´ë§¤,"pumpkin/ autumn squash",0
-207,ë‹¬ê±€,egg,1
-208,ë‹¬ê±€ë…¸ë¥¸ì,"egg yolk",1
-210,ë‹¬ë¦¬ì•„,dahlia,0
-211,ë‹­,chicken,15
-212,"ë‹­ ê°€ìŠ´ì‚´",breast,15
-213,"ë‹­ ë‚ ê°œ","chicken wing",15
-214,"ë‹­ ëª¨ë˜ì£¼ë¨¸ë‹ˆ","gizzard/ ventriculus",15
-215,"ë‹­ ë´‰","buffalo chicken wing drumette/ buffalo wing",15
-216,"ë‹­ ì•ˆì‹¬ì‚´","tender breast",15
-217,ë‹­ê°€ìŠ´ì‚´,"chicken breast",15
-218,ë‹­ê³ ê¸°,chicken,15
-219,ë‹­ë‹¤ë¦¬,"chicken leg",15
-220,ë‹­ë°œ,"chicken feet",15
-221,ë‹­ìƒˆìš°,ise-ebi,9
-222,ë‹­ìœ¡ìˆ˜,"chicken stock",15
-223,ë‹­ì˜ì¥í’€,dayflower,15
-224,ë‹´ë°°,tobacco,0
-225,ë‹¹ê·€,"angelica gigas root",0
-226,ë‹¹ê·¼,carrot,0
-227,ë‹¹ê·¼ë¿Œë¦¬,"carrot/ wild carrot/ queen anne`s lace",0
-229,ë‹¹ë©´,"cellophane noodles/ glass noodles",0
-230,ëŒ€ê²Œ,"snow crab",8
-231,ëŒ€êµ¬,"pacific cod/ gray cod",0
-232,ëŒ€ë‚˜ë¬´ì¤„ê¸°,"bamboo/ bambusoidae",0
-233,ëŒ€ë‘,soybean,5
-234,ëŒ€ì°½,"large intestine",0
-235,ëŒ€ì¶”,jujube,0
-236,ëŒ€íŒŒ,"green Onion",0
-237,ëŒ€í•˜,"fleshy prawn",0
-238,ëŒ€í•©,"harden clam",0
-239,ë”ë•,"bonnet bellflower",0
-240,ë”ë•ë¿Œë¦¬,"lance-asiabell root",0
-241,ë©êµ´ì¥ë¯¸,"climbing rose",0
-242,"ë°ë¦¬ì•¼ë¼ ì†ŒìŠ¤","Teriyaki sauce",0
-243,ë„ê°€ë‹ˆ,"Ox knee bone",0
-244,ë„ë¼ì§€,balloon-flower,0
-245,ë„ë¼ì§€ë¿Œë¦¬,"balloonflower root",0
-246,ë„ë¯¸,"snapper, sea bream",0
-247,ë„í† ë¦¬ë¬µ,"Acorn jelly",0
-248,ëŒë‚˜ë¬¼,stonecrop,0
-249,ëŒë‚˜ë¬¼ì–´ë¦°ìˆœ,"stonecrop young leaf",0
-250,ëŒë”,ishidai,0
-251,ë”,"snapper, sea bream",0
-252,ë™ë°±ë‚˜ë¬´,camellia,0
-253,ë™íƒœ,"frozen pollack",0
-254,"ë¼ì§€ ê°ˆë¹„","spare ribs",0
-255,"ë¼ì§€ ê°ˆë¹„ì‚´",rib,0
-256,"ë¼ì§€ ëŒ€ì°½","pig big intestine",0
-257,"ë¼ì§€ ë“±ì‹¬","loin/ center cut",0
-258,"ë¼ì§€ ë§‰ì°½","pig entrails",0
-259,"ë¼ì§€ ì†Œì°½","pig small intestine",0
-260,"ë¼ì§€ ì¡±ë°œ","jokbal/ pigâ€™s trotters/ pigâ€™s legs.",0
-261,"ë¼ì§€ í† ì‹œì‚´","hanging tender",0
-262,ë¼ì§€ê°ˆë¹„,"pork rib",0
-263,ë¼ì§€ê³ ê¸°,pork,10
-264,ë¼ì§€ê³ ê¸°ë“±ì‹¬,"pork sirloin",10
-265,ë¼ì§€ê³ ê¸°ì•ˆì‹¬,"pork tenderloin",10
-266,ë¼ì§€ê¸°ë¦„,"pork oil",10
-267,ë¼ì§€ê»ë°ê¸°,"pork skin",10
-268,ë¼ì§€ë‚´ì¥,"pig intestines",10
-269,ë¼ì§€ë“±ë¼ˆ,"pig spine",10
-270,ëœì¥,"soybean paste",0
-271,ë‘ë¦…,"fatsia shoots",0
-272,ë‘ë¦…ì–´ë¦°ìˆœ,"aralia elata young shoot",0
-273,ë‘ë¦¬ì•ˆ,durian,0
-274,ë‘ë¦¬ì•ˆì—´ë§¤,"durian/ civet-cat fruit",0
-275,ë‘ë¶€,bean-curd,0
-276,ë‘ì¶©,eucommia,0
-277,ë‘¥êµ´ë ˆ,"solomonâ€™s seal",0
-278,ë‘¥ê·¼ë§ˆë©ì´ë¿Œë¦¬,"airpotato yam root",0
-279,ë“¤êµ­í™”,"camomile/ wild chrysanthemum",0
-280,ë“¤ê¸°ë¦„,"perilla oil",0
-281,ë“¤ê¹¨,perilla,0
-282,ë“¤ê¹¨ê°€ë£¨,"perilla powder",0
-283,ë“¤ê¹¨ì”¨,perilla,0
-284,ë“¤ê¹»ì,"perilla leaves",0
-285,ë“±ê°ˆë¹„ì‚´,"center loin",0
-286,ë“±ë‚˜ë¬´,"japanese wisteria/ wistaria",0
-287,ë“±ì‹¬ì´ˆ,common-rush,0
-288,ë”¸ê¸°,strawberry,0
-289,ë”¸ê¸°ì—´ë§¤,strawberry,0
-290,ë”¸ê¸°ì£¼ìŠ¤,"strawberry juice",0
-291,ë•…ì½©,peanut,4
-292,ë•…ì½©ê²¬ê³¼,"peanut/ earth nut",4
-293,ë–¡,"rice cake",0
-294,ë–¡êµ­ë–¡,"rice cake",0
-295,ë¼ë©´,,0
-296,ë¼ë²¤ë”,lavender,0
-297,ë¼ì´ìŠ¤í˜ì´í¼,"rice paper",0
-298,ë¼ì„,lime,0
-299,ë¼ì„ì—´ë§¤,lime,0
-300,ë¼ì¦ˆë² ë¦¬,raspberry,0
-301,ë¼ì¦ˆë² ë¦¬ì—´ë§¤,"grayleaf red raspberry",0
-302,"ëŒë¶€íƒ„ ê³¼ìœ¡",rambutan,0
-303,"ëŒë¶€íƒ„ ì—´ë§¤",rambutan,0
-304,ëŒë¶€íƒ„ê³¼ìœ¡,"hairy litchi/ rambutan",0
-305,ë˜ë””ì‹œ,radish,0
-306,ë ˆëª¬,lemon,0
-307,ë ˆëª¬ê³¼ìœ¡,"lemon pulp",0
-308,ë ˆëª¬ì—´ë§¤,lemon,0
-309,ë ˆëª¬ì¦™,"lemon juice",0
-310,ë Œì¦ˆì½©ì”¨,lentil,0
-311,ë Œí‹¸ì½©,lentil,0
-312,ë¡œì¦ˆë§ˆë¦¬,rosemary,0
-313,ë¡œì¦ˆë§ˆë¦¬ì–´ë¦°ìˆœ,rosemary,0
-314,ë£¨í”¼ë„ˆìŠ¤,lupinnus,0
-315,ë¦¬ì½”íƒ€,"ricotta cheese",0
-316,ë§ˆ,"chinese yam",0
-317,ë§ˆê°€ë¦°,margarine,0
-318,ë§ˆëŠ˜,garlic,0
-319,ë§ˆëŠ˜ì,garlic,0
-320,ë§ˆëŠ˜ì¢…,"garlic stem",0
-321,ë§ˆë¥¸ê³ ì¶”,"dried red pepper",0
-322,ë§ˆì‹œë©œë¡œ,marshmallow,0
-323,ë§ˆìš”ë„¤ì¦ˆ,mayonnaise,0
-324,ë§ˆíƒ€ë¦¬,dahurian-patrinia,0
-326,ë§‰ê±¸ë¦¬,"raw[unrefined] rice wine",0
-327,ë§Œë‘í”¼,"dumpling skin",0
-328,ë§ë¦°í‘œê³ ë²„ì„¯,"dried dumpling[wonton] skin",0
-329,ë§›ê°„ì¥,"soy sauce",0
-330,ë§›ì‚´,"razor-clam meat",0
-331,ë§›ì†Œê¸ˆ,"seasoned salts",0
-332,ë§›ìˆ ,"seasoned salts",0
-333,ë§ê³ ,mango,0
-334,ë§ê³ ìŠ¤í‹´,mangosteen,0
-335,ë§ê³ ìŠ¤í‹´ì—´ë§¤,"mangosteen/ mangostan/ manggis",0
-336,ë§¤ìƒì´,"seaweed fulvescens",0
-337,ë§¤ì‹¤,"japanese apricot",0
-338,ë§¤ì‹¤ì•¡,"plum liquid",0
-339,ë§¤ì‹¤ì¥ì•„ì°Œ,"pickled Japanese apricot",0
-340,ë§¤ì‹¤ì²­,"plum liquid",0
-341,ë§¤í™”ê½ƒ,apricot,0
-342,ë§¥ë¬¸ë™,"broadleaf liriope",0
-343,ë¨¸ë£¨,"korean wild grapes",0
-344,ë¨¸ìŠ¤í¬ë©œë¡ ,muskmelon,0
-345,ë¨¸ìŠ¤í¬ë©œë¡ ì—´ë§¤,"musk melon",0
-346,ë¨¸ìŠ¤íƒ€ë“œ,mustard,0
-347,ë¨¸ìŠ¤í„°ë“œ,mustard,0
-348,ë¨¸ìœ„ëŒ€,"bog rhubarb",0
-349,ë©€êµ¬ìŠ¬ë‚˜ë¬´,subtripinnata,0
-350,ë©ê²Œ,"sea squirt",8
-351,ë©”ê¸°,"far eastern catfish",0
-352,ë©”ëšœê¸°,orthoptera,0
-353,ë©”ë°€,buckwheat,3
-354,ë©”ë°€êµ­ìˆ˜,"buckwheat noodle",3
-355,ë©”ë°€ê½ƒ,"buckwheat flower",3
-356,ë©”ì£¼,"korean-style soybean koji",0
-357,ë©”ì£¼ì½©,soybeans,0
-358,ë©”ì¶”ë¦¬ì•Œ,"quailâ€™s egg",0
-359,ë©œë¡ ,melon,0
-360,ë©¥ìŒ€,"nonglutinous rice",0
-361,ë©¥ìŒ€ê°€ë£¨,"nonglutinous rice powder",0
-362,ë©¥ìŒ€ë–¡,"nonglutinous rice cake",0
-363,ë©§ë¼ì§€,"wild boar meat/ brawn",0
-364,ë©´,noodle,0
-365,"ë©¸ê· í•œ ìš°ìœ ","sterilized milk",2
-366,ë©¸ì¹˜,anchovy,0
-367,ë©¸ì¹˜ê°€ë£¨,"anchovy powder",0
-368,ë©¸ì¹˜ì•¡ì “,"anchovy sauce",0
-369,ë©¸ì¹˜ìœ¡ìˆ˜,"anchovy Stock",0
-370,ë©¸ì¹˜ì “,"salted[pickled] and fermented anchovies",0
-371,ëª…ë€,"spawn[roe] of a pollack",0
-372,ëª…íƒœ,"alaska pollack",0
-373,ëª¨ê³¼,"chinese quince",0
-374,ëª¨ê³¼ë‚˜ë¬´ì—´ë§¤,"chinese quince/ chaenomeles fruit/ mu gua",0
-375,ëª¨ë€ê½ƒì,"moutan root bark",0
-376,ëª¨ì‹œì¡°ê°œ,"shortnecked clam",18
-377,ëª¨ì§œë ë¼,mozzarella,0
-378,ëª¨ì§œë ë¼ì¹˜ì¦ˆ,mozzarella,0
-379,ëª©ë ¨ê½ƒì,"kobus magnolia",0
-380,ëª©ì´ë²„ì„¯,"tree ear",0
-381,ëª©í–¥,compositae,0
-382,ëª©í™”ì”¨,"cotton seed",0
-383,ë¬´,radish,0
-384,ë¬´êµ­ë¬¼,"radish broth",0
-385,ë¬´ê¶í™”,"rose of sharon",0
-386,ë¬´ë§ë­ì´,"dried slices of daikon/ chinese radish dried",0
-387,ë¬´ìˆœ,radishï¼Ÿsprouts,0
-388,ë¬´ì²­,"radish leaves",0
-389,ë¬´í™”ê³¼,fig,0
-390,ë¬´í™”ê³¼ì—´ë§¤,fig,0
-391,ë¬¸ì–´,octopus,0
-392,ë¬¼,water,0
-393,ë¬¼ê°œ,seal,0
-394,ë¬¼ë¯¸ì—­,wakame,0
-395,ë¬¼ì—¿,"starch syrup",0
-396,ë¯¸ë‚˜ë¦¬,"java water-dropwort",0
-397,ë¯¸ë‹ˆíŒŒí”„ë¦¬ì¹´,"mini paprika",0
-398,ë¯¸ë”ë•,"warty sea squirt",0
-399,ë¯¸ë¦¼,"mirim(Japanese alcohol)",0
-400,ë¯¸ì†Œëœì¥,"Japanese miso",0
-401,ë¯¸ì—­,"sea mustard",0
-402,ë¯¸ì—­ê·€,seaweed,0
-403,ë¯¸ì›,"synthetic flavoring matter",0
-404,ë¯¼íŠ¸,mint,0
-405,ë°€,wheat,6
-406,ë°€ê°€ë£¨,flour,6
-407,ë°‘ë§Œê°€ë‹¥ë²„ì„¯,"yophyllum connatum",0
-408,ë°”ë‚˜ë‚˜,banana,0
-409,"ë°”ë¹„í ì†ŒìŠ¤","barbecue Sauces",0
-410,ë°”ì´ì˜¬ë ›,violet,0
-411,ë°”ì§€ë½,"filipino venus",18
-412,ë°”ì§ˆ,basil,0
-413,ë°•ìƒˆ,"a great tit",0
-414,ë°•ì£¼ê°€ë¦¬,"a milkweed",0
-415,ë°˜ë¬˜,cantharides,0
-416,ë°¤,chestnut,13
-417,ë°¤ê³ êµ¬ë§ˆ,é¢åœ°ç“œ,0
-418,ë°¤ë‚˜ë¬´ì—´ë§¤,chestnut,0
-419,ë°¤ì½©,"brown soybean",0
-420,ë°¥,rice,0
-421,ë°©ìš¸ë‹¤ë‹¤ê¸°ì–‘ë°°ì¶”,"brussels sprouts",0
-422,ë°©ìš¸í† ë§ˆí† ,"cherry tomato",12
-423,ë°©í’ë‚˜ë¬¼,"ledebouriella seseloides",0
-424,ë°°,"pear/ pyrus communis l.",0
-425,ë°°ê³¼ìœ¡,"pear pulp",0
-426,ë°°ë‚˜ë¬´ì—´ë§¤,pear,0
-427,ë°°ì¦™,"pear juice",0
-428,ë°°ì´ˆí–¥,"korean mint",0
-429,ë°°ì¶”,"chinese cabbage",0
-430,ë°°ì¶”ê¹€ì¹˜,"napa cabbage kimchi",0
-431,ë°°ì¶”ì,"chinese cabbage",0
-432,ë°°ì¶§ì,"cabbage leaf",0
-433,ë°±ë‹¨í–¥,"white sandalwood",0
-434,ë°±ë„ì—´ë§¤,"peche blanche",0
-435,ë°±ë‘êµ¬,"round cardamon",0
-436,ë°±ë‘êµ¬ì—´ë§¤,"round cardamon fruit",0
-437,ë°±ë¶€ì,ç™½é™„å­,0
-438,ë°±ì„ ,"the tinea",0
-439,ë°±ì˜¤ì´,"white cucumber",0
-440,ë°±íƒœ,soybean,0
-441,ë°±í¬ë„ì£¼,"white wine",0
-442,ë±€ë”¸ê¸°ì—´ë§¤,"indian strawberry",0
-443,ë±…ì–´í¬,"dried slices of seasoned whitebait",0
-444,ë²„ì„¯,mushroom,0
-445,"ë²„ì§„ ì˜¬ë¦¬ë¸Œ ì˜¤ì¼","virgin olive oil",0
-446,ë²„ì°Œ,cherry,0
-447,ë²„ì°Œì—´ë§¤,cherry,0
-448,ë²„í„°,butter,0
-449,ë²Œê°œë¯¸ì·¨ì–´ë¦°ìˆœ,"montane aster",0
-450,ë²Œê¹¨ë©êµ´ì–´ë¦°ìˆœ,"nettle-leaf mint",0
-451,ë²Œê¿€,honey,0
-452,ë²”ë¶€ì±„,"blackberry lily",0
-453,ë²”ë¶€ì±„ë¿Œë¦¬ì¤„ê¸°,"blackberry lily",0
-454,ë²šë‚˜ë¬´ê½ƒ,"cherry flower",0
-455,ë²šë‚˜ë¬´ì—´ë§¤,cherry,0
-456,ë²šë‚˜ë¬´ì,"cherry leaves",0
-457,ë² ê³ ë‹ˆì•„ê½ƒ,"a begonia flower",0
-458,"ë² ë‹ˆí•˜ë£¨ì¹´ ê³ êµ¬ë§ˆ",èœ‚èœœåœ°ç“œ,0
-460,ë² ì´ì»¨,bacon,0
-461,ë³„ê½ƒ,chickweed,0
-462,ë³‘ì–´,"silver pomfret",0
-463,ë³´ë¦„ë‹¬ë¬¼í•´íŒŒë¦¬,mizukurage,0
-464,ë³´ë¦¬,barley,0
-465,ë³´ë¦¬ìˆ˜ë‚˜ë¬´ì—´ë§¤,"autumn olive",0
-467,ë³µë ¹,tuckahoe,0
-468,ë³µë¶„ìë”¸ê¸°,"rubus coreanus",0
-469,ë³µë¶„ìë”¸ê¸°ì—´ë§¤,"korean bramble",0
-470,ë³µìˆ˜ì´ˆ,"amur adonis",0
-471,ë³µìˆ­ì•„,peach,11
-472,ë³µìˆ­ì•„ê³¼ìœ¡,"peach pulp",11
-473,ë³µìˆ­ì•„ë‚˜ë¬´ê½ƒ,"peach/ persicae flos/ persicae calyx",11
-474,ë³µì–´,"globe fish",0
-475,ë³¶ì€ê²°ëª…ì,"roasted sickle-senna",0
-476,ë³¶ì€ì†Œê¸ˆ,"roasted salt",0
-477,ë³¶ì€ìºìŠˆ,"cashew nut",0
-478,ë³¶ì€ì»¤í”¼ì›ë‘,"roasted coffee beans",0
-479,ë³¶ì€í˜¸ë‘,"grilled walnutmeats",14
-480,ë³¸ê°ˆë¹„,"short ribs",0
-481,ë´„ë™,"seasoned cabbage",0
-482,ë¶€ë“¤,"common cat-tail/ reed-mace",0
-483,ë¶€ì±„ì‚´,"top blade/ top blade muscle",0
-484,ë¶€ì¶”,leek,0
-485,ë¶€ì¶”ì,"leek leaf",0
-486,ë¶€ì¹¨ê°€ë£¨,"Korean pancake mix",0
-487,ë¶€í‰ì´ˆ,duckweed,0
-488,"ë¶ë°©ì‚° ê°œêµ¬ë¦¬","dybowski's brown frog",0
-489,ë¶ì–´,"dried pollack",0
-490,ë¶„ê½ƒ,"four-o'clock/ marvel of peru",0
-492,ë¶ˆë¦°ë¯¸ì—­,"soaked seaweed",0
-493,ë¶•ì–´,"crucian carp",0
-494,ë¶•ì¥ì–´,"common conger",0
-495,ë¸Œë¼ì§ˆë„›,"brazil nut",0
-496,ë¸Œë¡œì½œë¦¬,broccoli,0
-498,ë¸Œë¦¬,"brie cheese",0
-499,ë¸”ë™ì˜¬ë¦¬ë¸Œ,"olive nere",0
-500,ë¸”ë£¨ë² ë¦¬,blueberry,0
-501,ë¹„ë‹¨ë²Œë ˆ,"a buprestid",0
-502,ë¹„ë‘˜ê¸°,dove,0
-503,ë¹„ì—”ë‚˜ì†Œì‹œì§€,"Vienna sausage",0
-504,ë¹„ìë‚˜ë¬´,kaya,0
-505,ë¹„íŠ¸,beet,0
-506,ë¹™ì–´,"pond smelt",0
-507,"ë¹¨ê°„ ê³ ì¶”","red cluster pepper",0
-508,ë¹µê°€ë£¨,"bread crumbs",0
-509,ë½•ë‚˜ë¬´,mulberries,0
-510,ë½•ë‚˜ë¬´ê²¨ìš°ì‚´ì´ì,"mulberry mistletoe",0
-511,ë½•ë‚˜ë¬´ì—´ë§¤,"a mulberry",0
-512,ë¿”ì†Œë¼,murex,0
-513,ì‚¬ê³¨,"marrow bone",0
-514,ì‚¬ê³¼,apple,0
-515,ì‚¬ê³¼ê»ì§ˆ,"apple peel",0
-516,ì‚¬ê³¼ì‹ì´ˆ,"cider vinegar",0
-517,ì‚¬ê³¼ì—´ë§¤,apple,0
-518,ì‚¬ìŠ´,deer,0
-519,ì‚¬ìŠ´ê³ ê¸°,venison,0
-520,ì‚¬ìŠ´ë¿”,"bois de cerf",0
-521,ì‚¬ì‹œë‚˜ë¬´,"aspen/ (white) poplar",0
-522,ì‚¬ì´ë‹¤,cider,0
-523,ì‚¬í”„ë€ì•”ìˆ ë¨¸ë¦¬,"saffron crocus",0
-524,ì‚¬í”„ë€ì•”ìˆ ë¨¸ë¦¬ì¶”ì¶œë¬¼,"saffron extract",0
-525,ì‚°ë‚™ì§€,"sliced R\raw octopus",0
-526,ì‚°ë‹¬ë˜ì–´ë¦°ì‹ë¬¼,"long-stamen chive",0
-527,ì‚°ëŒë°°ë‚˜ë¬´ì—´ë§¤,"chinese pear/ sand pear",0
-528,ì‚°ë‘¥êµ´ë ˆì,"var. thunbergii",0
-529,ì‚°ë§ˆ,"white yam",0
-530,ì‚°ì‚¬ë‚˜ë¬´,"haw/ black/ bark",0
-531,ì‚°ì‚¬ë‚˜ë¬´ì,"large chinese hawthorn",0
-532,ì‚°ìˆ˜ìœ ,"asiatic cornelian cherry",0
-533,ì‚°ìˆ˜ìœ ì—´ë§¤,"asiatic cornelian cherry",18
-534,ì‚°ì•½ë¿Œë¦¬ì¤„ê¸°,dioscoreaceae,0
-535,ì‚´êµ¬,apricot,0
-536,ì‚´êµ¬ë‚˜ë¬´ê½ƒ,"apricot flower",0
-537,ì‚´êµ¬ë‚˜ë¬´ì”¨,"apricot tree seed",0
-538,ì‚´êµ¬ë‚˜ë¬´ì—´ë§¤,apricot,0
-539,ì‚´ë¼ë¯¸,salami,0
-540,ì‚´ë²¤ìë¦¬,"jarbua terapon",0
-541,ì‚´ì¹˜ì‚´,"chuck flap tail",0
-542,ì‚¶ì€ê³„ë€,"boiled egg",1
-543,ì‚¼ê²¹ì‚´,"belly, bacon, side",0
-544,ì‚¼ìƒ‰ì œë¹„ê½ƒ,pansy,0
-545,ì‚¼ì„¸ê¸°,"sea raven/ shaggy sea raven",0
-546,ì‚¼ì¹˜,"Japanese Spanish mackerel",0
-547,ì‚¿ê°“ë‚˜ë¬¼,.,0
-548,ìƒìˆ˜ë¦¬ë‚˜ë¬´ê²¬ê³¼,"quercus/ oriental chestnut oak/ acorn",13
-549,ìƒì¶”,lettuce,0
-550,ìƒì¶”ì,lettuce,0
-551,ìƒì¹˜,lettuce,0
-552,ìƒí™©ë²„ì„¯,"phellinus linteus",0
-553,ìƒˆê¼¬ë§‰,"ark shell",18
-554,ìƒˆì†¡ì´ë²„ì„¯,"king oyster mushroom",0
-555,ìƒˆì‹¹ì±„ì†Œ,"sprout vegetable",0
-556,ìƒˆìš°,shrimp,9
-557,ìƒˆìš°ì‚´,shrimp,9
-558,ìƒˆìš°ì “,"salted shrimp",9
-559,ìƒˆì¡°ê°œ,"egg cockle",18
-560,ìƒëŸ¬ë“œì±„ì†Œ,"salad vegetable",0
-561,ìƒëŸ¬ë¦¬,celery,0
-562,ìƒë¹„ì–´,"clary(clary sage)",0
-563,ìƒê°•,ginger,0
-564,ìƒê°•ê°€ë£¨,"ginger powders",0
-565,ìƒê°•ë‚˜ë¬´,ginger,0
-566,ìƒê°•ë¿Œë¦¬,"ginger/ amomum zingiber",0
-567,ìƒê°•ì¦™,"ginger juice",0
-568,ìƒëŒ€êµ¬,codfish,0
-569,ìƒìƒˆìš°,"raw shrimp",9
-570,ìƒìˆ˜,water,0
-571,ìƒí¬ë¦¼,"freash cream",0
-572,ìƒ¤í”„ë€,"saffron/ zafferano",0
-573,ìƒ´í˜ì¸,champagne,0
-574,ì„œëŒ€,tonguefish,0
-575,ì„œë¦¬íƒœ,"green kernel black bean",0
-576,ì„œì–‘ë¯¼ë“¤ë ˆ,dandelion,0
-577,ì„œì–‘ë¯¼ë“¤ë ˆì–´ë¦°ì,dandelion,0
-578,ì„œì–‘ë¯¼ë“¤ë ˆì,"organic dandelion leaf",0
-579,ì„œì–‘ë°°,"european pear",0
-580,ì„ë¥˜,pomegranate,0
-581,ì„ë¥˜ë‚˜ë¬´ì—´ë§¤,"dwarf pomegranate",0
-582,ì„ì í’€ì–´ë¦°ì,stachys,0
-583,ì„ ì§€,clottedï¼Ÿbloodï¼Ÿfromï¼Ÿslaughteredï¼Ÿcowsï¼Ÿandï¼Ÿpigs,0
-584,ì„¤íƒ•,suger,0
-585,ì„±ê²Œ,"sea urchin",8
-586,ì„±ê²Œì•Œ,"sea urchin roe",8
-587,ì„¸ì´ì§€,sage,0
-588,ì…€ëŸ¬ë¦¬,celery,0
-589,ì…€ëŸ¬ë¦¬ì,"celery/ smallage/ garden celery/ wild celery",0
-590,"ì†Œ ê°„",liver,0
-591,"ì†Œ ê°ˆë¹„ì‚´",intercostal,0
-592,"ì†Œ ê¼¬ë¦¬","ox tail",0
-593,"ì†Œ ì•ˆì‹¬",tenderloin,0
-594,"ì†Œ í† ì‹œì‚´","hanging tender",0
-595,ì†Œê³ ê¸°,beef,0
-596,ì†Œê¸ˆ,salt,0
-597,ì†Œê¼¬ë¦¬,"cow tail",0
-598,ì†Œë‚˜ë¬´ê»ì§ˆ,"pine bark",0
-599,ì†Œë‚˜ë¬´ë¿Œë¦¬,"korean red pine",0
-600,ì†Œë‚˜ë¬´ìˆœ,"korean red pine",0
-601,ì†Œë¼,"spiny turban shell",0
-602,ì†Œë©´,"plain noodles",0
-603,ì†Œì‹œì§€,sausage,0
-604,ì†Œì£¼,"soju, Korean distilled spirits",0
-605,ì†Œì² ,"sago palm",0
-606,ì†Œì² ì”¨,"sago palm",0
-607,ì†ë‹¨,çºŒæ–·,0
-608,ì†ë°”ë‹¥ì„ ì¸ì¥,"indian fig/ prickly pear",0
-609,ì†ë°”ë‹¥ì„ ì¸ì¥ì—´ë§¤,"prickly pear/ indian fig",0
-610,ì†ë°”ë‹¥ì„ ì¸ì¥ì¤„ê¸°,"indian fig/ prickly pear",0
-611,ì†”ì£ë‚˜ë¬´,"stone pine",0
-612,ì†”ì£ë‚˜ë¬´ê²¬ê³¼,"italian stone pine/ mediterranean stone pine",13
-613,ì†œë‹¤ë¦¬ì–´ë¦°ìˆœ,"korean edelweiss",0
-614,ì†¡ì‚¬ë¦¬,"asiatic ricefish",0
-615,ì†¡ì–´,"cherry salmon/ masou salmon",0
-616,ì†¡ì´,"pine mushroom",0
-617,ì†¡ì´ë²„ì„¯,"pine mushroom",0
-618,ì†¡í™”,æ¾èŠ±,0
-619,ì‡ ê³ ê¸°,beef,16
-620,ì‡ ê³ ê¸°ìŠ¤í†¡,"beef stock",16
-621,ì‡ ëœ¨ê¸°,"horsetail/ field horsetail",0
-622,ì‡ ëœ¨ê¸°ì,"horsetail/ field horsetail",0
-623,ì‡ ë¯¸ì—­,sujime,0
-624,ì‡ ë¹„ë¦„,"common purselane/ pigweed",0
-625,ì‡ ë¹„ë¦„ìˆœ,purslane,0
-626,ìˆ˜êµ­,hydrangea,0
-627,ìˆ˜êµ­ì,hydrangea,0
-628,ìˆ˜ë‹­,"rooster, cock",15
-629,ìˆ˜ë ¨,"water lily",0
-630,ìˆ˜ë ¨ë•…ì†ì¤„ê¸°,"water lily",0
-631,ìˆ˜ë°•,watermelon,0
-632,ìˆ˜ë°•ì—´ë§¤,watermelon,0
-633,ìˆ˜ë°•ì£¼ìŠ¤,"watermelon juice",0
-634,ìˆ˜ì‚¼,"fresh ginseng",0
-635,ìˆ˜ì„¸ë¯¸,"luffa cylindrica",0
-636,ìˆ˜ì„¸ë¯¸ì˜¤ì´ì–´ë¦°ì—´ë§¤,"smooth loofah",0
-637,ìˆ˜ìˆ˜,sorghum,0
-638,ìˆ˜ìˆ˜ì”¨,sorghum,0
-639,ìˆ˜ì–‘ë²„ë“¤,"weeping willow",0
-640,ìˆ™ì£¼,"bean sprouts",0
-641,ìˆ™ì£¼ë‚˜ë¬¼,"bean sprout",0
-642,ìˆœëŒ€,"sundae(Korean sausage)",0
-643,ìˆœë‘ë¶€,"soft tofu",0
-644,ìˆœë¬´,turnip,0
-645,ìˆœë¬´ì–‘ë°°ì¶”,kohlrabi,0
-646,ìˆ ,alcohol,0
-647,ìˆ­ì–´,"flathead mullet",0
-648,ìŠˆê°€íŒŒìš°ë”,"powder sugar",0
-649,ìŠ¤ìœ„í‹°,sweetie,0
-650,ìŠ¤íƒ€í”„ë£¨íŠ¸,"star fruit",0
-651,ìŠ¤íƒ€í›„ë¥´ì¸ ,starfruit,0
-652,ìŠ¤íƒ€í›„ë¥´ì¸ ì—´ë§¤,"starfruit/ carambola",0
-653,ìŠ¤íŒŒê²Œí‹°,spaghetti,0
-654,ìŠ¤íŒŒê²Œí‹°ë©´,spaghetti,0
-655,ìŠ¬ë¼ì´ìŠ¤ì¹˜ì¦ˆ,"slice cheese",0
-656,ìŠ¬ë¼ì´ìŠ¤í–„,"slice ham",0
-657,ì‹œê³„ê½ƒ,"passion flower",0
-658,ì‹œê¸ˆì¹˜,spinach,0
-659,ì‹œê¸ˆì¹˜ì,spinach,0
-660,ì‹œë‚˜ëª¬,cinnamon,0
-662,ì‹œë˜ê¸°,"dried radish greens",0
-663,ì‹œë¦¬ì–¼,cereal,0
-664,ì‹œì‚¬ëª¨,"capelin/ candlefish",0
-665,ì‹ë¹µ,"(plain) bread",0
-666,ì‹ìš©ëˆ„ì—ë²ˆë°ê¸°,beondegi,0
-667,ì‹ìš©ë‹¬íŒ½ì´,"an escargot",0
-668,ì‹ìš©ìœ ,"cooking oil",0
-669,ì‹ì´ˆ,vinegar,0
-670,ì‹ ê¹€ì¹˜,"sour[over-fermented] kimchi",0
-671,"ì‹ ì„  ì°¸ë§ˆ","fresh yam",0
-672,ì‹ ì„ ë°”ë‚˜ë‚˜,"fresh bananas",0
-673,ì‹ ì„ í† ë§ˆí† ,"fresh tomatoes",12
-674,"ì‹ ì„ í•œ í‘œê³ ë²„ì„¯","fresh oak mushroom/ shiitake fungus",0
-675,ì‹¤ë²„ë² ë¦¬ì—´ë§¤,silverberry,0
-676,ì‹¤íŒŒ,"a small green onion",0
-677,ìŒ€,rice,0
-678,ìŒ€ê°€ë£¨,"rice flour",0
-679,ìŒ€ê²¨ê¸°ë¦„(ë¯¸ê°•ìœ ),"rice oil",0
-680,ìŒ€êµ­ìˆ˜,"rice noodle",0
-681,ìŒ€ëœ¨ë¬¼,"used water from washing rice",0
-682,ìŒˆì¥,ssamjang,0
-683,ì˜ê°€ë¦¬,"freshwater mandarin fish",0
-684,ì ë°°ê°í­,"luna lion fish",0
-685,ì‘¥,"mugwort, wormwood",0
-686,ì‘¥ê°“,"crown daisy",0
-687,ì‘¥ê°“ì,"crown daisy",0
-688,ì‘¥ë¶€ìŸì´,"aster yomena",0
-689,ì‘¥ë¶€ìŸì´ì–´ë¦°ì,"aster yomena",0
-690,ì”€ë°”ê·€,"toothed ixeridium",0
-691,ì”€ë°”ê·€ì,"korean ixeris",0
-692,ì•„êµ¬,"anglerfish, monkfish",0
-693,ì•„ê·€,"anglerfish, monkfish",0
-694,ì•„ê¸°ì–‘ë°°ì¶”ì,"brussels sprouts",0
-695,ì•„ë¼ë¹„ì•ˆììŠ¤ë¯¼ê½ƒ,"arabian jasmine",0
-696,ì•„ë¡œë‹ˆì•„ì—´ë§¤,"black chokeberry",0
-697,ì•„ë§ˆ,flax,0
-698,ì•„ëª¬ë“œ,almond,13
-699,ì•„ëª¬ë“œê°€ë£¨,almond,13
-700,ì•„ëª¬ë“œê²¬ê³¼,"sweet almond",13
-701,ì•„ëª¬ë“œì™¸í”¼,"sweet almond",13
-702,ì•„ë³´ì¹´ë„,avocado,0
-703,ì•„ë³´ì¹´ë„ì—´ë§¤,"avocado/ alligator pear",0
-704,"ì•„ì‚­ì´ ê³ ì¶”","chili (pepper)",0
-705,ì•„ìŠ¤íŒŒë¼ê±°ìŠ¤,asparagus,0
-706,ì•„ìŠ¤íŒŒë¼ê±°ìŠ¤ì–´ë¦°ìˆœ,asparagus,0
-707,ì•„ì˜¤ë¦¬ì‚¬ê³¼,"green apple",0
-708,ì•„ìš±,"curled mallow",0
-709,ì•„ì¹´ì‹œì•„,"shittah tree",0
-710,ì•„ì¹´ì‹œì•„ë‚˜ë¬´ê½ƒ,"fleur d'acacia.",0
-711,ì•ˆì‹í–¥,angelica,0
-712,ì•ˆì‹¬,tenderloin,0
-713,ì•ˆì‹¬ì‚´,tenderloin,0
-714,ì•ˆì°½ì‚´,"outside skirt",0
-715,ì•”ë‹­,hen,15
-716,ì•ì¹˜ë§ˆì‚´,"thin flank",0
-718,ì• ê¸°ë‚˜ë¦¬ì–´ë¦°ì,fairy-bells,0
-719,ì• ê¸°ë˜¥í’€,"asian celandine/ greater celandine",0
-720,ì• ê¸°ì›ì¶”ë¦¬ì–´ë¦°ìˆœ,"small yellow daylily",0
-721,ì• í”Œë§ê³ ,"apple mango",0
-722,ì• í”Œë¯¼íŠ¸,"apple mint/ roundleave mint",0
-723,ì• í˜¸ë°•,"green pumpkin/ young pumpkin",0
-724,ì•¡ì “,"aekjeot, fish sauce",0
-725,ì•µë‘,"korean cherry",0
-726,ì•µë‘ë‚˜ë¬´ì—´ë§¤,"chinese bush cherry",0
-727,ì•µì´ˆì–´ë¦°ì‹¹,"a primrose",0
-728,ì•¼ìƒë”¸ê¸°,"wild strawberry",0
-729,ì•¼ìë‚˜ë¬´,"a palm (tree)",0
-730,ì•¼ì½˜ì–´ë¦°ì,yacon,0
-731,ì–‘ê³ ê¸°,lamb,0
-732,ì–‘ê·€ë¹„,opium-poppy,0
-733,ì–‘ê·€ë¹„ì „ì´ˆ,"opium poppy",0
-734,ì–‘ë…,seasoning,0
-735,ì–‘ë…ì¥,marinade,0
-736,ì–‘ë°°ì¶”,cabbage,0
-737,ì–‘ìƒì¶”,"lettuce/ cabbage lettuce",0
-738,ì–‘ìƒì¶”ì,lettuce,0
-739,ì–‘ì†¡ì´,"button mushroom",0
-740,ì–‘ì†¡ì´ë²„ì„¯,"cultivated mushroom",0
-741,ì–‘ì¥ë”,acanthuridae,0
-742,ì–‘ì§€êµ­ë¬¼,"brisket, flank",0
-743,ì–‘íŒŒ,onion,0
-744,ì–‘íŒŒì¦™,"onion juice",0
-745,ì–˜ë¡œ,yarrow,0
-746,ì–´ë¦°ìì±„ì†Œ,"sprout vegetable",0
-747,ì–´ë¬µ,"fish cake",0
-748,ì–¼ê°ˆì´ë°°ì¶”,"Chinese cabbage, napa cabbage",0
-749,ì–¼ë ˆì§€,"dog-tooth violet",0
-750,ì–¼ìŒ,ice,0
-751,ì—„ë‚˜ë¬´,"castor aralia",0
-752,ì—…ì§„ì‚´,"short plate",0
-753,ì—‰ê²…í€´,tiger-thistle,0
-754,ì—ë®¤,"an emu",0
-755,"ì— ë³´ë¥´ê·¸ ë¸Œë¦¬","emborg brie",0
-756,"ì— ë³´ë¥´ê·¸ ì¹´ë§ë² ë¥´","emborg camembert",0
-757,ì—°,lotus,0
-758,ì—°ê²¨ì,"light mustard",0
-759,ì—°ê·¼,"lotus root",0
-760,ì—°ê½ƒ,"lotus flower",0
-761,ì—°ë‘ë¶€,"soft soybean curd",0
-762,ì—°ë§¥,oat,0
-763,ì—°ì–´,salmon,0
-764,ì—°ì,"a lotus leaf",0
-765,ì—´ë¬´,"young radish",0
-766,ì—´ë¬´ê¹€ì¹˜,"young radish kimchi",0
-767,ì—¼ì†Œ,goat,0
-768,ì˜ì–‘ë¶€ì¶”,chives,0
-769,ì˜ì§€ë²„ì„¯,"glossy ganoderma",0
-770,ì˜¤ê°ˆí”¼,"stalkless-flower eleuthero",0
-771,ì˜¤ê°ˆí”¼ë‚˜ë¬´ì¤„ê¸°,"five-leaved aralia",0
-772,ì˜¤ê³¨ê³„,"chicken, black bone",0
-773,ì˜¤ë””,mulberries,0
-774,ì˜¤ë ˆê°€ë…¸,oregano,0
-775,ì˜¤ë Œì§€,"navel orange",0
-776,ì˜¤ë¦¬ê³ ê¸°,"duck meat",0
-777,ì˜¤ë¯¸ì,schizandra,0
-778,ì˜¤ë¯¸ìì—´ë§¤,schizandra,0
-779,ì˜¤ì†Œë¦¬,badger,0
-780,ì˜¤ì•½,"lindera root",0
-781,ì˜¤ì´,cucumber,0
-782,ì˜¤ì´ì—´ë§¤,cucumber,0
-783,ì˜¤ì´í’€,"a burnet",0
-784,ì˜¤ì´í”¼í´,"pickled cucumber",0
-785,ì˜¤ì§•ì–´,squid,17
-786,ì˜¤ì§•ì–´ì±„,"shredded squid",17
-787,ì˜¥ë”,"red tilefish/ red horsehead",0
-788,ì˜¥ìˆ˜ìˆ˜,"corn/ maize",0
-789,ì˜¥ìˆ˜ìˆ˜ê¸°ë¦„,"corn oil",0
-791,ì˜¥ìˆ˜ìˆ˜í†µì¡°ë¦¼,"canned corn",0
-792,ì˜¬ë¦¬ê³ ë‹¹,oligosaccharide,0
-793,ì˜¬ë¦¬ë¸Œ,olive,0
-794,"ì˜¬ë¦¬ë¸Œ ì˜¤ì¼","olive oil",0
-795,ì˜¬ë¦¬ë¸Œë‚˜ë¬´ì—´ë§¤,olive,0
-796,ì˜¬ë¦¬ë¸Œì˜¤ì¼,"olive oil",0
-797,ì˜¬ë¦¬ë¸Œìœ ,"olive oil",0
-798,ì™€ì‚¬ë¹„,wasabi,0
-799,ì™€ì¸,wine,0
-800,ì™„ë‘,pea,0
-801,ì™„ë‘ì½©,pisumï¼Ÿsativum,0
-802,ì™•ê²Œ,"red king crab",8
-803,ìš”êµ¬ë¥´íŠ¸,yoghurt,0
-804,ìš©ê³¼,"dragon fruit",0
-805,ìš©ë‹´(ì¤„ê¸°ì œì™¸),"gentian/ stemless",0
-806,ìš©ë‹´ë¿Œë¦¬,"gentian/ rhizome or root",0
-807,ìš°ê±°ì§€,"outer leaves",0
-808,ìš°ë™ë©´,"udong noodle",0
-809,ìš°ë ì´,"freshwater[mud, pond] snail",0
-810,ìš°ì—‰,"great burdock",0
-811,ìš°ìœ ,milk,2
-812,ìš¸ê¸ˆ,turmeric,0
-813,ì›ì¶”ë¦¬,"day lily",0
-814,ì›ì¶”ë¦¬ê½ƒë´‰ì˜¤ë¦¬,"common day liiy/ orange day lily/ day lily",0
-815,ì›ì¶”ë¦¬ì–´ë¦°ì,"common day liiy/ orange day lily/ day lily",0
-816,ì›”ê³„ìˆ˜ì,"bay leaf",0
-817,ì›”ë„›,walnut,0
-818,ìœ ë¶€,"fried tofu",0
-819,ìœ ì,citron,0
-820,ìœ ìì—´ë§¤,"citron fruit",0
-821,ìœ ì œí’ˆ,"dairy products",0
-822,ìœ ì±„,rapeseed,0
-823,ìœ ì±„ì”¨ê¸°ë¦„,"rape oil",0
-824,ìœ ì¹¼ë¦½íˆ¬ìŠ¤,"eucalyptus globulus leaves",0
-825,"ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ì","eucalyptus leaf",0
-826,ìœ¡ë‘êµ¬,nutmeg,0
-827,ìœ¡ë‘êµ¬ì”¨,"nutmeg seed",0
-828,ìœ¡ìˆ˜,"meat broth, meat stock",0
-829,ìœ¡í¬,"beef jerky",0
-830,ìœ¡íšŒ,"yukhoe, Korean-style raw beef",0
-831,ìœ¤íŒë‚˜ë¬¼ì–´ë¦°ìˆœ,"korean disporum",0
-832,ìœ¨ë¬´,adlay,0
-833,ìœ¨ë¬´ì”¨,"job's tears/ adlay/ adlai/ coicis semen",0
-834,ì€ë°©ìš¸ê½ƒ,"may lily/ lily of the valley",0
-835,ì€í–‰,maidenhair,13
-837,ì€í–‰ë‚˜ë¬´ì,ginko,0
-838,ì€í–‰ì—´ë§¤,ginkgo,13
-839,ì¸ì‚¼,ginseng,0
-840,ì¸ì‚¼ë¿Œë¦¬,"ginseng root",0
-841,ì¸ì‚¼ì—´ë§¤,"ginseng fruit",0
-842,ì¸ì ˆë¯¸,"injeolmi, Korean traditional rice cake",0
-843,ì‰ì–´,"common carp",0
-844,ìê·€ë‚˜ë¬´ê½ƒ,"silk tree flower",0
-845,ìë‘,plum,0
-846,ìë‘ë‚˜ë¬´ì—´ë§¤,"plum tree/ japanese plum",0
-847,ìë‘í•µ,plum,0
-848,ìë€,"bletillae rhizoma",0
-849,ìë¦¬ê³µ,"phytolacca esculenta",0
-850,ìë¦¬ë”,"pearl-spot chromis",0
-851,ìëª½,grapefruite,0
-852,ìëª½ê³¼ìœ¡,grapefruit,0
-853,ìëª½ì—´ë§¤,grapefruit,0
-854,ìëª½ì£¼ìŠ¤,"grapefruite juice",0
-855,ììš´ì˜,milk-vetch,0
-856,ìì‘ë‚˜ë¬´,birch,0
-857,ìì£¼ê°ì,"purple potato",0
-858,ìì£¼ë£¨ë“œë² í‚¤ì•„,echinacea,0
-859,ì‘ë‘ì½©,"sword bean",0
-860,ì‘ì•½,"peony root",0
-861,ì”ë©¸ì¹˜,"japanese anchovy/ anchovy",0
-862,ì¡ë¼ˆêµ­ë¬¼,"mixed bone broth",0
-863,ì£,"pine nut",0
-864,ì£ë‚˜ë¬´,"korean pine",0
-865,ì£ë‚˜ë¬´ê²¬ê³¼,"korean pine/ pine nut/ pine nut",13
-866,ì£ë‚˜ë¬´ì”¨ì•—,"nut pine",13
-867,ì£ë‚˜ë¬´ì,"nut pine leaf",0
-868,ì¥ì•„ì°Œ,"pickled vegetables",0
-869,ì¥ì–´,eel,0
-870,ì¬ìŠ¤ë¯¼,jasmine,0
-871,ì¬ìŠ¤ë¯¼ê½ƒ,"jasmine flower",0
-872,ì¬ì²©,"marsh clam",0
-873,"ì €ì˜¨ ì‚´ê· í•œ ìš°ìœ ","pasteurized milk",2
-874,ì ìƒì¶”,"red lettuce",0
-875,ì ì–‘ë°°ì¶”,"red cabbage",0
-876,ì ì‘ì•½,"paeony/ chinese paeony",0
-877,ì í¬ë„ì£¼,"red wine",0
-878,ì „ê°ˆ,scorpion,0
-879,ì „ë³µ,abalone,18
-880,ì „ë¶„,starch,0
-881,ì „ì–´,"dotted gizzard shad",0
-882,ì ‘ì‹œê½ƒ,hollyhock,0
-883,ì “ìƒˆìš°,"akiami paste shrimp",9
-884,ì •ì–´ë¦¬,sardine,0
-885,ì œë¼ëŠ„,geranium,0
-886,ì œë¼ë‹ˆì›€,geranium,0
-887,"ì œë¼ë‹ˆì›€, ë¡œì¦ˆ","geranium / rose",0
-888,ì œë¹„ê½ƒ,"manchurian violet",0
-889,ì œë¹„ì¶”ë¦¬,"rope meat",0
-890,ì¡°,"italian millet",0
-891,ì¡°ê°œ,clam,18
-892,ì¡°êµ¬ë“±,"uncaria rhynchophylla",0
-893,ì¡°ê¸°,"croaker/ yellow corbina",0
-894,ì¡°ë¯¸ë£Œ,"seasoning, (formal) condiment",0
-895,ì¡°ìƒ,mandarin,0
-897,ì¡°ì²­,"grain syrup",0
-898,ì¡¸ë³µ,"panther puffer",0
-899,ì¢ìŒ€,"foxtail millet",0
-900,ì£¼ê¾¸ë¯¸,"webfoot octopus",0
-901,ì£¼ë¦„ì,"asian mazus",0
-902,ì£¼ëª©,yew,0
-903,ì£¼ëª©ì—´ë§¤,"japaness yew/ yew",0
-904,ì£½ìˆœ,"bamboo sprout",0
-905,ì¤‘êµ­ê³„í”¼,"chinese cinnamon",0
-906,ì¤‘êµ­ë‹¹ê·€,"dang gui/ dan gui/ dang quai",0
-907,ì¤‘êµ­ë°¤,"chinese chestnut",0
-908,ì¤‘êµ­ë¶€ì¶”,"chinese chives",0
-909,ì¤‘êµ­ì “ìƒˆìš°,"northern mauxia shrimp",9
-910,ì¤‘ë ¥ë¶„,"gravity powder",0
-911,ì¤‘ìƒˆìš°,shrimp,9
-912,ì¤‘í•˜,"shiba shrimp",9
-913,ì¥ëˆˆì´ì½©,"a kind of small bean",0
-914,ì¥ì¹˜,"thread-sail filefish /fool fish /porky",0
-915,ì¥í¬,"filefish fillet",0
-916,ì§€ëª¨,anemarrhena,0
-917,ì§€ì¹­ê°œ,lyrate-hemistepta,0
-918,ì§€ì¹­ê°œì–´ë¦°ìˆœ,lyrate-hemistepta,0
-919,ì§„ê°„ì¥,"thick soy",0
-920,ì§„ë‹¬ë˜,azalea,0
-921,ì§„ë‹¬ë˜ê½ƒ,"korean rosebay",0
-922,ì§„í”¼,"citrus unshiu peel",0
-923,ì§ˆê²½ì´,"asian plantain",0
-924,ì§‘ê²Œ,"hermit crab",8
-925,ì§‘ì˜¤ë¦¬,"a domestic duck",0
-926,"ì§œì¥ ì†ŒìŠ¤","Jja-jang sauce",0
-927,ìª½íŒŒ,"allium fistulosum",0
-928,ì­ˆê¾¸ë¯¸,"webfoot octopus",0
-929,ì°”ë ˆ,"baby brier/ wild rosebush/ japanese rose",0
-930,ì°”ë ˆê½ƒì–´ë¦°ìˆœ,"baby brier/ wild rosebush/ japanese rose",0
-931,ì°¨ëŒë°•ì´,"brisket point end",0
-932,ì°¨ì¡°,glutinousï¼Ÿfoxtailï¼Ÿmillet,0
-933,ì°¬ë¬¼,water,0
-934,ì°¬ë°¥,rice,0
-935,ì°¸ê¸°ë¦„,"sesame oil",0
-936,ì°¸ê¹¨,sesame,0
-939,ì°¸ë‚˜ë¦¬ê½ƒì,"easter lily",0
-940,ì°¸ë‚˜ë¬´,oak,0
-941,ì°¸ë‚˜ë¬´ì—´ë§¤,"quercus/ oriental chestnut oak",0
-942,ì°¸ë‚˜ë¬¼,"pimpinella brachycarpa",0
-943,ì°¸ë‚˜ë¬¼ì,shortfruit-pimpinella,0
-944,ì°¸ëŠë¦…ë‚˜ë¬´,"korean autumn elm",0
-945,ì°¸ëŠë¦…ë‚˜ë¬´ì,"korean autumn elm",0
-946,ì°¸ë‹¤ìŠ¬ê¸°,coreana,0
-947,ì°¸ë‹¹ê·€,"korean angelica",0
-948,ì°¸ë”,"red seabream",0
-949,ì°¸ë§ˆë¿Œë¦¬,"a yam",0
-950,ì°¸ë¬¸ì–´,octopus,0
-951,ì°¸ë¹—ì‚´ë‚˜ë¬´ì–´ë¦°ì,"hamilton's spindle/ winterberry euonymus",0
-952,ì°¸ì™¸,"oriental melon",0
-953,ì°¸ì™¸ì—´ë§¤,"oriental melon",0
-954,ì°¸ì¡°ê¸°,"small yellow croaker",0
-955,ì°¸ì·¨ì–´ë¦°ì,edibleï¼Ÿaster,0
-956,ì°¸ì¹˜,tuna,0
-957,ì°¸ì¹˜ìº”,"canned tuna",0
-958,ì°¸ì¹˜í†µì¡°ë¦¼,"canned tuna",0
-959,ì°¸í™ì–´,"mottled skate /mottled skate",0
-960,ì°¹ìŒ€,"glutinous rice",0
-961,ì°¹ìŒ€ê°€ë£¨,"glutinous rice flour",0
-962,ì°½í¬,"è–è’²/ sweet flag/ calamus",0
-963,ì±„ëì‚´,striploin,0
-964,ì²œê¶,cnidium,0
-965,ì²œë„ë³µìˆ­ì•„,nectarine,11
-966,ì²œë„ë³µìˆ­ì•„ì—´ë§¤,nectarine,11
-967,ì²œë§ˆ,"rhizoma gastrodiae",0
-968,ì²œë§ˆë¿Œë¦¬,"tall gastrodia tuber root",0
-969,ì²œì¼ì—¼,å¤©æ—¥é¹½,0
-970,ì²œì¼í™,"a globe amaranth",0
-971,ì² ê°‘ë‘¥ì–´,pineconefish,0
-972,ì² ê°‘ìƒì–´,sturgeon,0
-973,ì²­ê°,"sea staghom",0
-974,ì²­ê²½ì±„,"pak choi",0
-975,ì²­ê³ ì¶”,"green chili",0
-976,ì²­êµ­ì¥,cheonggukjang,0
-977,ì²­ë§¤,"inexperienced ume",0
-978,ì²­ë³´ë¦¬,"forage barley",0
-979,ì²­ì–‘ê³ ì¶”,"spicy chili pepper",0
-980,ì²­ì£¼,"cheongju, refined[clear] rice wine",0
-981,ì²­í¬ë„,greenï¼Ÿgrape,0
-982,ì²­í¬ë¬µ,"Mung bean jelly",0
-983,ì²­í”¼ë§,"green pepper, bell pepper",0
-984,ì²´ë¦¬,cherry,0
-985,"ì´ˆê³ ì˜¨ ìˆœê°„ ì‚´ê· í•œ ìš°ìœ ","ultrahigh temperature sterilized milk",2
-986,ì´ˆê³ ì¶”ì¥,"red chili-pepper paste with vinegar",0
-987,ì´ˆë¡±ê½ƒì–´ë¦°ìˆœ,"bell flower",0
-988,ì´ˆì½œë¦¿,chocolate,0
-989,ì´ê°ë¬´,"a (young) radish",0
-990,ì¶˜ì¥,"black bean paste",0
-991,ì·¨ë‚˜ë¬¼,"seasoned aster",0
-992,ì¸¡ë°±ë‚˜ë¬´,"folium biotae orientalis",0
-993,ì¸¡ë°±ë‚˜ë¬´ê°€ì§€,"chinese arborvitae",0
-994,ì¸¡ë°±ë‚˜ë¬´ì”¨,"chinese arborvitae",0
-995,ì¸¡ë°±ë‚˜ë¬´ì,"chinese arborvitae",0
-996,ì¹˜ë§ˆì‚´,"flap meat",0
-997,ì¹˜ì¦ˆ,cheese,0
-998,ì¹˜ì¦ˆê°€ë£¨,"cheese powder",0
-999,ì¹˜ì»¤ë¦¬,"common chicory",0
-1000,"ì¹ ë¦¬ ì†ŒìŠ¤","chili sauce",0
-1001,ì¹¡,"kudzu vine",0
-1002,ì¹¡ë„ì¿¨,"kudzu vine",0
-1003,ì¹¡ì,"kudzu/ kudzu vine/ kuzu vine/ pueraria",0
-1004,ì¹´ë„¤ì´ì…˜ê½ƒ,"clove pinks/ rainbow pinks/ carnation",0
-1005,ì¹´ëŒë³¼ë¼,carambola,0
-1006,ì¹´ë ˆ,curry,0
-1007,ì¹´ë ˆê°€ë£¨,"curry powder",0
-1008,ì¹´ë§ë² ë¥´,camembert,0
-1009,"ì¹´ì‚¬ë°” ë©œë¡ ","casaba melon",0
-1010,ì¹´ì¹´ì˜¤,cacao,0
-1011,"ì¹¸íƒˆë£¨í¬ ë©œë¡ ","cantaloupe melon",0
-1012,ì¹¼êµ­ìˆ˜,"chopped noodles",0
-1013,ì¹¼êµ­ìˆ˜ë©´,"chopped noodles",0
-1014,ìºëª¨ë§ˆì¼,camomil,0
-1015,ìºëª¨ë§ˆì¼ê½ƒ,"chamomile flower",0
-1016,ìºìŠˆê²¬ê³¼,cashew,13
-1017,ìºìŠˆë„›,"cashew nut",13
-1018,ìº¥ê±°ë£¨ê³ ê¸°,"kangaroo meat",0
-1019,ì»¤í”¼ë‚˜ë¬´ê³¼ìœ¡,"coffee tree",0
-1020,ì»¤í”¼ë†ì¶•ì•¡,"coffee concentrate",0
-1021,ì»¤í”¼ë¹ˆì¶”ì¶œë¬¼,"coffee bean extract",0
-1022,ì»¤í”¼ì¶”ì¶œì•¡,"coffee extract",0
-1023,ì¼€ì¼,kale,0
-1024,ì¼€ì¼ì,"kale leaf",0
-1025,ì¼€ì²©,ketchup,12
-1026,ì½”ë‹¤ë¦¬,pollack,0
-1027,ì½”ì½”ë„›,coconut,0
-1028,"ì½”ì½”ë„› ë°€í¬","coconut milk",2
-1029,"ì½”ì½”ë„› ìš°ìœ ","coconut milk",2
-1030,ì½”ì½”ì•„ì£¼ìŠ¤,"cocoa(cacao) juice",0
-1031,ì½”ì½”ì•„íŒŒìš°ë”,"cocoa powder/ cacao powder",0
-1032,ì½œë¼ë¹„,kohlrabi,0
-1033,ì½œë¼ë¹„ë¹„ëŒ€ê²½,kohlrabi,0
-1034,ì½œë¦¬í”Œë¼ì›Œ,cauliflower,0
-1035,ì½©,bean,0
-1036,ì½©ê°€ë£¨,"bean flour",0
-1037,ì½©ê¸°ë¦„,"bean oil",0
-1038,ì½©ë‚˜ë¬¼,"bean sprouts",0
-1039,ì½©ì,beanï¼Ÿleaves,0
-1040,í€´ë…¸ì•„,quinoa,0
-1041,í€´ë…¸ì•„ì”¨ì•—,quinoa,0
-1042,í¬ëœë² ë¦¬,cranberry,0
-1043,í¬ë¦¼,cream,0
-1044,í¬ë¦¼ì¹˜ì¦ˆ,"cream cheese",0
-1045,í°ê´­ì´ë°¥ì–´ë¦°ìˆœ,"mountain lady's-sorrel",0
-1047,í°ì•µì´ˆì–´ë¦°ì,primrose,0
-1048,í´ë¡œë²„,clover,0
-1049,í‚¤ìœ„,kiwi,0
-1050,í‚¤ìœ„ì”¨,"kiwi seed",0
-1051,í‚¤ìœ„ì—´ë§¤,kiwi,0
-1052,í‚¤ì¡°ê°œ,"comb pen shell",0
-1053,í‚¹í¬ë©,"king crab",0
-1054,íƒ€ì„,thyme,0
-1055,íƒ€ì¡°,ostrich,0
-1056,íƒ€ì¡°ê³ ê¸°,"ostrich meat",0
-1057,íƒ±ì,"trifoliate orange",0
-1058,í„¸ê²Œ,kegani,8
-1059,í…Œí”„,tef,0
-1060,í† ë¼,"hare meat, rabbit meat",0
-1061,í† ë¼í’€ì,"dutch clover leaf",0
-1062,í† ë€,taro,0
-1063,í† ë€ë¿Œë¦¬ì¤„ê¸°,taro,0
-1064,í† ë€ì,"taro/ coco yam",0
-1065,í† ë€ì¤„ê¸°,taro,0
-1066,í† ë§ˆí† ,tomato,12
-1067,í† ë§ˆí† ì†ŒìŠ¤,"tomato sauce",12
-1068,í† ë§ˆí† ì—´ë§¤,"tomato/ lycopersicon lycopoersicum",12
-1069,í† ë§ˆí† ì¼€ì°¹,ketchup,12
-1070,í† ë§ˆí† ì¼€ì²©,ketchup,12
-1071,í†³,"sea weed fusiforme",0
-1072,í†³ë‚˜ë¬¼,"sea weed fusiforme",0
-1073,í†µê¹¨,sesame,0
-1074,í†µë„ë¼ì§€,"balloon/bell flower (root)",0
-1075,í†µë§ˆëŠ˜,"a whole bulb of garlic",0
-1076,í†µí›„ì¶”,"whole peppers",0
-1077,íˆ¬êµ¬ê½ƒ,monk'shood,0
-1078,íŠ€ê¹€ê°€ë£¨,"frying powder",0
-1079,íŠ€ê¹€ê¸°ë¦„,"frying oil",0
-1080,íŒŒ,"spring onion",0
-1081,íŒŒë˜,"sea lettuce",0
-1082,íŒŒë§ˆì‚°ì¹˜ì¦ˆ,"Parmesan cheese",0
-1083,íŒŒìŠ¤íƒ€,pasta,0
-1084,íŒŒìŠ¬ë¦¬,parsley,0
-1085,íŒŒìŠ¬ë¦¬ê°€ë£¨,parsley,0
-1086,íŒŒì¸ì• í”Œ,pineapple,0
-1087,íŒŒì¸ì• í”Œì—´ë§¤,pineapple,0
-1088,íŒŒíŒŒì•¼,papaya,0
-1089,íŒŒí”„ë¦¬ì¹´,paprika,0
-1090,íŒ”ê°,"star anise",0
-1091,íŒ”ë‘ê°œë¹„êµ­í™”(ìˆ˜ë ˆêµ­í™”),cornflower,0
-1092,íŒ”ë‘ê°œë¹„êµ­í™”ê½ƒì,cornflower,0
-1093,íŒ¥,"red bean",0
-1094,íŒ¥ì”¨,"red bean",0
-1095,íŒ¨ë­ì´ê½ƒ,pink,0
-1096,"íŒ¬ì§€ ê½ƒ",pansy,0
-1097,íŒ½ì´ë²„ì„¯,"winter mushroom",0
-1098,í˜í¼ë¯¼íŠ¸ì,peppermint,0
-1099,í¬ë„,grape,0
-1100,í¬ë„ì”¨ìœ ,"grape seed oil",0
-1101,í¬ë„ì—´ë§¤,grape,0
-1102,í¬ë©œë¡œ,pomelo,0
-1103,í¬ë©œë¡œì—´ë§¤,pomelo,0
-1104,íë“€ì¹˜ì¦ˆ,"fondue cheese",0
-1105,í‘œê³ ë²„ì„¯,"oak mushroom",0
-1106,í‘œì£¼ë°•,"gourd dipper",0
-1107,í’‹ê³ ì¶”,"green chilli",0
-1108,í’‹ë§ˆëŠ˜,"green garlic",0
-1109,í’‹ì½©,"green soybean",0
-1110,í”Œë ˆì¸ìš”êµ¬ë¥´íŠ¸,"plain yogurt",0
-1111,í”¼ë§,"sweet pepper",0
-1112,í”¼ë§ì—´ë§¤,"sweet pepper/ pimento",0
-1113,í”¼ìŠ¤íƒ€ì¹˜ì˜¤,pistachio,0
-1114,í”¼ìì¹˜ì¦ˆ,"pizza cheese",0
-1115,í”¼ì¡°ê°œ,akagai,0
-1116,í”¼ì¹¸,pecan,13
-1117,í”¼ì¹¸ê²¬ê³¼,pecan,13
-1118,í”¼í´,pickle,0
-1119,í•˜ëŠ˜ë‚˜ë¦¬ë¹„ëŠ˜ì¤„ê¸°,"star lily",0
-1120,í•˜ëŠ˜ë§ë‚˜ë¦¬ì–´ë¦°ìˆœ,"korean wheel lily",0
-1121,í•˜ë°”ë„¤ë¡œì—´ë§¤,"habanero chili",0
-1122,í•˜ìˆ˜ì˜¤,"polygoni multiflori radix",0
-1123,í•œë¼ë´‰,hanbalong,0
-1124,í•œë¼ë´‰ì—´ë§¤,"hallabong/ kabosu(ã‹ã½ã™)",0
-1125,í• ë¼í˜ë‡¨,jalapenos,0
-1126,í• ë¼í”¼ë‡¨,jalapeno,0
-1127,í•«ì†ŒìŠ¤,"hot sauce",0
-1128,í•­ì •ì‚´,jowls,0
-1129,í•´êµ­ì–´ë¦°ì,"arctic daisy young leaf",0
-1130,í•´ë¬¼,seafood,0
-1131,í•´ë°”ë¼ê¸°ê½ƒ,"sunflower flower",0
-1132,í•´ë°”ë¼ê¸°ê½ƒì,sunflower,0
-1133,í•´ë°”ë¼ê¸°ì”¨,"sunflower seed",0
-1134,í•´ì‚¼,"sea cucumber",0
-1135,í•´íŒŒë¦¬,"jellyfish, sea jelly",0
-1136,í–„,ham,0
-1137,í—ˆë‹ˆë¨¸ìŠ¤íƒ€ë“œ,"honey mustard",0
-1138,í—ˆë‹ˆë¨¸ìŠ¤í„°ë“œ,"honey mustard",0
-1139,í—ˆë¸Œì†”íŠ¸,"herb salt",0
-1140,í—›ê°œ,"japanese raisin tree",0
-1141,í—¤ì´ì¦ë„›,hazelnuts,13
-1142,í˜„ë¯¸,"unpolished rice",0
-1143,í˜¸ë‘,walnut,14
-1145,í˜¸ë¦¬ë°•ë³‘,"bottle gourd",0
-1147,í˜¸ë°•,"pumpkin/ squash",0
-1148,í˜¸ë°•ê½ƒ,"pumpkin flower",0
-1149,í˜¸ë°•ì”¨,"pumpkin seed",0
-1150,í˜¸ë°•ì,"pumpkin leaf",0
-1151,í™ê³ ì¶”,"mashed red pepper",0
-1152,í™ë‹¹ë¬´,carrot,0
-1153,í™ì‚¼,"red ginseng",0
-1154,í™ì‹œ,"soft persimmon",0
-1155,í™ì–´,"skate ray",0
-1156,í™í”¼ë§,"bell pepper",0
-1157,í™í•©,"igai/ mytili caro",18
-1158,í™í™”(ì‡ê½ƒ),safflower,0
-1159,í™í™”ì”¨,"safflower/ fucus",0
-1160,í™©ê¸°,"astragalus root",0
-1161,í™©ê¸°ë¿Œë¦¬,"milk vetch root",0
-1162,í™©ë„,peach,0
-1163,í™©ì†Œê°œêµ¬ë¦¬,"american bull frog",0
-1164,í™©íƒœ,"dried pollack",0
-1165,íšŒìƒ‰ê¸°ëŸ¬ê¸°,"greylag goose",0
-1166,í›„ì¶”,pepper,0
-1167,í›„ì¶”ì—´ë§¤,"black pepper/ pepper/ piperis nigri fructus",0
-1168,í›„ì¶§ê°€ë£¨,"ground pepper",0
-1169,í›ˆì œì—°ì–´,"smoked salmon",0
-1170,íœ˜í•‘í¬ë¦¼,"whipping cream",0
-1171,í‘ë¯¸,"black rice",0
-1172,í‘ì„¤íƒ•,"brown sugar",0
-1173,í‘ì„ì,"black sesame",0
-1174,í°ê°•ë‚­ì½©,"butter bean",0
-1175,í°ê°•ë‚­ì½©ì—´ë§¤,"butter bean fruit",0
-1176,í°ë¯¼ë“¤ë ˆ,"korean dandelion",0
-1177,í°ì½©,"white soybean",0
-1178,íˆë¹„ìŠ¤ì»¤ìŠ¤,"hibiscus/ hibiscus",0
-1179,íˆë¹„ìŠ¤ì»¤ìŠ¤ê½ƒ,"hibiscus flower",0
-1180,íˆë¹„ìŠ¤ì»¤ìŠ¤ê½ƒì,hibiscus,0
-1181,íˆì•„ì‹ ìŠ¤ê½ƒ,"hyacinth flowers",0
+1,°¡´Ù¶û¾î,"katsuo/ bonito",0
+2,°¡´Ù¶û¾îÆ÷,katsuobushi,0
+3,°¡·¡¶±,"rice cake",0
+4,°¡¸®ºñ,scallop,18
+5,°¡¸®ºñ»ì,hotategai,18
+6,°¡½Ãº¹,harisenbon,0
+7,°¡¾²¿ÀºÎ½Ã,Katsuobushi,0
+8,°¡¿À¸®,Stingray,0
+9,°¡ÀÚ¹Ì,"flat fish",0
+10,°¡Á×³ª¹°,"Cedrela sinensis leaves",0
+11,°¡Áö,eggplant,0
+12,°¡Áö¿­¸Å,"egg plant/ brinjal/ melongena",0
+13,°¡Ã÷¿ÀºÎ½Ã,katsuobushi,0
+14,°£°íµî¾î,"salted mackerel",7
+15,°£¸¶´Ã,"ground garlic",0
+16,°£Àå,"soy sauce",0
+17,°¥¸Å±â»ì,"skirt meat",0
+18,°¥ºñ,rib,0
+19,°¥Ä¡,hairtail,0
+20,°¨,persimmon,0
+21,°¨±Ö,"unshiu orange",0
+22,°¨¿­¸Å,"persimmon fruit",0
+23,°¨ÀÚ,potato,0
+24,°¨ÀÚÀüºĞ,"potato starch",0
+25,°¨ÃÊ,"chinese liquorice",0
+26,°©¿ÀÂ¡¾î,kouika,17
+27,°«,"leaf mustard",0
+28,°«±èÄ¡,"leaf mustard kimchi",0
+29,°­³¶Äá,"kidney bean",0
+30,°­·ÂºĞ,"Strong flour",0
+31,°­¾ÆÁöÇ®,"green bristlegrass",0
+32,°­È²,turmeric,0
+33,°³°í±â,"Dog meat",0
+34,°³º¹¼ş¾Æ,"chinese wild peach",11
+35,°³ºÒ,"spoon worm",0
+36,°³¾Ï,"hazelnut/ filbert",13
+37,°³¾Ï°ß°ú,hazelnut,13
+38,°ÅÀ§,goose,0
+39,°Ç´ëÃß,"Dried jujube",0
+40,°Ç¹Ì¿ª,"Dried seaweed",0
+41,°Ç»õ¿ì,"Dried shrimp",9
+42,°ÇÁ¶±è,laver,0
+43,°ÇÁ¶»ç°ú,"dried apple",0
+44,°ÇÁ¶ÀÚ¸ù,"dry grapefruite",0
+45,°ÇÁ¶Ä³¸ğ¸¶ÀÏ,"dry chamomile",0
+46,°ÇÁ¶Ä³¸ğ¸¶ÀÏ²É,"dried chamomile flower",0
+47,°ÇÁ¶È÷ºñ½ºÄ¿½º,"dried hibiscus",0
+48,°ÇÆ÷µµ,raisin,0
+49,°ËÀº±ú,"Black sesame",0
+50,°ËÀºÄá,"Black beans",0
+51,°ËÁ¤Äá,"black beans",0
+52,°Ô,crab,8
+53,°Ô¸À»ì,"Crab stick",8
+54,°Ô»ì,crab,8
+55,°ÜÀÚ,mustard,0
+56,"°ÜÀÚ ¼Ò½º","mustard sauce",0
+57,°ß°ú·ù,nuts,13
+58,°á¸íÀÚ,"senna tora",0
+59,°á¸íÀÚ¿­¸Å,sicklepod,0
+60,°è¶õ,egg,1
+61,°è¶õÈòÀÚ,"egg whites",1
+62,°èÇÇ,cinnamon,0
+63,°èÇÍ°¡·ç,"Cinnamon powder",0
+64,°í±¸¸¶,"sweet potato",0
+65,"°í±â ¼Ò½º","meat sauce",0
+66,°í±â»êÀû,"Korean Shish kebab",0
+67,°í´Ï,"tundra swan",0
+68,°íµé»©±â,"lactuca bungeana",0
+69,°íµî¾î,"chub mackerel",7
+70,°í¶ó´Ï,"inermis/ water deer",0
+71,°í»ç¸®,bracken,0
+72,°í»ç¸®¾î¸°¼ø,braken,0
+73,°í¼ö,"coriandrum sativum",0
+74,°í¼öÀÙ,"coriander leaf",0
+75,°í¿î°íÃå°¡·ç,"Fine red pepper powder",0
+76,°íÃß,"hot pepper(cayenne/ chili pepper/ red pepper)",0
+77,°íÃß±â¸§,"Chili oil",0
+78,°íÃß³ÃÀÌ,Wasabi,0
+79,°íÃß¾¾,"Pepper seeds",0
+82,°íÃßÀå,"Korean traditional red hot pepper paste",0
+83,°íÃå°¡·ç,"Red pepper powder",0
+84,°íÃå±â¸§,"Chili oil",0
+85,°íÃåÀÙ,"Red pepper leaves",0
+86,°ï¾à,"Konjac/ Devil's-tongue",0
+87,°ñµåÅ°À§,"golden kiwi fruit",0
+88,°ñ¹ğÀÌ,"horn snail",0
+89,°ñÆÄ,chive,0
+90,°õÄ¡,utsubo,0
+91,°õÇÇ,"gom pi/ sea weed",0
+92,°öÃ¢,"small intestine",0
+93,°ù°¨,"dried persimmon",0
+94,°ú¸Ş±â,guamegi,0
+95,°üÀÚ,cappesante,0
+96,±¤±Ö³ª¹«²É,"sour orange blossom",0
+97,±¤¾î,Flatfish,0
+98,±¸±âÀÚ,"chinese matrimony vine",0
+99,±¸±âÀÚ³ª¹«,"chinese wolfberry",0
+100,±¸±âÀÚ³ª¹«¿­¸Å,"chinese wolfberry fruit",0
+101,±¸±âÀÚ³ª¹«ÀÙ,"chinese wolfberry leaf",0
+102,±¸¿î±è,laver,0
+103,±¸¿î²ÇÄ¡,"pacific saury",0
+104,±¸¿î¹ã,"roasted chestnut",0
+105,±¸ÀıÃÊ,siberian-chrysanthemum,0
+106,±¸ÀıÃÊÀÙ,"siberian-chrysanthemum leaf",0
+107,±¹°£Àå,"Soup soy sauce",0
+108,±¹¸êÄ¡,Anchovy,0
+109,±¹¼ö,noodle,0
+110,±¹È­,chrysanthemum,0
+111,±¹È­²É,"chrysanthemum flower",0
+112,±¼,oyster,18
+113,±¼ºñ,"dried yellow corvina",0
+114,±¼¼Ò½º,"Oyster Sauce",18
+115,±½Àº°íÃå°¡·ç,"Coarse red pepper",0
+116,±½Àº¼Ò±İ,"Coarse salt",0
+117,±Í¸®,oat,0
+118,±Í¸®¾¾,oat,0
+119,±Ö,tangerine,0
+120,±Ö²É,"unishiu orange flower",0
+121,"±×¸° ¸Á°í","green mango",0
+122,±×¸°Äá¾¾,"green bean",0
+123,±Ù´ë,"leaf beet",0
+124,±İ±Ö,"oval kumquat",0
+125,±İ³¶È­,"showy dicentra",0
+126,±İÀÜÈ­,marigold,0
+127,±İÀÜÈ­²É,"marigold/ marigold flower",0
+128,±â·¯±â,"wild goose",0
+129,±â¸§,oil,0
+130,±âÀå,"common millet",0
+131,±âÀå¾¾,millet,0
+132,±è,laver,0
+133,±è°¡·ç,"dried seaweed powder",0
+134,±èÄ¡,kimchi,0
+135,±èÄ©±¹¹°,"Kimchi soup",0
+136,±î³ª¸®¾×Á£,"Canary Fish Sauce",0
+137,±ú,Sesame,0
+138,±ú¼Ò±İ,"Ground sesame",0
+139,²¢ÀÙ,"perilla leaf",0
+140,²¿¸®,"ox tail",0
+141,²¿¸·,cockle,18
+142,²ÇÄ¡,"pacific saury",0
+143,²É°Ô,"swimming crab",8
+144,²Éµî½É,"ribeye roll",0
+145,²É»ç°ú,"chinese apple",0
+146,²É»ç°ú¿­¸Å,"chinese apple/ plumleaf crab apple",0
+147,²É»óÃß,"belgian endive",0
+148,²É»óÃßÀÙ,"endive/ kasini",0
+149,²É¼Ò±İ,salt,0
+150,²É¾ç¹èÃß,cauliflower,0
+151,²É¾ç¹èÃß²É,cauliflower,0
+152,"²Ê¸® °íÃß","shishito peppers",0
+153,²Ê¸®°íÃß,"shishito peper",0
+154,²Ü,honey,0
+155,²ÜÇ®,"asiatic self-heal",0
+156,²æ°í±â,pheasant,0
+157,³ª¹«µş±â,"berry/ brambles fruit",0
+158,³ª¹«µş±â¿­¸Å,"raspberry fruit",0
+159,³«Áö,"long arm octopus",0
+160,³¯Ä¡¾Ë,"flyling fish roe",0
+161,³²Ãµ¿­¸Å,nandina,0
+162,³²ÃµÀÙ,nandina,0
+163,³´Åä,natto,0
+164,¸¸µÎ,dumplings,0
+165,³Ã¸é,"cold noodles",0
+166,³ÃÀÌ,"shepherd's purse",0
+167,³ÃÀÌ»Ñ¸®,"shepherd's purse",0
+168,³ÃÀÌ¾î¸°ÀÙ,"shepherd's purse",0
+169,³ÒÄ¡,"olive flounder",0
+170,³×Æ®¸á·Ğ,"netted melon",0
+171,³â¾î,"keta salmon",0
+172,³ì°¢,"a deer horn",0
+173,³ìµÎ,"mung beans",0
+174,³ìµÎ¾¾,"green gram/ mung bean",0
+175,³ì¸»°¡·ç,"starch powder",0
+176,³ì¸»¹°,"starch powder",0
+177,³ì¿ë,"velvet antler",0
+178,³ìÂ÷°¡·ç,"green tea flour",0
+179,³ó¾î,"sea bass",0
+180,´©¿¡,silkworm,0
+181,´©¿¡¹øµ¥±â,pupa,0
+182,´ÀÅ¸¸®¹ö¼¸,"oyster mushroom",0
+183,´É¼ÒÈ­,"chinese trumpet creeper",0
+184,´ÉÀÌ¹ö¼¸,Òöì¼,0
+185,´Ù·¡,"kiwi-fruit/ chinese gooseberry",0
+186,´Ù½½±â,kawanina,0
+187,´Ù½Ã¸¶,kelp,0
+188,´Ù½Ã¸¶±¹¹°,"kelp stock",0
+189,´Ù½Ã¸¶À°¼ö,"kelp stock",0
+190,´Ù½Ã¹°,"kelp stock",0
+191,´ÙÁø°íÃß,"chopped pepper",0
+192,´ÙÁø´ëÆÄ,"chopped green onion",0
+193,´ÙÁøµÅÁö°í±â,"minced pork",10
+194,´ÙÁø¸¶´Ã,"chopped garlic",0
+196,´ÙÁø»ı°­,"chopped ginger",0
+197,´ÙÁø¼è°í±â,"Minced beef",16
+198,´ÙÁø¾çÆÄ,"Chopped onion",0
+199,´ÙÁøÆÄ,"Chopped green onion",0
+200,´ÙÁüÀ°(µÅÁö°í±â),"minced pork",10
+201,´Ü°¨,persimmons,0
+202,´Ü¹«Áö,"Pickled radish",0
+203,´ÜÇ³³ª¹«,"palmate maple",0
+204,´ÜÈ£¹Ú,"sweet pumpkin",0
+205,´ÜÈ£¹Ú¾¾,"pumpkin/ autumn squash",0
+206,´ÜÈ£¹Ú¿­¸Å,"pumpkin/ autumn squash",0
+207,´Ş°¿,egg,1
+208,´Ş°¿³ë¸¥ÀÚ,"egg yolk",1
+210,´Ş¸®¾Æ,dahlia,0
+211,´ß,chicken,15
+212,"´ß °¡½¿»ì",breast,15
+213,"´ß ³¯°³","chicken wing",15
+214,"´ß ¸ğ·¡ÁÖ¸Ó´Ï","gizzard/ ventriculus",15
+215,"´ß ºÀ","buffalo chicken wing drumette/ buffalo wing",15
+216,"´ß ¾È½É»ì","tender breast",15
+217,´ß°¡½¿»ì,"chicken breast",15
+218,´ß°í±â,chicken,15
+219,´ß´Ù¸®,"chicken leg",15
+220,´ß¹ß,"chicken feet",15
+221,´ß»õ¿ì,ise-ebi,9
+222,´ßÀ°¼ö,"chicken stock",15
+223,´ßÀÇÀåÇ®,dayflower,15
+224,´ã¹è,tobacco,0
+225,´ç±Í,"angelica gigas root",0
+226,´ç±Ù,carrot,0
+227,´ç±Ù»Ñ¸®,"carrot/ wild carrot/ queen anne`s lace",0
+229,´ç¸é,"cellophane noodles/ glass noodles",0
+230,´ë°Ô,"snow crab",8
+231,´ë±¸,"pacific cod/ gray cod",0
+232,´ë³ª¹«ÁÙ±â,"bamboo/ bambusoidae",0
+233,´ëµÎ,soybean,5
+234,´ëÃ¢,"large intestine",0
+235,´ëÃß,jujube,0
+236,´ëÆÄ,"green Onion",0
+237,´ëÇÏ,"fleshy prawn",0
+238,´ëÇÕ,"harden clam",0
+239,´õ´ö,"bonnet bellflower",0
+240,´õ´ö»Ñ¸®,"lance-asiabell root",0
+241,µ¢±¼Àå¹Ì,"climbing rose",0
+242,"µ¥¸®¾ß³¢ ¼Ò½º","Teriyaki sauce",0
+243,µµ°¡´Ï,"Ox knee bone",0
+244,µµ¶óÁö,balloon-flower,0
+245,µµ¶óÁö»Ñ¸®,"balloonflower root",0
+246,µµ¹Ì,"snapper, sea bream",0
+247,µµÅä¸®¹¬,"Acorn jelly",0
+248,µ¹³ª¹°,stonecrop,0
+249,µ¹³ª¹°¾î¸°¼ø,"stonecrop young leaf",0
+250,µ¹µ¼,ishidai,0
+251,µ¼,"snapper, sea bream",0
+252,µ¿¹é³ª¹«,camellia,0
+253,µ¿ÅÂ,"frozen pollack",0
+254,"µÅÁö °¥ºñ","spare ribs",0
+255,"µÅÁö °¥ºñ»ì",rib,0
+256,"µÅÁö ´ëÃ¢","pig big intestine",0
+257,"µÅÁö µî½É","loin/ center cut",0
+258,"µÅÁö ¸·Ã¢","pig entrails",0
+259,"µÅÁö ¼ÒÃ¢","pig small intestine",0
+260,"µÅÁö Á·¹ß","jokbal/ pig¡¯s trotters/ pig¡¯s legs.",0
+261,"µÅÁö Åä½Ã»ì","hanging tender",0
+262,µÅÁö°¥ºñ,"pork rib",0
+263,µÅÁö°í±â,pork,10
+264,µÅÁö°í±âµî½É,"pork sirloin",10
+265,µÅÁö°í±â¾È½É,"pork tenderloin",10
+266,µÅÁö±â¸§,"pork oil",10
+267,µÅÁö²®µ¥±â,"pork skin",10
+268,µÅÁö³»Àå,"pig intestines",10
+269,µÅÁöµî»À,"pig spine",10
+270,µÈÀå,"soybean paste",0
+271,µÎ¸¨,"fatsia shoots",0
+272,µÎ¸¨¾î¸°¼ø,"aralia elata young shoot",0
+273,µÎ¸®¾È,durian,0
+274,µÎ¸®¾È¿­¸Å,"durian/ civet-cat fruit",0
+275,µÎºÎ,bean-curd,0
+276,µÎÃæ,eucommia,0
+277,µÕ±¼·¹,"solomon¡¯s seal",0
+278,µÕ±Ù¸¶µ¢ÀÌ»Ñ¸®,"airpotato yam root",0
+279,µé±¹È­,"camomile/ wild chrysanthemum",0
+280,µé±â¸§,"perilla oil",0
+281,µé±ú,perilla,0
+282,µé±ú°¡·ç,"perilla powder",0
+283,µé±ú¾¾,perilla,0
+284,µé²¢ÀÙ,"perilla leaves",0
+285,µî°¥ºñ»ì,"center loin",0
+286,µî³ª¹«,"japanese wisteria/ wistaria",0
+287,µî½ÉÃÊ,common-rush,0
+288,µş±â,strawberry,0
+289,µş±â¿­¸Å,strawberry,0
+290,µş±âÁÖ½º,"strawberry juice",0
+291,¶¥Äá,peanut,4
+292,¶¥Äá°ß°ú,"peanut/ earth nut",4
+293,¶±,"rice cake",0
+294,¶±±¹¶±,"rice cake",0
+295,¶ó¸é,,0
+296,¶óº¥´õ,lavender,0
+297,¶óÀÌ½ºÆäÀÌÆÛ,"rice paper",0
+298,¶óÀÓ,lime,0
+299,¶óÀÓ¿­¸Å,lime,0
+300,¶óÁîº£¸®,raspberry,0
+301,¶óÁîº£¸®¿­¸Å,"grayleaf red raspberry",0
+302,"¶÷ºÎÅº °úÀ°",rambutan,0
+303,"¶÷ºÎÅº ¿­¸Å",rambutan,0
+304,¶÷ºÎÅº°úÀ°,"hairy litchi/ rambutan",0
+305,·¡µğ½Ã,radish,0
+306,·¹¸ó,lemon,0
+307,·¹¸ó°úÀ°,"lemon pulp",0
+308,·¹¸ó¿­¸Å,lemon,0
+309,·¹¸óÁó,"lemon juice",0
+310,·»ÁîÄá¾¾,lentil,0
+311,·»Æ¿Äá,lentil,0
+312,·ÎÁî¸¶¸®,rosemary,0
+313,·ÎÁî¸¶¸®¾î¸°¼ø,rosemary,0
+314,·çÇÇ³Ê½º,lupinnus,0
+315,¸®ÄÚÅ¸,"ricotta cheese",0
+316,¸¶,"chinese yam",0
+317,¸¶°¡¸°,margarine,0
+318,¸¶´Ã,garlic,0
+319,¸¶´ÃÀÙ,garlic,0
+320,¸¶´ÃÁ¾,"garlic stem",0
+321,¸¶¸¥°íÃß,"dried red pepper",0
+322,¸¶½Ã¸á·Î,marshmallow,0
+323,¸¶¿ä³×Áî,mayonnaise,0
+324,¸¶Å¸¸®,dahurian-patrinia,0
+326,¸·°É¸®,"raw[unrefined] rice wine",0
+327,¸¸µÎÇÇ,"dumpling skin",0
+328,¸»¸°Ç¥°í¹ö¼¸,"dried dumpling[wonton] skin",0
+329,¸À°£Àå,"soy sauce",0
+330,¸À»ì,"razor-clam meat",0
+331,¸À¼Ò±İ,"seasoned salts",0
+332,¸À¼ú,"seasoned salts",0
+333,¸Á°í,mango,0
+334,¸Á°í½ºÆ¾,mangosteen,0
+335,¸Á°í½ºÆ¾¿­¸Å,"mangosteen/ mangostan/ manggis",0
+336,¸Å»ıÀÌ,"seaweed fulvescens",0
+337,¸Å½Ç,"japanese apricot",0
+338,¸Å½Ç¾×,"plum liquid",0
+339,¸Å½ÇÀå¾ÆÂî,"pickled Japanese apricot",0
+340,¸Å½ÇÃ»,"plum liquid",0
+341,¸ÅÈ­²É,apricot,0
+342,¸Æ¹®µ¿,"broadleaf liriope",0
+343,¸Ó·ç,"korean wild grapes",0
+344,¸Ó½ºÅ©¸á·Ğ,muskmelon,0
+345,¸Ó½ºÅ©¸á·Ğ¿­¸Å,"musk melon",0
+346,¸Ó½ºÅ¸µå,mustard,0
+347,¸Ó½ºÅÍµå,mustard,0
+348,¸ÓÀ§´ë,"bog rhubarb",0
+349,¸Ö±¸½½³ª¹«,subtripinnata,0
+350,¸Û°Ô,"sea squirt",8
+351,¸Ş±â,"far eastern catfish",0
+352,¸Ş¶Ñ±â,orthoptera,0
+353,¸Ş¹Ğ,buckwheat,3
+354,¸Ş¹Ğ±¹¼ö,"buckwheat noodle",3
+355,¸Ş¹Ğ²É,"buckwheat flower",3
+356,¸ŞÁÖ,"korean-style soybean koji",0
+357,¸ŞÁÖÄá,soybeans,0
+358,¸ŞÃß¸®¾Ë,"quail¡¯s egg",0
+359,¸á·Ğ,melon,0
+360,¸ã½Ò,"nonglutinous rice",0
+361,¸ã½Ò°¡·ç,"nonglutinous rice powder",0
+362,¸ã½Ò¶±,"nonglutinous rice cake",0
+363,¸äµÅÁö,"wild boar meat/ brawn",0
+364,¸é,noodle,0
+365,"¸ê±ÕÇÑ ¿ìÀ¯","sterilized milk",2
+366,¸êÄ¡,anchovy,0
+367,¸êÄ¡°¡·ç,"anchovy powder",0
+368,¸êÄ¡¾×Á£,"anchovy sauce",0
+369,¸êÄ¡À°¼ö,"anchovy Stock",0
+370,¸êÄ¡Á£,"salted[pickled] and fermented anchovies",0
+371,¸í¶õ,"spawn[roe] of a pollack",0
+372,¸íÅÂ,"alaska pollack",0
+373,¸ğ°ú,"chinese quince",0
+374,¸ğ°ú³ª¹«¿­¸Å,"chinese quince/ chaenomeles fruit/ mu gua",0
+375,¸ğ¶õ²ÉÀÙ,"moutan root bark",0
+376,¸ğ½ÃÁ¶°³,"shortnecked clam",18
+377,¸ğÂ¥·¼¶ó,mozzarella,0
+378,¸ğÂ¥·¼¶óÄ¡Áî,mozzarella,0
+379,¸ñ·Ã²ÉÀÙ,"kobus magnolia",0
+380,¸ñÀÌ¹ö¼¸,"tree ear",0
+381,¸ñÇâ,compositae,0
+382,¸ñÈ­¾¾,"cotton seed",0
+383,¹«,radish,0
+384,¹«±¹¹°,"radish broth",0
+385,¹«±ÃÈ­,"rose of sharon",0
+386,¹«¸»·©ÀÌ,"dried slices of daikon/ chinese radish dried",0
+387,¹«¼ø,radish£¿sprouts,0
+388,¹«Ã»,"radish leaves",0
+389,¹«È­°ú,fig,0
+390,¹«È­°ú¿­¸Å,fig,0
+391,¹®¾î,octopus,0
+392,¹°,water,0
+393,¹°°³,seal,0
+394,¹°¹Ì¿ª,wakame,0
+395,¹°¿³,"starch syrup",0
+396,¹Ì³ª¸®,"java water-dropwort",0
+397,¹Ì´ÏÆÄÇÁ¸®Ä«,"mini paprika",0
+398,¹Ì´õ´ö,"warty sea squirt",0
+399,¹Ì¸²,"mirim(Japanese alcohol)",0
+400,¹Ì¼ÒµÈÀå,"Japanese miso",0
+401,¹Ì¿ª,"sea mustard",0
+402,¹Ì¿ª±Í,seaweed,0
+403,¹Ì¿ø,"synthetic flavoring matter",0
+404,¹ÎÆ®,mint,0
+405,¹Ğ,wheat,6
+406,¹Ğ°¡·ç,flour,6
+407,¹Ø¸¸°¡´Ú¹ö¼¸,"yophyllum connatum",0
+408,¹Ù³ª³ª,banana,0
+409,"¹ÙºñÅ¥ ¼Ò½º","barbecue Sauces",0
+410,¹ÙÀÌ¿Ã·¿,violet,0
+411,¹ÙÁö¶ô,"filipino venus",18
+412,¹ÙÁú,basil,0
+413,¹Ú»õ,"a great tit",0
+414,¹ÚÁÖ°¡¸®,"a milkweed",0
+415,¹İ¹¦,cantharides,0
+416,¹ã,chestnut,13
+417,¹ã°í±¸¸¶,Øüò¢Íş,0
+418,¹ã³ª¹«¿­¸Å,chestnut,0
+419,¹ãÄá,"brown soybean",0
+420,¹ä,rice,0
+421,¹æ¿ï´Ù´Ù±â¾ç¹èÃß,"brussels sprouts",0
+422,¹æ¿ïÅä¸¶Åä,"cherry tomato",12
+423,¹æÇ³³ª¹°,"ledebouriella seseloides",0
+424,¹è,"pear/ pyrus communis l.",0
+425,¹è°úÀ°,"pear pulp",0
+426,¹è³ª¹«¿­¸Å,pear,0
+427,¹èÁó,"pear juice",0
+428,¹èÃÊÇâ,"korean mint",0
+429,¹èÃß,"chinese cabbage",0
+430,¹èÃß±èÄ¡,"napa cabbage kimchi",0
+431,¹èÃßÀÙ,"chinese cabbage",0
+432,¹èÃåÀÙ,"cabbage leaf",0
+433,¹é´ÜÇâ,"white sandalwood",0
+434,¹éµµ¿­¸Å,"peche blanche",0
+435,¹éµÎ±¸,"round cardamon",0
+436,¹éµÎ±¸¿­¸Å,"round cardamon fruit",0
+437,¹éºÎÀÚ,ÛÜİ¾í­,0
+438,¹é¼±,"the tinea",0
+439,¹é¿ÀÀÌ,"white cucumber",0
+440,¹éÅÂ,soybean,0
+441,¹éÆ÷µµÁÖ,"white wine",0
+442,¹ìµş±â¿­¸Å,"indian strawberry",0
+443,¹ğ¾îÆ÷,"dried slices of seasoned whitebait",0
+444,¹ö¼¸,mushroom,0
+445,"¹öÁø ¿Ã¸®ºê ¿ÀÀÏ","virgin olive oil",0
+446,¹öÂî,cherry,0
+447,¹öÂî¿­¸Å,cherry,0
+448,¹öÅÍ,butter,0
+449,¹ú°³¹ÌÃë¾î¸°¼ø,"montane aster",0
+450,¹ú±úµ¢±¼¾î¸°¼ø,"nettle-leaf mint",0
+451,¹ú²Ü,honey,0
+452,¹üºÎÃ¤,"blackberry lily",0
+453,¹üºÎÃ¤»Ñ¸®ÁÙ±â,"blackberry lily",0
+454,º¢³ª¹«²É,"cherry flower",0
+455,º¢³ª¹«¿­¸Å,cherry,0
+456,º¢³ª¹«ÀÙ,"cherry leaves",0
+457,º£°í´Ï¾Æ²É,"a begonia flower",0
+458,"º£´ÏÇÏ·çÄ« °í±¸¸¶",ÜğÚÌò¢Íş,0
+460,º£ÀÌÄÁ,bacon,0
+461,º°²É,chickweed,0
+462,º´¾î,"silver pomfret",0
+463,º¸¸§´Ş¹°ÇØÆÄ¸®,mizukurage,0
+464,º¸¸®,barley,0
+465,º¸¸®¼ö³ª¹«¿­¸Å,"autumn olive",0
+467,º¹·É,tuckahoe,0
+468,º¹ºĞÀÚµş±â,"rubus coreanus",0
+469,º¹ºĞÀÚµş±â¿­¸Å,"korean bramble",0
+470,º¹¼öÃÊ,"amur adonis",0
+471,º¹¼ş¾Æ,peach,11
+472,º¹¼ş¾Æ°úÀ°,"peach pulp",11
+473,º¹¼ş¾Æ³ª¹«²É,"peach/ persicae flos/ persicae calyx",11
+474,º¹¾î,"globe fish",0
+475,ººÀº°á¸íÀÚ,"roasted sickle-senna",0
+476,ººÀº¼Ò±İ,"roasted salt",0
+477,ººÀºÄ³½´,"cashew nut",0
+478,ººÀºÄ¿ÇÇ¿øµÎ,"roasted coffee beans",0
+479,ººÀºÈ£µÎ,"grilled walnutmeats",14
+480,º»°¥ºñ,"short ribs",0
+481,º½µ¿,"seasoned cabbage",0
+482,ºÎµé,"common cat-tail/ reed-mace",0
+483,ºÎÃ¤»ì,"top blade/ top blade muscle",0
+484,ºÎÃß,leek,0
+485,ºÎÃßÀÙ,"leek leaf",0
+486,ºÎÄ§°¡·ç,"Korean pancake mix",0
+487,ºÎÆòÃÊ,duckweed,0
+488,"ºÏ¹æ»ê °³±¸¸®","dybowski's brown frog",0
+489,ºÏ¾î,"dried pollack",0
+490,ºĞ²É,"four-o'clock/ marvel of peru",0
+492,ºÒ¸°¹Ì¿ª,"soaked seaweed",0
+493,ºØ¾î,"crucian carp",0
+494,ºØÀå¾î,"common conger",0
+495,ºê¶óÁú³Ó,"brazil nut",0
+496,ºê·ÎÄİ¸®,broccoli,0
+498,ºê¸®,"brie cheese",0
+499,ºí·¢¿Ã¸®ºê,"olive nere",0
+500,ºí·çº£¸®,blueberry,0
+501,ºñ´Ü¹ú·¹,"a buprestid",0
+502,ºñµÑ±â,dove,0
+503,ºñ¿£³ª¼Ò½ÃÁö,"Vienna sausage",0
+504,ºñÀÚ³ª¹«,kaya,0
+505,ºñÆ®,beet,0
+506,ºù¾î,"pond smelt",0
+507,"»¡°£ °íÃß","red cluster pepper",0
+508,»§°¡·ç,"bread crumbs",0
+509,»Í³ª¹«,mulberries,0
+510,»Í³ª¹«°Ü¿ì»ìÀÌÀÙ,"mulberry mistletoe",0
+511,»Í³ª¹«¿­¸Å,"a mulberry",0
+512,»Ô¼Ò¶ó,murex,0
+513,»ç°ñ,"marrow bone",0
+514,»ç°ú,apple,0
+515,»ç°ú²®Áú,"apple peel",0
+516,»ç°ú½ÄÃÊ,"cider vinegar",0
+517,»ç°ú¿­¸Å,apple,0
+518,»ç½¿,deer,0
+519,»ç½¿°í±â,venison,0
+520,»ç½¿»Ô,"bois de cerf",0
+521,»ç½Ã³ª¹«,"aspen/ (white) poplar",0
+522,»çÀÌ´Ù,cider,0
+523,»çÇÁ¶õ¾Ï¼ú¸Ó¸®,"saffron crocus",0
+524,»çÇÁ¶õ¾Ï¼ú¸Ó¸®ÃßÃâ¹°,"saffron extract",0
+525,»ê³«Áö,"sliced R\raw octopus",0
+526,»ê´Ş·¡¾î¸°½Ä¹°,"long-stamen chive",0
+527,»êµ¹¹è³ª¹«¿­¸Å,"chinese pear/ sand pear",0
+528,»êµÕ±¼·¹ÀÙ,"var. thunbergii",0
+529,»ê¸¶,"white yam",0
+530,»ê»ç³ª¹«,"haw/ black/ bark",0
+531,»ê»ç³ª¹«ÀÙ,"large chinese hawthorn",0
+532,»ê¼öÀ¯,"asiatic cornelian cherry",0
+533,»ê¼öÀ¯¿­¸Å,"asiatic cornelian cherry",18
+534,»ê¾à»Ñ¸®ÁÙ±â,dioscoreaceae,0
+535,»ì±¸,apricot,0
+536,»ì±¸³ª¹«²É,"apricot flower",0
+537,»ì±¸³ª¹«¾¾,"apricot tree seed",0
+538,»ì±¸³ª¹«¿­¸Å,apricot,0
+539,»ì¶ó¹Ì,salami,0
+540,»ìº¥ÀÚ¸®,"jarbua terapon",0
+541,»ìÄ¡»ì,"chuck flap tail",0
+542,»îÀº°è¶õ,"boiled egg",1
+543,»ï°ã»ì,"belly, bacon, side",0
+544,»ï»öÁ¦ºñ²É,pansy,0
+545,»ï¼¼±â,"sea raven/ shaggy sea raven",0
+546,»ïÄ¡,"Japanese Spanish mackerel",0
+547,»ñ°«³ª¹°,.,0
+548,»ó¼ö¸®³ª¹«°ß°ú,"quercus/ oriental chestnut oak/ acorn",13
+549,»óÃß,lettuce,0
+550,»óÃßÀÙ,lettuce,0
+551,»óÄ¡,lettuce,0
+552,»óÈ²¹ö¼¸,"phellinus linteus",0
+553,»õ²¿¸·,"ark shell",18
+554,»õ¼ÛÀÌ¹ö¼¸,"king oyster mushroom",0
+555,»õ½ÏÃ¤¼Ò,"sprout vegetable",0
+556,»õ¿ì,shrimp,9
+557,»õ¿ì»ì,shrimp,9
+558,»õ¿ìÁ£,"salted shrimp",9
+559,»õÁ¶°³,"egg cockle",18
+560,»ø·¯µåÃ¤¼Ò,"salad vegetable",0
+561,»ø·¯¸®,celery,0
+562,»øºñ¾î,"clary(clary sage)",0
+563,»ı°­,ginger,0
+564,»ı°­°¡·ç,"ginger powders",0
+565,»ı°­³ª¹«,ginger,0
+566,»ı°­»Ñ¸®,"ginger/ amomum zingiber",0
+567,»ı°­Áó,"ginger juice",0
+568,»ı´ë±¸,codfish,0
+569,»ı»õ¿ì,"raw shrimp",9
+570,»ı¼ö,water,0
+571,»ıÅ©¸²,"freash cream",0
+572,»şÇÁ¶õ,"saffron/ zafferano",0
+573,¼¤ÆäÀÎ,champagne,0
+574,¼­´ë,tonguefish,0
+575,¼­¸®ÅÂ,"green kernel black bean",0
+576,¼­¾ç¹Îµé·¹,dandelion,0
+577,¼­¾ç¹Îµé·¹¾î¸°ÀÙ,dandelion,0
+578,¼­¾ç¹Îµé·¹ÀÙ,"organic dandelion leaf",0
+579,¼­¾ç¹è,"european pear",0
+580,¼®·ù,pomegranate,0
+581,¼®·ù³ª¹«¿­¸Å,"dwarf pomegranate",0
+582,¼®ÀáÇ®¾î¸°ÀÙ,stachys,0
+583,¼±Áö,clotted£¿blood£¿from£¿slaughtered£¿cows£¿and£¿pigs,0
+584,¼³ÅÁ,suger,0
+585,¼º°Ô,"sea urchin",8
+586,¼º°Ô¾Ë,"sea urchin roe",8
+587,¼¼ÀÌÁö,sage,0
+588,¼¿·¯¸®,celery,0
+589,¼¿·¯¸®ÀÙ,"celery/ smallage/ garden celery/ wild celery",0
+590,"¼Ò °£",liver,0
+591,"¼Ò °¥ºñ»ì",intercostal,0
+592,"¼Ò ²¿¸®","ox tail",0
+593,"¼Ò ¾È½É",tenderloin,0
+594,"¼Ò Åä½Ã»ì","hanging tender",0
+595,¼Ò°í±â,beef,0
+596,¼Ò±İ,salt,0
+597,¼Ò²¿¸®,"cow tail",0
+598,¼Ò³ª¹«²®Áú,"pine bark",0
+599,¼Ò³ª¹«»Ñ¸®,"korean red pine",0
+600,¼Ò³ª¹«¼ø,"korean red pine",0
+601,¼Ò¶ó,"spiny turban shell",0
+602,¼Ò¸é,"plain noodles",0
+603,¼Ò½ÃÁö,sausage,0
+604,¼ÒÁÖ,"soju, Korean distilled spirits",0
+605,¼ÒÃ¶,"sago palm",0
+606,¼ÒÃ¶¾¾,"sago palm",0
+607,¼Ó´Ü,áÙÓ¨,0
+608,¼Õ¹Ù´Ú¼±ÀÎÀå,"indian fig/ prickly pear",0
+609,¼Õ¹Ù´Ú¼±ÀÎÀå¿­¸Å,"prickly pear/ indian fig",0
+610,¼Õ¹Ù´Ú¼±ÀÎÀåÁÙ±â,"indian fig/ prickly pear",0
+611,¼ÖÀã³ª¹«,"stone pine",0
+612,¼ÖÀã³ª¹«°ß°ú,"italian stone pine/ mediterranean stone pine",13
+613,¼Ø´Ù¸®¾î¸°¼ø,"korean edelweiss",0
+614,¼Û»ç¸®,"asiatic ricefish",0
+615,¼Û¾î,"cherry salmon/ masou salmon",0
+616,¼ÛÀÌ,"pine mushroom",0
+617,¼ÛÀÌ¹ö¼¸,"pine mushroom",0
+618,¼ÛÈ­,áæü£,0
+619,¼è°í±â,beef,16
+620,¼è°í±â½ºÅå,"beef stock",16
+621,¼è¶ß±â,"horsetail/ field horsetail",0
+622,¼è¶ß±âÀÙ,"horsetail/ field horsetail",0
+623,¼è¹Ì¿ª,sujime,0
+624,¼èºñ¸§,"common purselane/ pigweed",0
+625,¼èºñ¸§¼ø,purslane,0
+626,¼ö±¹,hydrangea,0
+627,¼ö±¹ÀÙ,hydrangea,0
+628,¼ö´ß,"rooster, cock",15
+629,¼ö·Ã,"water lily",0
+630,¼ö·Ã¶¥¼ÓÁÙ±â,"water lily",0
+631,¼ö¹Ú,watermelon,0
+632,¼ö¹Ú¿­¸Å,watermelon,0
+633,¼ö¹ÚÁÖ½º,"watermelon juice",0
+634,¼ö»ï,"fresh ginseng",0
+635,¼ö¼¼¹Ì,"luffa cylindrica",0
+636,¼ö¼¼¹Ì¿ÀÀÌ¾î¸°¿­¸Å,"smooth loofah",0
+637,¼ö¼ö,sorghum,0
+638,¼ö¼ö¾¾,sorghum,0
+639,¼ö¾ç¹öµé,"weeping willow",0
+640,¼÷ÁÖ,"bean sprouts",0
+641,¼÷ÁÖ³ª¹°,"bean sprout",0
+642,¼ø´ë,"sundae(Korean sausage)",0
+643,¼øµÎºÎ,"soft tofu",0
+644,¼ø¹«,turnip,0
+645,¼ø¹«¾ç¹èÃß,kohlrabi,0
+646,¼ú,alcohol,0
+647,¼ş¾î,"flathead mullet",0
+648,½´°¡ÆÄ¿ì´õ,"powder sugar",0
+649,½ºÀ§Æ¼,sweetie,0
+650,½ºÅ¸ÇÁ·çÆ®,"star fruit",0
+651,½ºÅ¸ÈÄ¸£Ã÷,starfruit,0
+652,½ºÅ¸ÈÄ¸£Ã÷¿­¸Å,"starfruit/ carambola",0
+653,½ºÆÄ°ÔÆ¼,spaghetti,0
+654,½ºÆÄ°ÔÆ¼¸é,spaghetti,0
+655,½½¶óÀÌ½ºÄ¡Áî,"slice cheese",0
+656,½½¶óÀÌ½ºÇÜ,"slice ham",0
+657,½Ã°è²É,"passion flower",0
+658,½Ã±İÄ¡,spinach,0
+659,½Ã±İÄ¡ÀÙ,spinach,0
+660,½Ã³ª¸ó,cinnamon,0
+662,½Ã·¡±â,"dried radish greens",0
+663,½Ã¸®¾ó,cereal,0
+664,½Ã»ç¸ğ,"capelin/ candlefish",0
+665,½Ä»§,"(plain) bread",0
+666,½Ä¿ë´©¿¡¹øµ¥±â,beondegi,0
+667,½Ä¿ë´ŞÆØÀÌ,"an escargot",0
+668,½Ä¿ëÀ¯,"cooking oil",0
+669,½ÄÃÊ,vinegar,0
+670,½Å±èÄ¡,"sour[over-fermented] kimchi",0
+671,"½Å¼± Âü¸¶","fresh yam",0
+672,½Å¼±¹Ù³ª³ª,"fresh bananas",0
+673,½Å¼±Åä¸¶Åä,"fresh tomatoes",12
+674,"½Å¼±ÇÑ Ç¥°í¹ö¼¸","fresh oak mushroom/ shiitake fungus",0
+675,½Ç¹öº£¸®¿­¸Å,silverberry,0
+676,½ÇÆÄ,"a small green onion",0
+677,½Ò,rice,0
+678,½Ò°¡·ç,"rice flour",0
+679,½Ò°Ü±â¸§(¹Ì°­À¯),"rice oil",0
+680,½Ò±¹¼ö,"rice noodle",0
+681,½Ò¶ß¹°,"used water from washing rice",0
+682,½ÓÀå,ssamjang,0
+683,½î°¡¸®,"freshwater mandarin fish",0
+684,½ò¹è°¨Æë,"luna lion fish",0
+685,¾¦,"mugwort, wormwood",0
+686,¾¦°«,"crown daisy",0
+687,¾¦°«ÀÙ,"crown daisy",0
+688,¾¦ºÎÀïÀÌ,"aster yomena",0
+689,¾¦ºÎÀïÀÌ¾î¸°ÀÙ,"aster yomena",0
+690,¾¸¹Ù±Í,"toothed ixeridium",0
+691,¾¸¹Ù±ÍÀÙ,"korean ixeris",0
+692,¾Æ±¸,"anglerfish, monkfish",0
+693,¾Æ±Í,"anglerfish, monkfish",0
+694,¾Æ±â¾ç¹èÃßÀÙ,"brussels sprouts",0
+695,¾Æ¶óºñ¾ÈÀÚ½º¹Î²É,"arabian jasmine",0
+696,¾Æ·Î´Ï¾Æ¿­¸Å,"black chokeberry",0
+697,¾Æ¸¶,flax,0
+698,¾Æ¸óµå,almond,13
+699,¾Æ¸óµå°¡·ç,almond,13
+700,¾Æ¸óµå°ß°ú,"sweet almond",13
+701,¾Æ¸óµå¿ÜÇÇ,"sweet almond",13
+702,¾Æº¸Ä«µµ,avocado,0
+703,¾Æº¸Ä«µµ¿­¸Å,"avocado/ alligator pear",0
+704,"¾Æ»èÀÌ °íÃß","chili (pepper)",0
+705,¾Æ½ºÆÄ¶ó°Å½º,asparagus,0
+706,¾Æ½ºÆÄ¶ó°Å½º¾î¸°¼ø,asparagus,0
+707,¾Æ¿À¸®»ç°ú,"green apple",0
+708,¾Æ¿í,"curled mallow",0
+709,¾ÆÄ«½Ã¾Æ,"shittah tree",0
+710,¾ÆÄ«½Ã¾Æ³ª¹«²É,"fleur d'acacia.",0
+711,¾È½ÄÇâ,angelica,0
+712,¾È½É,tenderloin,0
+713,¾È½É»ì,tenderloin,0
+714,¾ÈÃ¢»ì,"outside skirt",0
+715,¾Ï´ß,hen,15
+716,¾ÕÄ¡¸¶»ì,"thin flank",0
+718,¾Ö±â³ª¸®¾î¸°ÀÙ,fairy-bells,0
+719,¾Ö±â¶ËÇ®,"asian celandine/ greater celandine",0
+720,¾Ö±â¿øÃß¸®¾î¸°¼ø,"small yellow daylily",0
+721,¾ÖÇÃ¸Á°í,"apple mango",0
+722,¾ÖÇÃ¹ÎÆ®,"apple mint/ roundleave mint",0
+723,¾ÖÈ£¹Ú,"green pumpkin/ young pumpkin",0
+724,¾×Á£,"aekjeot, fish sauce",0
+725,¾ŞµÎ,"korean cherry",0
+726,¾ŞµÎ³ª¹«¿­¸Å,"chinese bush cherry",0
+727,¾ŞÃÊ¾î¸°½Ï,"a primrose",0
+728,¾ß»ıµş±â,"wild strawberry",0
+729,¾ßÀÚ³ª¹«,"a palm (tree)",0
+730,¾ßÄÜ¾î¸°ÀÙ,yacon,0
+731,¾ç°í±â,lamb,0
+732,¾ç±Íºñ,opium-poppy,0
+733,¾ç±ÍºñÀüÃÊ,"opium poppy",0
+734,¾ç³ä,seasoning,0
+735,¾ç³äÀå,marinade,0
+736,¾ç¹èÃß,cabbage,0
+737,¾ç»óÃß,"lettuce/ cabbage lettuce",0
+738,¾ç»óÃßÀÙ,lettuce,0
+739,¾ç¼ÛÀÌ,"button mushroom",0
+740,¾ç¼ÛÀÌ¹ö¼¸,"cultivated mushroom",0
+741,¾çÁãµ¼,acanthuridae,0
+742,¾çÁö±¹¹°,"brisket, flank",0
+743,¾çÆÄ,onion,0
+744,¾çÆÄÁó,"onion juice",0
+745,¾ê·Î,yarrow,0
+746,¾î¸°ÀÙÃ¤¼Ò,"sprout vegetable",0
+747,¾î¹¬,"fish cake",0
+748,¾ó°¥ÀÌ¹èÃß,"Chinese cabbage, napa cabbage",0
+749,¾ó·¹Áö,"dog-tooth violet",0
+750,¾óÀ½,ice,0
+751,¾ö³ª¹«,"castor aralia",0
+752,¾÷Áø»ì,"short plate",0
+753,¾û°ÏÄû,tiger-thistle,0
+754,¿¡¹Â,"an emu",0
+755,"¿¥º¸¸£±× ºê¸®","emborg brie",0
+756,"¿¥º¸¸£±× Ä«¸Áº£¸£","emborg camembert",0
+757,¿¬,lotus,0
+758,¿¬°ÜÀÚ,"light mustard",0
+759,¿¬±Ù,"lotus root",0
+760,¿¬²É,"lotus flower",0
+761,¿¬µÎºÎ,"soft soybean curd",0
+762,¿¬¸Æ,oat,0
+763,¿¬¾î,salmon,0
+764,¿¬ÀÙ,"a lotus leaf",0
+765,¿­¹«,"young radish",0
+766,¿­¹«±èÄ¡,"young radish kimchi",0
+767,¿°¼Ò,goat,0
+768,¿µ¾çºÎÃß,chives,0
+769,¿µÁö¹ö¼¸,"glossy ganoderma",0
+770,¿À°¥ÇÇ,"stalkless-flower eleuthero",0
+771,¿À°¥ÇÇ³ª¹«ÁÙ±â,"five-leaved aralia",0
+772,¿À°ñ°è,"chicken, black bone",0
+773,¿Àµğ,mulberries,0
+774,¿À·¹°¡³ë,oregano,0
+775,¿À·»Áö,"navel orange",0
+776,¿À¸®°í±â,"duck meat",0
+777,¿À¹ÌÀÚ,schizandra,0
+778,¿À¹ÌÀÚ¿­¸Å,schizandra,0
+779,¿À¼Ò¸®,badger,0
+780,¿À¾à,"lindera root",0
+781,¿ÀÀÌ,cucumber,0
+782,¿ÀÀÌ¿­¸Å,cucumber,0
+783,¿ÀÀÌÇ®,"a burnet",0
+784,¿ÀÀÌÇÇÅ¬,"pickled cucumber",0
+785,¿ÀÂ¡¾î,squid,17
+786,¿ÀÂ¡¾îÃ¤,"shredded squid",17
+787,¿Áµ¼,"red tilefish/ red horsehead",0
+788,¿Á¼ö¼ö,"corn/ maize",0
+789,¿Á¼ö¼ö±â¸§,"corn oil",0
+791,¿Á¼ö¼öÅëÁ¶¸²,"canned corn",0
+792,¿Ã¸®°í´ç,oligosaccharide,0
+793,¿Ã¸®ºê,olive,0
+794,"¿Ã¸®ºê ¿ÀÀÏ","olive oil",0
+795,¿Ã¸®ºê³ª¹«¿­¸Å,olive,0
+796,¿Ã¸®ºê¿ÀÀÏ,"olive oil",0
+797,¿Ã¸®ºêÀ¯,"olive oil",0
+798,¿Í»çºñ,wasabi,0
+799,¿ÍÀÎ,wine,0
+800,¿ÏµÎ,pea,0
+801,¿ÏµÎÄá,pisum£¿sativum,0
+802,¿Õ°Ô,"red king crab",8
+803,¿ä±¸¸£Æ®,yoghurt,0
+804,¿ë°ú,"dragon fruit",0
+805,¿ë´ã(ÁÙ±âÁ¦¿Ü),"gentian/ stemless",0
+806,¿ë´ã»Ñ¸®,"gentian/ rhizome or root",0
+807,¿ì°ÅÁö,"outer leaves",0
+808,¿ìµ¿¸é,"udong noodle",0
+809,¿ì··ÀÌ,"freshwater[mud, pond] snail",0
+810,¿ì¾û,"great burdock",0
+811,¿ìÀ¯,milk,2
+812,¿ï±İ,turmeric,0
+813,¿øÃß¸®,"day lily",0
+814,¿øÃß¸®²ÉºÀ¿À¸®,"common day liiy/ orange day lily/ day lily",0
+815,¿øÃß¸®¾î¸°ÀÙ,"common day liiy/ orange day lily/ day lily",0
+816,¿ù°è¼öÀÙ,"bay leaf",0
+817,¿ù³Ó,walnut,0
+818,À¯ºÎ,"fried tofu",0
+819,À¯ÀÚ,citron,0
+820,À¯ÀÚ¿­¸Å,"citron fruit",0
+821,À¯Á¦Ç°,"dairy products",0
+822,À¯Ã¤,rapeseed,0
+823,À¯Ã¤¾¾±â¸§,"rape oil",0
+824,À¯Ä®¸³Åõ½º,"eucalyptus globulus leaves",0
+825,"À¯Ä®¸³Åõ½º ÀÙ","eucalyptus leaf",0
+826,À°µÎ±¸,nutmeg,0
+827,À°µÎ±¸¾¾,"nutmeg seed",0
+828,À°¼ö,"meat broth, meat stock",0
+829,À°Æ÷,"beef jerky",0
+830,À°È¸,"yukhoe, Korean-style raw beef",0
+831,À±ÆÇ³ª¹°¾î¸°¼ø,"korean disporum",0
+832,À²¹«,adlay,0
+833,À²¹«¾¾,"job's tears/ adlay/ adlai/ coicis semen",0
+834,Àº¹æ¿ï²É,"may lily/ lily of the valley",0
+835,ÀºÇà,maidenhair,13
+837,ÀºÇà³ª¹«ÀÙ,ginko,0
+838,ÀºÇà¿­¸Å,ginkgo,13
+839,ÀÎ»ï,ginseng,0
+840,ÀÎ»ï»Ñ¸®,"ginseng root",0
+841,ÀÎ»ï¿­¸Å,"ginseng fruit",0
+842,ÀÎÀı¹Ì,"injeolmi, Korean traditional rice cake",0
+843,À×¾î,"common carp",0
+844,ÀÚ±Í³ª¹«²É,"silk tree flower",0
+845,ÀÚµÎ,plum,0
+846,ÀÚµÎ³ª¹«¿­¸Å,"plum tree/ japanese plum",0
+847,ÀÚµÎÇÙ,plum,0
+848,ÀÚ¶õ,"bletillae rhizoma",0
+849,ÀÚ¸®°ø,"phytolacca esculenta",0
+850,ÀÚ¸®µ¼,"pearl-spot chromis",0
+851,ÀÚ¸ù,grapefruite,0
+852,ÀÚ¸ù°úÀ°,grapefruit,0
+853,ÀÚ¸ù¿­¸Å,grapefruit,0
+854,ÀÚ¸ùÁÖ½º,"grapefruite juice",0
+855,ÀÚ¿î¿µ,milk-vetch,0
+856,ÀÚÀÛ³ª¹«,birch,0
+857,ÀÚÁÖ°¨ÀÚ,"purple potato",0
+858,ÀÚÁÖ·çµåº£Å°¾Æ,echinacea,0
+859,ÀÛµÎÄá,"sword bean",0
+860,ÀÛ¾à,"peony root",0
+861,ÀÜ¸êÄ¡,"japanese anchovy/ anchovy",0
+862,Àâ»À±¹¹°,"mixed bone broth",0
+863,Àã,"pine nut",0
+864,Àã³ª¹«,"korean pine",0
+865,Àã³ª¹«°ß°ú,"korean pine/ pine nut/ pine nut",13
+866,Àã³ª¹«¾¾¾Ñ,"nut pine",13
+867,Àã³ª¹«ÀÙ,"nut pine leaf",0
+868,Àå¾ÆÂî,"pickled vegetables",0
+869,Àå¾î,eel,0
+870,Àç½º¹Î,jasmine,0
+871,Àç½º¹Î²É,"jasmine flower",0
+872,ÀçÃ¸,"marsh clam",0
+873,"Àú¿Â »ì±ÕÇÑ ¿ìÀ¯","pasteurized milk",2
+874,Àû»óÃß,"red lettuce",0
+875,Àû¾ç¹èÃß,"red cabbage",0
+876,ÀûÀÛ¾à,"paeony/ chinese paeony",0
+877,ÀûÆ÷µµÁÖ,"red wine",0
+878,Àü°¥,scorpion,0
+879,Àüº¹,abalone,18
+880,ÀüºĞ,starch,0
+881,Àü¾î,"dotted gizzard shad",0
+882,Á¢½Ã²É,hollyhock,0
+883,Á£»õ¿ì,"akiami paste shrimp",9
+884,Á¤¾î¸®,sardine,0
+885,Á¦¶ó´½,geranium,0
+886,Á¦¶ó´Ï¿ò,geranium,0
+887,"Á¦¶ó´Ï¿ò, ·ÎÁî","geranium / rose",0
+888,Á¦ºñ²É,"manchurian violet",0
+889,Á¦ºñÃß¸®,"rope meat",0
+890,Á¶,"italian millet",0
+891,Á¶°³,clam,18
+892,Á¶±¸µî,"uncaria rhynchophylla",0
+893,Á¶±â,"croaker/ yellow corbina",0
+894,Á¶¹Ì·á,"seasoning, (formal) condiment",0
+895,Á¶»ı,mandarin,0
+897,Á¶Ã»,"grain syrup",0
+898,Á¹º¹,"panther puffer",0
+899,Á¼½Ò,"foxtail millet",0
+900,ÁÖ²Ù¹Ì,"webfoot octopus",0
+901,ÁÖ¸§ÀÙ,"asian mazus",0
+902,ÁÖ¸ñ,yew,0
+903,ÁÖ¸ñ¿­¸Å,"japaness yew/ yew",0
+904,Á×¼ø,"bamboo sprout",0
+905,Áß±¹°èÇÇ,"chinese cinnamon",0
+906,Áß±¹´ç±Í,"dang gui/ dan gui/ dang quai",0
+907,Áß±¹¹ã,"chinese chestnut",0
+908,Áß±¹ºÎÃß,"chinese chives",0
+909,Áß±¹Á£»õ¿ì,"northern mauxia shrimp",9
+910,Áß·ÂºĞ,"gravity powder",0
+911,Áß»õ¿ì,shrimp,9
+912,ÁßÇÏ,"shiba shrimp",9
+913,Áã´«ÀÌÄá,"a kind of small bean",0
+914,ÁãÄ¡,"thread-sail filefish /fool fish /porky",0
+915,ÁãÆ÷,"filefish fillet",0
+916,Áö¸ğ,anemarrhena,0
+917,ÁöÄª°³,lyrate-hemistepta,0
+918,ÁöÄª°³¾î¸°¼ø,lyrate-hemistepta,0
+919,Áø°£Àå,"thick soy",0
+920,Áø´Ş·¡,azalea,0
+921,Áø´Ş·¡²É,"korean rosebay",0
+922,ÁøÇÇ,"citrus unshiu peel",0
+923,Áú°æÀÌ,"asian plantain",0
+924,Áı°Ô,"hermit crab",8
+925,Áı¿À¸®,"a domestic duck",0
+926,"Â¥Àå ¼Ò½º","Jja-jang sauce",0
+927,ÂÊÆÄ,"allium fistulosum",0
+928,ÂŞ²Ù¹Ì,"webfoot octopus",0
+929,Âñ·¹,"baby brier/ wild rosebush/ japanese rose",0
+930,Âñ·¹²É¾î¸°¼ø,"baby brier/ wild rosebush/ japanese rose",0
+931,Â÷µ¹¹ÚÀÌ,"brisket point end",0
+932,Â÷Á¶,glutinous£¿foxtail£¿millet,0
+933,Âù¹°,water,0
+934,Âù¹ä,rice,0
+935,Âü±â¸§,"sesame oil",0
+936,Âü±ú,sesame,0
+939,Âü³ª¸®²ÉÀÙ,"easter lily",0
+940,Âü³ª¹«,oak,0
+941,Âü³ª¹«¿­¸Å,"quercus/ oriental chestnut oak",0
+942,Âü³ª¹°,"pimpinella brachycarpa",0
+943,Âü³ª¹°ÀÙ,shortfruit-pimpinella,0
+944,Âü´À¸¨³ª¹«,"korean autumn elm",0
+945,Âü´À¸¨³ª¹«ÀÙ,"korean autumn elm",0
+946,Âü´Ù½½±â,coreana,0
+947,Âü´ç±Í,"korean angelica",0
+948,Âüµ¼,"red seabream",0
+949,Âü¸¶»Ñ¸®,"a yam",0
+950,Âü¹®¾î,octopus,0
+951,Âüºø»ì³ª¹«¾î¸°ÀÙ,"hamilton's spindle/ winterberry euonymus",0
+952,Âü¿Ü,"oriental melon",0
+953,Âü¿Ü¿­¸Å,"oriental melon",0
+954,ÂüÁ¶±â,"small yellow croaker",0
+955,ÂüÃë¾î¸°ÀÙ,edible£¿aster,0
+956,ÂüÄ¡,tuna,0
+957,ÂüÄ¡Äµ,"canned tuna",0
+958,ÂüÄ¡ÅëÁ¶¸²,"canned tuna",0
+959,ÂüÈ«¾î,"mottled skate /mottled skate",0
+960,Âı½Ò,"glutinous rice",0
+961,Âı½Ò°¡·ç,"glutinous rice flour",0
+962,Ã¢Æ÷,"óîøä/ sweet flag/ calamus",0
+963,Ã¤³¡»ì,striploin,0
+964,Ãµ±Ã,cnidium,0
+965,Ãµµµº¹¼ş¾Æ,nectarine,11
+966,Ãµµµº¹¼ş¾Æ¿­¸Å,nectarine,11
+967,Ãµ¸¶,"rhizoma gastrodiae",0
+968,Ãµ¸¶»Ñ¸®,"tall gastrodia tuber root",0
+969,ÃµÀÏ¿°,ô¸ìíç¤,0
+970,ÃµÀÏÈ«,"a globe amaranth",0
+971,Ã¶°©µÕ¾î,pineconefish,0
+972,Ã¶°©»ó¾î,sturgeon,0
+973,Ã»°¢,"sea staghom",0
+974,Ã»°æÃ¤,"pak choi",0
+975,Ã»°íÃß,"green chili",0
+976,Ã»±¹Àå,cheonggukjang,0
+977,Ã»¸Å,"inexperienced ume",0
+978,Ã»º¸¸®,"forage barley",0
+979,Ã»¾ç°íÃß,"spicy chili pepper",0
+980,Ã»ÁÖ,"cheongju, refined[clear] rice wine",0
+981,Ã»Æ÷µµ,green£¿grape,0
+982,Ã»Æ÷¹¬,"Mung bean jelly",0
+983,Ã»ÇÇ¸Á,"green pepper, bell pepper",0
+984,Ã¼¸®,cherry,0
+985,"ÃÊ°í¿Â ¼ø°£ »ì±ÕÇÑ ¿ìÀ¯","ultrahigh temperature sterilized milk",2
+986,ÃÊ°íÃßÀå,"red chili-pepper paste with vinegar",0
+987,ÃÊ·Õ²É¾î¸°¼ø,"bell flower",0
+988,ÃÊÄİ¸´,chocolate,0
+989,ÃÑ°¢¹«,"a (young) radish",0
+990,ÃáÀå,"black bean paste",0
+991,Ãë³ª¹°,"seasoned aster",0
+992,Ãø¹é³ª¹«,"folium biotae orientalis",0
+993,Ãø¹é³ª¹«°¡Áö,"chinese arborvitae",0
+994,Ãø¹é³ª¹«¾¾,"chinese arborvitae",0
+995,Ãø¹é³ª¹«ÀÙ,"chinese arborvitae",0
+996,Ä¡¸¶»ì,"flap meat",0
+997,Ä¡Áî,cheese,0
+998,Ä¡Áî°¡·ç,"cheese powder",0
+999,Ä¡Ä¿¸®,"common chicory",0
+1000,"Ä¥¸® ¼Ò½º","chili sauce",0
+1001,Ä¦,"kudzu vine",0
+1002,Ä¦³ÕÄğ,"kudzu vine",0
+1003,Ä¦ÀÙ,"kudzu/ kudzu vine/ kuzu vine/ pueraria",0
+1004,Ä«³×ÀÌ¼Ç²É,"clove pinks/ rainbow pinks/ carnation",0
+1005,Ä«¶÷º¼¶ó,carambola,0
+1006,Ä«·¹,curry,0
+1007,Ä«·¹°¡·ç,"curry powder",0
+1008,Ä«¸Áº£¸£,camembert,0
+1009,"Ä«»ç¹Ù ¸á·Ğ","casaba melon",0
+1010,Ä«Ä«¿À,cacao,0
+1011,"Ä­Å»·çÆ÷ ¸á·Ğ","cantaloupe melon",0
+1012,Ä®±¹¼ö,"chopped noodles",0
+1013,Ä®±¹¼ö¸é,"chopped noodles",0
+1014,Ä³¸ğ¸¶ÀÏ,camomil,0
+1015,Ä³¸ğ¸¶ÀÏ²É,"chamomile flower",0
+1016,Ä³½´°ß°ú,cashew,13
+1017,Ä³½´³Ó,"cashew nut",13
+1018,Ä»°Å·ç°í±â,"kangaroo meat",0
+1019,Ä¿ÇÇ³ª¹«°úÀ°,"coffee tree",0
+1020,Ä¿ÇÇ³óÃà¾×,"coffee concentrate",0
+1021,Ä¿ÇÇºóÃßÃâ¹°,"coffee bean extract",0
+1022,Ä¿ÇÇÃßÃâ¾×,"coffee extract",0
+1023,ÄÉÀÏ,kale,0
+1024,ÄÉÀÏÀÙ,"kale leaf",0
+1025,ÄÉÃ¸,ketchup,12
+1026,ÄÚ´Ù¸®,pollack,0
+1027,ÄÚÄÚ³Ó,coconut,0
+1028,"ÄÚÄÚ³Ó ¹ĞÅ©","coconut milk",2
+1029,"ÄÚÄÚ³Ó ¿ìÀ¯","coconut milk",2
+1030,ÄÚÄÚ¾ÆÁÖ½º,"cocoa(cacao) juice",0
+1031,ÄÚÄÚ¾ÆÆÄ¿ì´õ,"cocoa powder/ cacao powder",0
+1032,Äİ¶óºñ,kohlrabi,0
+1033,Äİ¶óºñºñ´ë°æ,kohlrabi,0
+1034,Äİ¸®ÇÃ¶ó¿ö,cauliflower,0
+1035,Äá,bean,0
+1036,Äá°¡·ç,"bean flour",0
+1037,Äá±â¸§,"bean oil",0
+1038,Äá³ª¹°,"bean sprouts",0
+1039,ÄáÀÙ,bean£¿leaves,0
+1040,Äû³ë¾Æ,quinoa,0
+1041,Äû³ë¾Æ¾¾¾Ñ,quinoa,0
+1042,Å©·£º£¸®,cranberry,0
+1043,Å©¸²,cream,0
+1044,Å©¸²Ä¡Áî,"cream cheese",0
+1045,Å«±ªÀÌ¹ä¾î¸°¼ø,"mountain lady's-sorrel",0
+1047,Å«¾ŞÃÊ¾î¸°ÀÙ,primrose,0
+1048,Å¬·Î¹ö,clover,0
+1049,Å°À§,kiwi,0
+1050,Å°À§¾¾,"kiwi seed",0
+1051,Å°À§¿­¸Å,kiwi,0
+1052,Å°Á¶°³,"comb pen shell",0
+1053,Å·Å©·¦,"king crab",0
+1054,Å¸ÀÓ,thyme,0
+1055,Å¸Á¶,ostrich,0
+1056,Å¸Á¶°í±â,"ostrich meat",0
+1057,ÅÊÀÚ,"trifoliate orange",0
+1058,ÅĞ°Ô,kegani,8
+1059,Å×ÇÁ,tef,0
+1060,Åä³¢,"hare meat, rabbit meat",0
+1061,Åä³¢Ç®ÀÙ,"dutch clover leaf",0
+1062,Åä¶õ,taro,0
+1063,Åä¶õ»Ñ¸®ÁÙ±â,taro,0
+1064,Åä¶õÀÙ,"taro/ coco yam",0
+1065,Åä¶õÁÙ±â,taro,0
+1066,Åä¸¶Åä,tomato,12
+1067,Åä¸¶Åä¼Ò½º,"tomato sauce",12
+1068,Åä¸¶Åä¿­¸Å,"tomato/ lycopersicon lycopoersicum",12
+1069,Åä¸¶ÅäÄÉÂı,ketchup,12
+1070,Åä¸¶ÅäÄÉÃ¸,ketchup,12
+1071,Åê,"sea weed fusiforme",0
+1072,Åê³ª¹°,"sea weed fusiforme",0
+1073,Åë±ú,sesame,0
+1074,Åëµµ¶óÁö,"balloon/bell flower (root)",0
+1075,Åë¸¶´Ã,"a whole bulb of garlic",0
+1076,ÅëÈÄÃß,"whole peppers",0
+1077,Åõ±¸²É,monk'shood,0
+1078,Æ¢±è°¡·ç,"frying powder",0
+1079,Æ¢±è±â¸§,"frying oil",0
+1080,ÆÄ,"spring onion",0
+1081,ÆÄ·¡,"sea lettuce",0
+1082,ÆÄ¸¶»êÄ¡Áî,"Parmesan cheese",0
+1083,ÆÄ½ºÅ¸,pasta,0
+1084,ÆÄ½½¸®,parsley,0
+1085,ÆÄ½½¸®°¡·ç,parsley,0
+1086,ÆÄÀÎ¾ÖÇÃ,pineapple,0
+1087,ÆÄÀÎ¾ÖÇÃ¿­¸Å,pineapple,0
+1088,ÆÄÆÄ¾ß,papaya,0
+1089,ÆÄÇÁ¸®Ä«,paprika,0
+1090,ÆÈ°¢,"star anise",0
+1091,ÆÈ¶û°³ºñ±¹È­(¼ö·¹±¹È­),cornflower,0
+1092,ÆÈ¶û°³ºñ±¹È­²ÉÀÙ,cornflower,0
+1093,ÆÏ,"red bean",0
+1094,ÆÏ¾¾,"red bean",0
+1095,ÆĞ·©ÀÌ²É,pink,0
+1096,"ÆÒÁö ²É",pansy,0
+1097,ÆØÀÌ¹ö¼¸,"winter mushroom",0
+1098,ÆäÆÛ¹ÎÆ®ÀÙ,peppermint,0
+1099,Æ÷µµ,grape,0
+1100,Æ÷µµ¾¾À¯,"grape seed oil",0
+1101,Æ÷µµ¿­¸Å,grape,0
+1102,Æ÷¸á·Î,pomelo,0
+1103,Æ÷¸á·Î¿­¸Å,pomelo,0
+1104,ÆşµàÄ¡Áî,"fondue cheese",0
+1105,Ç¥°í¹ö¼¸,"oak mushroom",0
+1106,Ç¥ÁÖ¹Ú,"gourd dipper",0
+1107,Ç²°íÃß,"green chilli",0
+1108,Ç²¸¶´Ã,"green garlic",0
+1109,Ç²Äá,"green soybean",0
+1110,ÇÃ·¹ÀÎ¿ä±¸¸£Æ®,"plain yogurt",0
+1111,ÇÇ¸Á,"sweet pepper",0
+1112,ÇÇ¸Á¿­¸Å,"sweet pepper/ pimento",0
+1113,ÇÇ½ºÅ¸Ä¡¿À,pistachio,0
+1114,ÇÇÀÚÄ¡Áî,"pizza cheese",0
+1115,ÇÇÁ¶°³,akagai,0
+1116,ÇÇÄ­,pecan,13
+1117,ÇÇÄ­°ß°ú,pecan,13
+1118,ÇÇÅ¬,pickle,0
+1119,ÇÏ´Ã³ª¸®ºñ´ÃÁÙ±â,"star lily",0
+1120,ÇÏ´Ã¸»³ª¸®¾î¸°¼ø,"korean wheel lily",0
+1121,ÇÏ¹Ù³×·Î¿­¸Å,"habanero chili",0
+1122,ÇÏ¼ö¿À,"polygoni multiflori radix",0
+1123,ÇÑ¶óºÀ,hanbalong,0
+1124,ÇÑ¶óºÀ¿­¸Å,"hallabong/ kabosu(ª«ªİª¹)",0
+1125,ÇÒ¶óÆä´¢,jalapenos,0
+1126,ÇÒ¶óÇÇ´¢,jalapeno,0
+1127,ÇÖ¼Ò½º,"hot sauce",0
+1128,Ç×Á¤»ì,jowls,0
+1129,ÇØ±¹¾î¸°ÀÙ,"arctic daisy young leaf",0
+1130,ÇØ¹°,seafood,0
+1131,ÇØ¹Ù¶ó±â²É,"sunflower flower",0
+1132,ÇØ¹Ù¶ó±â²ÉÀÙ,sunflower,0
+1133,ÇØ¹Ù¶ó±â¾¾,"sunflower seed",0
+1134,ÇØ»ï,"sea cucumber",0
+1135,ÇØÆÄ¸®,"jellyfish, sea jelly",0
+1136,ÇÜ,ham,0
+1137,Çã´Ï¸Ó½ºÅ¸µå,"honey mustard",0
+1138,Çã´Ï¸Ó½ºÅÍµå,"honey mustard",0
+1139,Çãºê¼ÖÆ®,"herb salt",0
+1140,Çê°³,"japanese raisin tree",0
+1141,ÇìÀÌÁñ³Ó,hazelnuts,13
+1142,Çö¹Ì,"unpolished rice",0
+1143,È£µÎ,walnut,14
+1145,È£¸®¹Úº´,"bottle gourd",0
+1147,È£¹Ú,"pumpkin/ squash",0
+1148,È£¹Ú²É,"pumpkin flower",0
+1149,È£¹Ú¾¾,"pumpkin seed",0
+1150,È£¹ÚÀÙ,"pumpkin leaf",0
+1151,È«°íÃß,"mashed red pepper",0
+1152,È«´ç¹«,carrot,0
+1153,È«»ï,"red ginseng",0
+1154,È«½Ã,"soft persimmon",0
+1155,È«¾î,"skate ray",0
+1156,È«ÇÇ¸Á,"bell pepper",0
+1157,È«ÇÕ,"igai/ mytili caro",18
+1158,È«È­(ÀÕ²É),safflower,0
+1159,È«È­¾¾,"safflower/ fucus",0
+1160,È²±â,"astragalus root",0
+1161,È²±â»Ñ¸®,"milk vetch root",0
+1162,È²µµ,peach,0
+1163,È²¼Ò°³±¸¸®,"american bull frog",0
+1164,È²ÅÂ,"dried pollack",0
+1165,È¸»ö±â·¯±â,"greylag goose",0
+1166,ÈÄÃß,pepper,0
+1167,ÈÄÃß¿­¸Å,"black pepper/ pepper/ piperis nigri fructus",0
+1168,ÈÄÃå°¡·ç,"ground pepper",0
+1169,ÈÆÁ¦¿¬¾î,"smoked salmon",0
+1170,ÈÖÇÎÅ©¸²,"whipping cream",0
+1171,Èæ¹Ì,"black rice",0
+1172,Èæ¼³ÅÁ,"brown sugar",0
+1173,ÈæÀÓÀÚ,"black sesame",0
+1174,Èò°­³¶Äá,"butter bean",0
+1175,Èò°­³¶Äá¿­¸Å,"butter bean fruit",0
+1176,Èò¹Îµé·¹,"korean dandelion",0
+1177,ÈòÄá,"white soybean",0
+1178,È÷ºñ½ºÄ¿½º,"hibiscus/ hibiscus",0
+1179,È÷ºñ½ºÄ¿½º²É,"hibiscus flower",0
+1180,È÷ºñ½ºÄ¿½º²ÉÀÙ,hibiscus,0
+1181,È÷¾Æ½Å½º²É,"hyacinth flowers",0
