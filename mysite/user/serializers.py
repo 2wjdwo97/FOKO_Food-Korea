@@ -24,17 +24,17 @@ class UserSerializer(serializers.ModelSerializer):
 # json example
 # {
 # 	"user_id" : "pkm1015",
-# 	"user_pw" : "1015kio",
+# 	"user_pw" : "1015pkm",
 # 	"pw_confirm" : "1015pkm",
 # 	"user_name" : "park",
-# 	"user_age" : "24",
-# 	"user_spicy" : "4",
-# 	"country_no" : "37"
+# 	"user_age" : 24,
+# 	"user_spicy" : 4,
+# 	"country_no" : 37
 # }
 
 # {
-#    "user" : "2",
-#    "food_class" : "1,4,15",
-#    "tag" : "1,4,10,26",
-#    "allergy" : "4,9,12"
+#    "user" : 1,
+#    "food_class" : [1, 4, 15],
+#    "tag" : [1, 4, 10, 26],
+#    "allergy" : [4, 9, 12]
 # }

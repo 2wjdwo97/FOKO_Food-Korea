@@ -9,7 +9,7 @@ from rest_framework.parsers import JSONParser
 
 from food.models import FoodClass, AllergyClass
 from review.models import Tag, MapUserTag
-from .models import Country, MapUserClass, MapUserAllergy, User
+from .models import MapUserClass, MapUserAllergy, User
 from .serializers import UserSerializer
 
 
@@ -34,7 +34,7 @@ def manage(request, pk):
     # TODO 회원 정보 삭제
     elif request.method == 'DELETE':
         # user_info.delete()
-        return HttpResponse(status=204)
+        return HttpResponse(status=202)
 
 
 # 회원가입
@@ -47,11 +47,11 @@ def signup(request):
         # 유효성 검사 (아이디 중복 검사 등)
         if not serializer.is_valid():
             print(serializer.errors)
-            return HttpResponse(status=400)
+            return HttpResponse(status=404)
 
         # 비밀번호 확인
         if data['user_pw'] != data['pw_confirm']:
-            raise ValueError('password confirm error')
+            return HttpResponse(status=404)
 
         password = data['user_pw'].encode('utf-8')                  # 입력된 패스워드를 바이트 형태로 인코딩
         password_crypt = bcrypt.hashpw(password, bcrypt.gensalt())  # 암호화된 비밀번호 생성
@@ -69,22 +69,20 @@ def signup(request):
 def login(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
-        # serializer = LoginSerializer(data=data)
 
         try:
-            if User.objects.filter(user_id=data['user_id']).exists():
-                account = User.objects.get(user_id=data['user_id'])
+            if not User.objects.filter(user_id=data['user_id']).exists():
+                return HttpResponse(status=404)
 
-                # 비밀번호 확인
-                if bcrypt.checkpw(data['user_pw'].encode('utf-8'), account.user_pw.encode('utf-8')):
-                    token = jwt.encode({'user_id': account.user_id}, settings.SECRET_KEY, algorithm='HS256')
-                    token = token.decode('utf-8')
+            # 비밀번호 확인
+            account = User.objects.get(user_id=data['user_id'])
+            if bcrypt.checkpw(data['user_pw'].encode('utf-8'), account.user_pw.encode('utf-8')):
+                token = jwt.encode({'user_id': account.user_id}, settings.SECRET_KEY, algorithm='HS256')
+                token = token.decode('utf-8')
 
-                    return JsonResponse({'access_token': token}, status=200)
-                else:
-                    return HttpResponse(status=401)
-
-            return HttpResponse(status=400)
+                return JsonResponse({'access_token': token}, status=200)
+            else:
+                return HttpResponse(status=404)
 
         except KeyError as ke:
             print(ke)
@@ -99,14 +97,14 @@ def set_user_taste(request):
 
         try:
             user = data['user']
-            food_classes = data['food_class'].split(',')
-            tags = data['tag'].split(',')
-            allergy_classes = data['allergy'].split(',')
+            food_classes = data['food_class']
+            tags = data['tag']
+            allergy_classes = data['allergy']
 
             for food_class in food_classes:
                 MapUserClass(
                     user_no=User.objects.get(user_no=user),
-                    class_no=FoodClass.objects.get(class_no=food_class),
+                    food_class_no=FoodClass.objects.get(food_class_no=food_class),
                 ).save()
 
             for tag in tags:
