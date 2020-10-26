@@ -43,7 +43,13 @@ class IngredientAdmin(admin.ModelAdmin):
         verbose_name_plural = "Ingredients"
 
 
-admin.site.register(FoodClass, FoodClassAdmin)
+class MapFoodIngreAdmin(admin.ModelAdmin):
+    list_display = ['id', 'food_no', 'ingre_no']
+    list_display_links = ['id']
+    list_editable = ['food_no', 'ingre_no']
+
+
 admin.site.register(AllergyClass, AllergyClassAdmin)
 admin.site.register(Food, FoodAdmin)
 admin.site.register(Ingredient, IngredientAdmin)
+admin.site.register(MapFoodIngre, MapFoodIngreAdmin)

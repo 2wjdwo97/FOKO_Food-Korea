@@ -25,11 +25,11 @@ from . import file_utils
 import json
 import zipfile
 
-from ocr.craft import CRAFT
+from ocr.CRAFT.craft import CRAFT
 
 from collections import OrderedDict
 
-trained_model = '/home/ubuntu/proj/FOKO_FoodKorea/mysite/ocr/craft_mlt_25k.pth'
+trained_model = '/home/ubuntu/proj/FOKO_FoodKorea/mysite/ocr/CRAFT/craft_mlt_25k.pth'
 text_threshold = 0.7
 low_text = 0.4
 link_threshold = 0.1

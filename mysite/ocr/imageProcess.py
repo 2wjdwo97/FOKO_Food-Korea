@@ -1,9 +1,9 @@
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ExifTags
 import cv2
 import numpy as np
 import pytesseract
 from matplotlib import pyplot as plt
-from ocr.tet import runCRAFT
+from ocr.CRAFT.tet import runCRAFT
 
 
 def crop(img_to_crop, arr):
@@ -48,42 +48,27 @@ def crop(img_to_crop, arr):
     # Now we can crop again just the envloping rectangle
     im_crop = cropedImage[minY:maxY, minX:maxX]
 
-    # Now strectch the polygon to a rectangle. We take the points that
-    polygonStrecth = np.float32(
-        [[0, 0], [im_crop.shape[1], 0], [im_crop.shape[1], im_crop.shape[0]], [0, im_crop.shape[0]]])
-
-    # Convert the polygon corrdanite to the new rectnagle
-    polygonForTransform = np.zeros_like(polygonStrecth)
-
-    index = 0
-    for point in cnt[0]:
-        x = point[0]
-        y = point[1]
-
-        newX = x - minX
-        newY = y - minY
-
-        polygonForTransform[index] = [newX, newY]
-        index += 1
-
-    # Find affine transform
-    M = cv2.getPerspectiveTransform(np.asarray(polygonForTransform).astype(np.float32),
-                                    np.asarray(polygonStrecth).astype(np.float32))
-
-    # Warp one image to the other
-    warpedImage = cv2.warpPerspective(im_crop, M, (im_crop.shape[1], im_crop.shape[0]))
-
-    # cv2.imshow('crop', im_crop)
-    # cv2.waitKey(0)
-    # cv2.imshow('warped', warpedImage)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
-
-    return warpedImage
+    return im_crop
 
 def runOCR(orig_img):
     menu_list = list()
     # orig_img = Image.open('C:/Users/LG/Desktop/testImages/legend.PNG')
+
+    # rotate image
+    try:
+        for orientation in ExifTags.TAGS.keys():
+            if ExifTags.TAGS[orientation] == 'Orientation':
+                break
+        exif = dict(orig_img._getexif().items())
+
+        if exif[orientation] == 3:
+            orig_img = orig_img.rotate(180, expand=True)
+        elif exif[orientation] == 6:
+            orig_img = orig_img.rotate(270, expand=True)
+        elif exif[orientation] == 8:
+            orig_img = orig_img.rotate(90, expand=True)
+    except (AttributeError, KeyError, IndexError):
+        pass
 
     # run CRAFT
     text_region = runCRAFT(orig_img)
@@ -95,8 +80,10 @@ def runOCR(orig_img):
     img = np.asarray(orig_img.convert('L'))  # Image to cv2
 
     # Crop image and run Tesseract
-    for i in range(len(arr_text_region)):
-        crop_img = crop(img, arr_text_region[i])
+    for i in arr_text_region:
+        if sum(int(n) < 0 for n in i) > 0:
+            continue
+        crop_img = crop(img, i)
 #        ret3, th1 = cv2.threshold(crop_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
         # reverse RGB if characters are white
