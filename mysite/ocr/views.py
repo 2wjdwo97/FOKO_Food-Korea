@@ -53,12 +53,11 @@ def imageupload(request):
                 db_Ingre = Ingredient.objects.get(ingre_no=ingre_number)
                 ingredients.append(db_Ingre.ingre_en_name)
 
-                allergy_number = db_Ingre.allergy_no
+                allergy_number = db_Ingre.allergy_no.allergy_no
                 if allergy_number != 0:
-                    db_allergyClass = AllergyClass.objects.get(allergy_no=allergy_number)
-
-                    if db_allergyClass.allergy_en_name not in allergies:
-                        allergies.append(db_allergyClass.allergy_en_name)
+                    allergy = AllergyClass.objects.get(allergy_no=int(allergy_number)).allergy_en_name
+                    if allergy not in allergies:
+                        allergies.append(allergy)
 
             food_ingredients.append(ingredients)
             food_allergies.append(allergies)

@@ -47,11 +47,11 @@ def signup(request):
         # 유효성 검사 (아이디 중복 검사 등)
         if not serializer.is_valid():
             print(serializer.errors)
-            return HttpResponse(status=404)
+            return HttpResponse(status=402)
 
         # 비밀번호 확인
         if data['user_pw'] != data['pw_confirm']:
-            return HttpResponse(status=404)
+            return HttpResponse(status=403)
 
         password = data['user_pw'].encode('utf-8')                  # 입력된 패스워드를 바이트 형태로 인코딩
         password_crypt = bcrypt.hashpw(password, bcrypt.gensalt())  # 암호화된 비밀번호 생성
@@ -72,7 +72,7 @@ def login(request):
 
         try:
             if not User.objects.filter(user_id=data['user_id']).exists():
-                return HttpResponse(status=404)
+                return HttpResponse(status=402)
 
             # 비밀번호 확인
             account = User.objects.get(user_id=data['user_id'])
@@ -82,11 +82,11 @@ def login(request):
 
                 return JsonResponse({'access_token': token}, status=200)
             else:
-                return HttpResponse(status=404)
+                return HttpResponse(status=403)
 
         except KeyError as ke:
             print(ke)
-            return JsonResponse({"message": "INVALID_KEYS"}, status=400)
+            return JsonResponse({"message": "INVALID_KEYS"}, status=401)
 
 
 # 선호하는 태그, 알레르기 식재료 설정
