@@ -1,6 +1,9 @@
 from django.db import models
+from django.conf import settings
+from django.utils import timezone
 
 from food.models import FoodClass, AllergyClass
+
 
 DEGREE = (('1', 'very bad'),
           ('2', 'bad'),
@@ -22,13 +25,15 @@ class User(models.Model):
     user_no = models.AutoField(primary_key=True)
     user_id = models.CharField(unique=True, max_length=20)
     user_pw = models.CharField(max_length=128)
+    user_email = models.EmailField(unique=True)
     user_name = models.CharField(max_length=50)
-    user_age = models.PositiveSmallIntegerField()
+    user_birth = models.DateField(null=True, blank=True)
     user_spicy = models.CharField(max_length=1, choices=DEGREE)
     country_no = models.ForeignKey(Country, on_delete=models.CASCADE, db_column='country_no')
+    is_active = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'user_id'
-    REQUIRED_FIELDS = ['user_name', 'user_age', 'user_spicy', 'country_no']
+    REQUIRED_FIELDS = ['user_name', 'user_birth', 'user_spicy', 'country_no']
 
     class Meta:
         db_table = 'data_users'

@@ -16,8 +16,9 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['user_id',
                   'user_pw',
+                  'user_email',
                   'user_name',
-                  'user_age',
+                  'user_birth',
                   'user_spicy',
                   'country_no']
 
@@ -26,8 +27,9 @@ class UserSerializer(serializers.ModelSerializer):
 # 	"user_id" : "pkm1015",
 # 	"user_pw" : "1015pkm",
 # 	"pw_confirm" : "1015pkm",
+# 	"user_email" : "kio971015@gmail.com",
 # 	"user_name" : "park",
-# 	"user_age" : 24,
+# 	"user_birth" : "1997-10-15",
 # 	"user_spicy" : 4,
 # 	"country_no" : 37
 # }
