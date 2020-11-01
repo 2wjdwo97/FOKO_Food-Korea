@@ -1,3 +1,5 @@
+import string
+import random
 import bcrypt
 import jwt
 
@@ -5,9 +7,8 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views import View
 from django.core.exceptions import ValidationError
-from django.core.validators import validate_email
+# from django.core.validators import validate_email
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.core.mail import EmailMessage
@@ -15,7 +16,6 @@ from django.utils.encoding import force_bytes, force_text
 
 from rest_framework.parsers import JSONParser
 
-from mysite.setting_secret import EMAIL
 from food.models import FoodClass, AllergyClass
 from review.models import Tag, MapUserTag
 from .models import MapUserClass, MapUserAllergy, User
@@ -48,9 +48,10 @@ def signup(request):
 
             # 데이터베이스 저장
             serializer.save()
-            user = User.objects.get(user_id=data['user_id'])
 
             # 이메일 인증
+            user = User.objects.get(user_id=data['user_id'])
+
             current_site = get_current_site(request)
             domain = current_site.domain
             uidb64 = urlsafe_base64_encode(force_bytes(user.user_no))
@@ -100,14 +101,18 @@ def login(request):
                 return JsonResponse({"message": "INVALID_ID"}, status=401)
 
             # 비밀번호 확인
-            account = User.objects.get(user_id=data['user_id'])
-            if bcrypt.checkpw(data['user_pw'].encode('utf-8'), account.user_pw.encode('utf-8')):
-                token = jwt.encode({'user_id': account.user_id}, settings.SECRET_KEY, algorithm='HS256')
-                token = token.decode('utf-8')
-
-                return JsonResponse({'access_token': token}, status=200)
-            else:
+            user = User.objects.get(user_id=data['user_id'])
+            if not bcrypt.checkpw(data['user_pw'].encode('utf-8'), user.user_pw.encode('utf-8')):
                 return JsonResponse({"message": "INVALID_PASSWORD"}, status=402)
+
+            # 계정 활성화 확인
+            if user.is_active == 0:
+                return JsonResponse({"message": "NOT_ACTIVATE_ACCOUNT"}, status=402)
+
+            token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
+            token = token.decode('utf-8')
+
+            return JsonResponse({'access_token': token}, status=200)
 
         except KeyError as ke:
             print(ke)
@@ -121,20 +126,55 @@ def find_id(request):
         data = JSONParser().parse(request)
 
         try:
-            # 아이디 확인
-            if not User.objects.filter(user_id=data['user_id']).exists():
-                return HttpResponse(status=401)
+            # 이메일 확인
+            if not User.objects.filter(user_email=data['user_email']).exists():
+                return JsonResponse({"message": "INVALID_EMAIL"}, status=401)
 
-            # 비밀번호 확인
-            account = User.objects.get(user_id=data['user_id'])
-            if bcrypt.checkpw(data['user_pw'].encode('utf-8'), account.user_pw.encode('utf-8')):
-                token = jwt.encode({'user_id': account.user_id}, settings.SECRET_KEY, algorithm='HS256')
-                jwt.decode
-                token = token.decode('utf-8')
+            # 이메일 전송
+            user = User.objects.get(user_email=data['user_email'])
+            mail_title = "Your ID from FOORI has been sent."
+            email = EmailMessage(mail_title, user.user_id, to=[user.user_email])
+            email.send()
 
-                return JsonResponse({'access_token': token}, status=200)
-            else:
-                return HttpResponse(status=402)
+            return JsonResponse({"message": "SEND_MAIL_SUCCESS"}, status=200)
+
+        except KeyError as ke:
+            print(ke)
+            return JsonResponse({"message": "INVALID_KEYS"}, status=400)
+
+
+# 비밀번호 찾기
+@csrf_exempt
+def find_pw(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+
+        try:
+            # 이메일 확인
+            if not User.objects.filter(user_email=data['user_email']).exists():
+                return JsonResponse({"message": "INVALID_EMAIL"}, status=401)
+
+            user = User.objects.get(user_email=data['user_email'])
+
+            # 임시 비밀번호 생성
+            _LENGTH = 8
+            temp_pw = ""
+            for i in range(_LENGTH):
+                temp_pw += random.choice(string.ascii_uppercase)
+
+            # 암호화
+            password = temp_pw.encode('utf-8')
+            password_crypt = bcrypt.hashpw(password, bcrypt.gensalt())
+            password_crypt = password_crypt.decode('utf-8')
+            user.user_pw = password_crypt
+            user.save()
+
+            # 이메일 전송
+            mail_title = "Your temporary password from FOORI has been sent."
+            email = EmailMessage(mail_title, temp_pw, to=[user.user_email])
+            email.send()
+
+            return JsonResponse({"message": "SEND_MAIL_SUCCESS"}, status=200)
 
         except KeyError as ke:
             print(ke)
