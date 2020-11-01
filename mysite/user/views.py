@@ -211,11 +211,11 @@ def set_user_taste(request):
                     allergy_no=AllergyClass.objects.get(allergy_no=allergy_class),
                 ).save()
 
-            return HttpResponse(status=200)
+            return JsonResponse({"message": "TASTE_SAVED"}, status=200)
 
         except KeyError as ke:
             print(ke)
-            return HttpResponse(status=400)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
 # 유저 정보 가져오기

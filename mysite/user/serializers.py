@@ -35,8 +35,8 @@ class UserSerializer(serializers.ModelSerializer):
 # }
 
 # {
-#    "user" : 1,
-#    "food_class" : [1, 4, 15],
+#    "user" : 11,
+#    "food_class" : [1, 2, 3, 4, 5, 6],
 #    "tag" : [1, 4, 10, 26],
-#    "allergy" : [4, 9, 12]
+#    "allergy" : [6, 18]
 # }
