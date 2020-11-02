@@ -12,11 +12,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # keep the secret key in 'mysite.setting_secret'
 SECRET_KEY = setting_secret.secret_dict['SECRET_KEY']
 
+EMAIL_BACKEND = setting_secret.EMAIL['EMAIL_BACKEND']
+
+EMAIL_BACKEND = setting_secret.EMAIL['EMAIL_BACKEND']
+EMAIL_USE_TLS = setting_secret.EMAIL['EMAIL_USE_TLS']
+EMAIL_PORT = setting_secret.EMAIL['EMAIL_PORT']
+EMAIL_HOST = setting_secret.EMAIL['EMAIL_HOST']
+EMAIL_HOST_USER = setting_secret.EMAIL['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = setting_secret.EMAIL['EMAIL_HOST_PASSWORD']
+SERVER_EMAIL = setting_secret.EMAIL['SERVER_EMAIL']
+
+
 # Specify a CUSTOM_USER_MODEL to use for authentication
 # AUTH_USER_MODEL = 'user.User'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 

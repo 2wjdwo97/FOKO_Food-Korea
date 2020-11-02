@@ -31,7 +31,6 @@ class Migration(migrations.Migration):
                 ('user_id', models.CharField(max_length=20, unique=True)),
                 ('user_pw', models.CharField(max_length=128)),
                 ('user_name', models.CharField(max_length=50)),
-                ('user_age', models.PositiveSmallIntegerField()),
                 ('user_spicy', models.CharField(choices=[('1', 'very bad'), ('2', 'bad'), ('3', 'so so'), ('4', 'good'), ('5', 'very good')], max_length=1)),
                 ('country_no', models.ForeignKey(db_column='country_no', on_delete=django.db.models.deletion.CASCADE, to='user.country')),
             ],
