@@ -5,13 +5,9 @@ from rest_framework.parsers import JSONParser
 from PIL import Image
 from .forms import ReceiveImageForm
 from food.models import Food, AllergyClass, FoodClass, MapFoodIngre, MapFoodIngreAdd, Ingredient
-from ocr.stringDist import matchStr, removeUseless
-import copy
-# 일단 여기서 실험
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/ubuntu/proj/CRAFT_image/My.json"
-from google.cloud import vision
-#from google.cloud.vision import types
+import pytesseract
+from ocr.imageProcess import runOCR
+from ocr.textSimilarity import getTheMostSimilarText
 
 # Create your views here.
 
@@ -20,24 +16,16 @@ def imageupload(request):
     if request.method == 'POST':
         # get image file
         form = ReceiveImageForm(request.POST, request.FILES)
-        #im = Image.open(request.FILES['file'])
-        im = request.FILES['file'].read()
+        im = Image.open(request.FILES['file'])
 
-        client = vision.ImageAnnotatorClient()
-        image = vision.Image(content=im)
-        response = client.text_detection(image=image)
-        texts = response.text_annotations
-
-        text_list = texts[0].description.split('\n')
-        text_list = removeUseless(text_list)
         # get text list from image
-        #text_list = runOCR(im)
+        text_list = runOCR(im)
 
         # get food list from models.py
         food_list = list(Food.objects.values_list('food_name', flat=True))
 
         # get match(between text list & food list) list
-        match_list = matchStr(text_list, food_list)
+        match_list = getTheMostSimilarText(text_list, food_list)
 
         # get food description from models.py
         food_korName = match_list
@@ -65,11 +53,12 @@ def imageupload(request):
                 db_Ingre = Ingredient.objects.get(ingre_no=ingre_number)
                 ingredients.append(db_Ingre.ingre_en_name)
 
-                allergy_number = db_Ingre.allergy_no.allergy_no
+                allergy_number = db_Ingre.allergy_no
                 if allergy_number != 0:
-                    allergy = AllergyClass.objects.get(allergy_no=int(allergy_number)).allergy_en_name
-                    if allergy not in allergies:
-                        allergies.append(allergy)
+ #                   db_allergyClass = AllergyClass.objects.get(allergy_no=allergy_number)
+
+#                    if db_allergyClass.allergy_en_name not in allergies:
+  #                  allergies.append(db_allergyClass.allergy_en_name)
 
             food_ingredients.append(ingredients)
             food_allergies.append(allergies)
@@ -79,10 +68,11 @@ def imageupload(request):
             "food_engName": food_engName,
             "food_description": food_description,
             "food_ingredients": food_ingredients,
-            "food_allergy": food_allergies,
-            "text_list" : text_list
+            "food_allergy": food_allergies
         }
 
+#        match_list.append('=========================')
+#        match_list += text_list
         return JsonResponse(description, status=201)
     elif request.method == 'GET':
         return JsonResponse(serializer.errors, status=400)
