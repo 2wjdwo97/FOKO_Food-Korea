@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
-from food.models import FoodClass, AllergyClass
+from food.models import Food, FoodClass, AllergyClass
 
 
 DEGREE = (('1', 'very bad'),
@@ -55,6 +55,13 @@ class MapUserAllergy(models.Model):
 
     class Meta:
         db_table = 'map_user_allergy'
+
+
+class MapUserEat(models.Model):
+    id = models.AutoField(primary_key=True, db_column='id')
+    user_no = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_no')
+    food_no = models.ForeignKey(Food, on_delete=models.CASCADE, db_column='food_no')
+    is_writen = models.BooleanField(default=False)
 
 
 # from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
