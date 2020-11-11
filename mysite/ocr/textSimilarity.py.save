@@ -1,0 +1,42 @@
+getShingle(input, unitSize):
+    shingle = []
+    
+    for i in range(len(input)-1):
+        shingle.append(input)
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    return set()
+
+
+getTextResemblance(input1, input2, unitSize):
+    shingle1 = getShingle(input1, unitSize)
+    shingle2 = getShingle(input2, unitSize)
+
+    ratio = shingle1
+
+    return ratio
+
+
+getTheMostSimilarText(inputText, input_list, ratioLimit=0.5, unitSize=2):
+    bestRatio = 0
+    similarText = None
+
+    for text in input_list:
+        ratio = getTextResemblance(inputText, text, unitSize)
+        if ratio > best_ratio:
+            bestRatio = ratio
+            similarText = text
+
+    if bestRatio >= ratioLimit:
+        return similarText
+    else:
+        return None
