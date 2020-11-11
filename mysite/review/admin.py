@@ -4,7 +4,7 @@ from .models import *
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ['user_no', 'food_no', 'rev_data', 'rev_star', 'rev_spicy', 'rev_contents', 'rev_manual']
+    list_display = ['user_no', 'food_no', 'rev_date', 'rev_star', 'rev_spicy', 'rev_contents']
     list_display_links = ['food_no',]
     list_filter = ['user_no', 'food_no', 'rev_star', 'rev_spicy']
 

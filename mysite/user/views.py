@@ -18,7 +18,7 @@ from rest_framework.parsers import JSONParser
 
 from food.models import FoodClass, AllergyClass
 from review.models import Tag, MapUserTag
-from .models import MapUserClass, MapUserAllergy, User
+from .models import MapUserFoodClass, MapUserAllergy, User
 from .serializers import UserSerializer
 from .tokens import account_activation_token
 from .text import msg_Email
@@ -150,8 +150,14 @@ def find_pw(request):
         data = JSONParser().parse(request)
 
         try:
+            # 아이디 확인
+            if not User.objects.filter(user_id=data['user_id']).exists():
+                return JsonResponse({"message": "INVALID_ID"}, status=401)
+
+            user = User.objects.get(user_id=data['user_id'])
+
             # 이메일 확인
-            if not User.objects.filter(user_email=data['user_email']).exists():
+            if user.user_email != data['user_email']:
                 return JsonResponse({"message": "INVALID_EMAIL"}, status=401)
 
             user = User.objects.get(user_email=data['user_email'])
@@ -188,13 +194,13 @@ def set_user_taste(request):
         data = JSONParser().parse(request)
 
         try:
-            user = data['user']
-            food_classes = data['food_class']
-            tags = data['tag']
-            allergy_classes = data['allergy']
+            user = data['user_no']
+            food_classes = data['food_class_no']
+            tags = data['tag_no']
+            allergy_classes = data['allergy_no']
 
             for food_class in food_classes:
-                MapUserClass(
+                MapUserFoodClass(
                     user_no=User.objects.get(user_no=user),
                     food_class_no=FoodClass.objects.get(food_class_no=food_class),
                 ).save()

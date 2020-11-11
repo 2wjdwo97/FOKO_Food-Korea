@@ -24,6 +24,8 @@ class Food(models.Model):
     food_class_no = models.ForeignKey(FoodClass, on_delete=models.CASCADE, db_column='food_class_no')
     food_name = models.CharField(max_length=50)
     food_dsc = models.TextField(null=True)
+    food_star = models.SmallIntegerField(default=0)
+    food_review_count = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'data_foods'
@@ -40,6 +42,7 @@ class Ingredient(models.Model):
 
 
 class MapFoodIngre(models.Model):
+    id = models.AutoField(primary_key=True, db_column='id')
     food_no = models.ForeignKey(Food, on_delete=models.CASCADE, db_column='food_no')
     ingre_no = models.ForeignKey(Ingredient, on_delete=models.CASCADE, db_column='ingre_no')
 
@@ -48,6 +51,7 @@ class MapFoodIngre(models.Model):
 
 
 class MapFoodIngreAdd(models.Model):
+    id = models.AutoField(primary_key=True, db_column='id')
     food_no = models.ForeignKey(Food, on_delete=models.CASCADE, db_column='food_no')
     ingre_no = models.ForeignKey(Ingredient, on_delete=models.CASCADE, db_column='ingre_no')
 

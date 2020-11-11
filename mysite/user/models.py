@@ -39,15 +39,17 @@ class User(models.Model):
         db_table = 'data_users'
 
 
-class MapUserClass(models.Model):
+class MapUserFoodClass(models.Model):
+    id = models.AutoField(primary_key=True, db_column='id')
     user_no = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_no')
     food_class_no = models.ForeignKey(FoodClass, on_delete=models.CASCADE, db_column='food_class_no')
 
     class Meta:
-        db_table = 'map_user_class'
+        db_table = 'map_user_food_class'
 
 
 class MapUserAllergy(models.Model):
+    id = models.AutoField(primary_key=True, db_column='id')
     user_no = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_no')
     allergy_no = models.ForeignKey(AllergyClass, on_delete=models.CASCADE, db_column='allergy_no')
 
