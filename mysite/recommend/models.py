@@ -21,4 +21,4 @@ class FoodRankAge(models.Model):
     rank = models.PositiveSmallIntegerField()
 
     class Meta:
-        db_table = 'data_food_rank_country_age'
+        db_table = 'data_food_rank_age'

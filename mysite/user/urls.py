@@ -9,5 +9,6 @@ urlpatterns = [
     path('activate/<str:uidb64>/<str:token>/', views.activate),
     path('help/id/', views.find_id),
     path('help/pw/', views.find_pw),
+    path('modify/pw/', views.change_pw)
     # path('logout/', views.logout, name='logout'),
 ]

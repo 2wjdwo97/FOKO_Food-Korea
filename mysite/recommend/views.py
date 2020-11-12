@@ -3,6 +3,7 @@ import numpy as np
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
+
 from food.models import Food, Ingredient, MapFoodIngre
 from user.models import User, MapUserAllergy, MapUserFoodClass
 from review.models import Review, MapFoodTag, MapUserTag

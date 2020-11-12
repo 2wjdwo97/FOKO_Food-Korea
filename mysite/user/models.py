@@ -62,7 +62,10 @@ class MapUserEat(models.Model):
     id = models.AutoField(primary_key=True, db_column='id')
     user_no = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_no')
     food_no = models.ForeignKey(Food, on_delete=models.CASCADE, db_column='food_no')
-    is_writen = models.BooleanField(default=False)
+    is_written = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'map_user_eat'
 
 
 # from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin

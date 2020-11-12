@@ -40,3 +40,10 @@ class UserSerializer(serializers.ModelSerializer):
 #    "tag_no" : [1, 6, 17, 31],
 #    "allergy_no" : [6, 18]
 # }
+
+# {
+# 	"user_no": 1,
+# 	"user_pw": "1015pkm",
+#   "pw_new": "971015pkm",
+# 	"pw_confirm": "971015pkm"
+# }

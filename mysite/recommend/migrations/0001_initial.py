@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('food_no', models.ForeignKey(db_column='food_no', on_delete=django.db.models.deletion.CASCADE, to='food.food')),
             ],
             options={
-                'db_table': 'data_food_rank_country_age',
+                'db_table': 'data_food_rank_age',
             },
         ),
     ]

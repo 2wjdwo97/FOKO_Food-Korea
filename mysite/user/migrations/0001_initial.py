@@ -56,10 +56,13 @@ class Migration(migrations.Migration):
             name='MapUserEat',
             fields=[
                 ('id', models.AutoField(db_column='id', primary_key=True, serialize=False)),
-                ('is_writen', models.BooleanField(default=False)),
+                ('is_written', models.BooleanField(default=False)),
                 ('food_no', models.ForeignKey(db_column='food_no', on_delete=django.db.models.deletion.CASCADE, to='food.food')),
                 ('user_no', models.ForeignKey(db_column='user_no', on_delete=django.db.models.deletion.CASCADE, to='user.user')),
             ],
+            options={
+                'db_table': 'map_user_eat',
+            },
         ),
         migrations.CreateModel(
             name='MapUserAllergy',

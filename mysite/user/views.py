@@ -190,6 +190,33 @@ def find_pw(request):
             return JsonResponse({"message": "INVALID_KEYS"}, status=400)
 
 
+# 비밀번호 변경
+@csrf_exempt
+def change_pw(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+
+        try:
+            user = User.objects.get(user_no=data['user_no'])
+
+            # 기존 비밀번호 확인
+            if not bcrypt.checkpw(data['user_pw'].encode('utf-8'), user.user_pw.encode('utf-8')):
+                return JsonResponse({"message": "INVALID_CURRENT_PASSWORD"}, status=401)
+
+            # 비밀번호 확인
+            if data['pw_new'] != data['pw_confirm']:
+                return JsonResponse({"message": "INVALID_NEW_PASSWORD"}, status=402)
+
+            user.user_pw = bcrypt.hashpw(data['pw_new'].encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+            user.save()
+
+            return JsonResponse({"message": "CHANGE_SUCCESS"}, status=200)
+
+        except KeyError as ke:
+            print(ke)
+            return JsonResponse({"message": "INVALID_KEYS"}, status=400)
+
+
 # 선호하는 태그, 알레르기 식재료 설정
 @csrf_exempt
 def set_user_taste(request):
