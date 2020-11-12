@@ -25,7 +25,7 @@ class Food(models.Model):
     food_name = models.CharField(max_length=50)
     food_dsc = models.TextField(null=True)
     food_img = models.ImageField(null=True)
-    food_star = models.SmallIntegerField(default=0)
+    food_star = models.FloatField(default=0)
     food_review_count = models.IntegerField(default=0)
 
     class Meta:

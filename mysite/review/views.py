@@ -21,7 +21,7 @@ def get_all_review(request):
 # 사용자가 작성한 리뷰 가져오기
 @csrf_exempt
 def get_user_review(request):
-    if request.method == "POST":    # TODO access_token 으로 바꾸면 GET 으로
+    if request.method == "POST":
         try:
             data = JSONParser().parse(request)
             user_no = data['user_no']
@@ -31,10 +31,10 @@ def get_user_review(request):
                 reviews = list(reviews.values())
                 return JsonResponse(reviews, safe=False, status=200)
             else:
-                return JsonResponse([], safe=False, status=200)
+                return JsonResponse([], safe=False, status=201)
 
         except KeyError:
-            return JsonResponse({"message": "INVALID_KEY"}, status=403)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
 # 리뷰 저장
@@ -45,26 +45,34 @@ def save(request):
             data = JSONParser().parse(request)
             serializer = ReviewSerializer(data=data)
 
+            user_no = data['user_no']
+            food_no = data['food_no']
+
+            # 먹은 음식의 후기 작성 여부 변경
+            eaten_food = MapUserEat.objects.filter(user_no=user_no).get(food_no=food_no)
+            if eaten_food.is_written == 1:
+                return JsonResponse({"message": "ALREADY_WRITTEN"}, status=401)
+
+            eaten_food.is_written = 1
+            eaten_food.save()
+
             # 유효성 검사
             if not serializer.is_valid():
                 print(serializer.errors)
-                return JsonResponse({"message": "INVALID_FORM"}, status=401)
-
-            user_no = data['user_no']       # TODO access_token
-            serializer.validated_data['user_no'] = user_no
+                return JsonResponse({"message": "INVALID_FORM"}, status=402)
 
             # 리뷰 저장
             serializer.save()
 
-            review = Review.objects.order_by('rev_no').last()   # 최근에 저장된 리뷰를 가져옴
-            food_no = review.food_no.food_no
+            # 최근에 저장된 리뷰를 가져옴
+            review = Review.objects.order_by('rev_no').last()
 
             # 음식 정보 업데이트 (평균 별점, 후기 수)
             food = Food.objects.get(food_no=food_no)
             star = food.food_star
             cnt = food.food_review_count
 
-            food.food_star = round(((star * cnt) + int(review.rev_star)) / (cnt + 1), 1)
+            food.food_star = round(((star * cnt) + int(4)) / (cnt + 1), 1)
             food.food_review_count = cnt + 1
             food.save()
 
@@ -77,18 +85,10 @@ def save(request):
                     tag_no=Tag.objects.get(tag_no=tags[i])
                 ).save()
 
-            # 먹은 음식의 후기 작성 여부 변경
-            eaten_food = MapUserEat.objects.filter(user_no=user_no).get(food_no=food_no)
-            if eaten_food.is_written == 1:
-                return JsonResponse({"message": "ALREADY_WRITTEN"}, status=400)
-
-            eaten_food.is_written = 1
-            eaten_food.save()
-
             return JsonResponse({"message": "SAVE_SUCCESS"}, status=200)
 
         except KeyError:
-            return JsonResponse({"message": "INVALID_KEY"}, status=403)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
 # 사용자가 먹은 음식 전체 가져오기
@@ -119,4 +119,4 @@ def get_eaten_food(request):
             return JsonResponse(eaten_food, safe=False, status=200)
 
     except KeyError:
-        return JsonResponse({"message": "INVALID_KEY"}, status=403)
+        return JsonResponse({"message": "INVALID_KEY"}, status=400)

@@ -65,7 +65,7 @@ def signup(request):
 
             return JsonResponse({"message": "SUCCESS"}, status=200)
         except KeyError:
-            return JsonResponse({"message": "INVALID_KEY"}, status=403)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
 # 회원가입 인증
@@ -107,15 +107,15 @@ def login(request):
 
             # 계정 활성화 확인
             if user.is_active == 0:
-                return JsonResponse({"message": "NOT_ACTIVATE_ACCOUNT"}, status=402)
+                return JsonResponse({"message": "NOT_ACTIVATE_ACCOUNT"}, status=403)
 
-            token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
-            token = token.decode('utf-8')
+            # token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
+            # token = token.decode('utf-8')
 
             if user.is_first == 1:
-                return JsonResponse({"access_token": token}, status=201)
+                return JsonResponse({"user_no": user.user_no}, status=201)
             else:
-                return JsonResponse({'access_token': token}, status=200)
+                return JsonResponse({"user_no": user.user_no}, status=200)
 
         except KeyError as ke:
             print(ke)
@@ -161,7 +161,7 @@ def find_pw(request):
 
             # 이메일 확인
             if user.user_email != data['user_email']:
-                return JsonResponse({"message": "INVALID_EMAIL"}, status=401)
+                return JsonResponse({"message": "INVALID_EMAIL"}, status=402)
 
             user = User.objects.get(user_email=data['user_email'])
 
