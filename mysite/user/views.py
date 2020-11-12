@@ -112,7 +112,10 @@ def login(request):
             token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
             token = token.decode('utf-8')
 
-            return JsonResponse({'access_token': token}, status=200)
+            if user.is_first == 1:
+                return JsonResponse({"access_token": token}, status=201)
+            else:
+                return JsonResponse({'access_token': token}, status=200)
 
         except KeyError as ke:
             print(ke)

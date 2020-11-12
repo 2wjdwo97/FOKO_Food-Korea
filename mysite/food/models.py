@@ -24,7 +24,7 @@ class Food(models.Model):
     food_class_no = models.ForeignKey(FoodClass, on_delete=models.CASCADE, db_column='food_class_no')
     food_name = models.CharField(max_length=50)
     food_dsc = models.TextField(null=True)
-    food_img = models.ImageField()
+    food_img = models.ImageField(null=True)
     food_star = models.SmallIntegerField(default=0)
     food_review_count = models.IntegerField(default=0)
 

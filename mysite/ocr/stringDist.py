@@ -1,38 +1,11 @@
 import re
-from soynlp.hangle import levenshtein
-from soynlp.hangle import decompose
-
-def jamo_levenshtein(s1, s2, cost):
-    if len(s1) < len(s2):
-        return jamo_levenshtein(s2, s1, cost)
-
-    if len(s2) == 0:
-        return len(s1)
-
-    def substitution_cost(c1, c2):
-        if c1 == c2:
-            return 0
-        return levenshtein(decompose(c1), decompose(c2), cost) / 3
-
-    previous_row = range(len(s2) + 1)
-
-    for i, c1 in enumerate(s1):
-        current_row = [i + 1]
-
-        for j, c2 in enumerate(s2):
-            insertions = previous_row[j + 1] + 1
-            deletions = current_row[j] + 1
-            substitutions = previous_row[j] + substitution_cost(c1, c2)
-
-            current_row.append(min(insertions, deletions, substitutions))
-
-        previous_row = current_row
-
-    return previous_row[-1]
+from soynlp.hangle import jamo_levenshtein
+from multipledispatch import dispatch
 
 
 def getTextResemblance(text1, text2):
-    cost = {('ㅡ', 'ㅜ'): 0.7, ('ㅈ', 'ㅊ'): 0.7, ('ㅏ', 'ㅣ'): 0.6, ('ㅗ', 'ㅜ'): 0.7, ('ㅁ', 'ㅇ'): 0.6}
+    cost = {('ㅡ', 'ㅜ'): 0.4, ('ㅈ', 'ㅊ'): 0.4, ('ㅗ', 'ㅜ'): 0.4, \
+            ('ㅁ', 'ㅇ'): 0.3, ('ㄹ', 'ㅌ'): 0.3, ('ㅗ', 'ㅛ'): 0.3, ('ㅏ', 'ㅣ'): 0.3}
     if len(text1) > len(text2):
         divider = len(text1)
     else:
@@ -40,33 +13,90 @@ def getTextResemblance(text1, text2):
     return 1 - jamo_levenshtein(text1, text2, cost) / divider
 
 
-def removeUseless(text_list):
-    output = []
-    for index, text in enumerate(text_list):
-        output_text = ''.join(i for i in re.sub(r" ?\([^)]+\)", "", text.replace(',', '')) if not i.isdigit())
-        if output_text != '':
-            output.append(output_text)
+def preprocessText(input_text):
+    output_list = []
+    output_text = ''.join(i for i in re.sub(r" ?\([^)]+\)", "", input_text.replace(',', '')) if not i.isdigit())
+    output_text = output_text.split('\n')
 
-    return output
+    for index, texts in enumerate(output_text):
+        if texts:
+            temp = [text for text in texts.split(' ') if text != '']
+            if len(temp) == 1:
+                temp = temp[0]
+            output_list.append(temp)
+    return output_list
 
 
-def matchStr(input_list, base_list, ratioLimit = 0.7):
+@dispatch(str,list, float)
+def getSimilarTextInBaseList(input_text, base_list, ratio_limit):
+    cur_ratio = ratio_limit
+    cur_text = None
+    boundary = [int(ratio_limit * len(input_text)), int(1 / ratio_limit * len(input_text))]
+    for base in base_list:
+        if boundary[0] <= len(base) <= boundary[1]:
+            new_ratio = getTextResemblance(input_text, base)
+            if new_ratio > cur_ratio:
+                cur_ratio = new_ratio
+                cur_text = base
+    return [cur_text]
+
+
+@dispatch(list, list, float)
+def getSimilarTextInBaseList(input_texts, base_list, ratio_limit):
+    food_list = []
+    start_idx = 0
+    cur_ratio = ratio_limit
+
+    while start_idx < len(input_texts):
+        compare_list = base_list
+        temp_food = None
+        temp_idx = start_idx + 1
+        ratio_list = []
+
+        for end_idx in range(start_idx, len(input_texts)):
+            word = ''.join(input_texts[start_idx:end_idx + 1])
+            crop_end = len(word)
+            crop_start = crop_end - len(input_texts[end_idx])
+            compare_list, ratio_list = getFoodList(word, compare_list, crop_start, crop_end, 0.6)
+
+            for idx, food in enumerate(compare_list):
+                if len(food) == len(word) and ratio_list[idx] >= cur_ratio:
+                    temp_food = food
+                    temp_idx = end_idx + 1
+                    cur_ratio = ratio_list[idx]
+
+        if temp_food:
+            food_list.append(temp_food)
+        start_idx = temp_idx
+
+    return food_list
+
+
+def getFoodList(word, base_list, start_idx, end_idx, ratio_limit):
+    output_list = []
+    ratio_list = []
+
+    for food in base_list:
+        # calculate resemblance between last text and substring of the food
+        ratio = getTextResemblance(word[start_idx:], food[start_idx:end_idx])
+
+        # if similar then add that food to a list
+        # calculate resemblance between input text and string of the food
+        if ratio >= ratio_limit:
+            output_list.append(food)
+            ratio_list.append(getTextResemblance(word, food))
+
+    return output_list, ratio_list
+
+
+def matchStr(input_string, base_list, ratio_limit = 0.7):
     match_list = []
+    input_list = preprocessText(input_string)
     # match
-    for input in input_list:
-        curRatio = 0
-        curText = None
-        boundary = [int(ratioLimit * len(input)), int(1 / ratioLimit * len(input))]
-
-        for base in base_list:
-            if boundary[0] <= len(base) <= boundary[1]:
-                newRatio = getTextResemblance(input, base)
-                if newRatio > curRatio:
-                    curRatio = newRatio
-                    curText = base
-
-        # append curText to match_list when the curRatio is greater or equal to limit
-        if curRatio >= ratioLimit and curText not in match_list:
-            match_list.append(curText)
+    for input_text in input_list:
+        results = getSimilarTextInBaseList(input_text, base_list, ratio_limit)
+        for result in results:
+            if result and result not in match_list:
+                match_list.append(result)
 
     return match_list

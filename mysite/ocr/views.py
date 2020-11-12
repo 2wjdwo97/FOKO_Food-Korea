@@ -5,22 +5,18 @@ from rest_framework.parsers import JSONParser
 from PIL import Image
 from .forms import ReceiveImageForm
 from food.models import Food, AllergyClass, FoodClass, MapFoodIngre, MapFoodIngreAdd, Ingredient
-from ocr.stringDist import matchStr, removeUseless
+from ocr.stringDist import matchStr
 import copy
-# 일단 여기서 실험
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/ubuntu/proj/CRAFT_image/My.json"
 from google.cloud import vision
-#from google.cloud.vision import types
 
-# Create your views here.
 
 @csrf_exempt
 def imageupload(request):
     if request.method == 'POST':
         # get image file
         form = ReceiveImageForm(request.POST, request.FILES)
-        #im = Image.open(request.FILES['file'])
         im = request.FILES['file'].read()
 
         client = vision.ImageAnnotatorClient()
@@ -28,16 +24,11 @@ def imageupload(request):
         response = client.text_detection(image=image)
         texts = response.text_annotations
 
-        text_list = texts[0].description.split('\n')
-        text_list = removeUseless(text_list)
-        # get text list from image
-        #text_list = runOCR(im)
-
         # get food list from models.py
         food_list = list(Food.objects.values_list('food_name', flat=True))
 
         # get match(between text list & food list) list
-        match_list = matchStr(text_list, food_list)
+        match_list = matchStr(texts[0].description, food_list, ratio_limit = 0.8)
 
         # get food description from models.py
         food_korName = match_list
@@ -80,7 +71,7 @@ def imageupload(request):
             "food_description": food_description,
             "food_ingredients": food_ingredients,
             "food_allergy": food_allergies,
-            "text_list" : text_list
+            "texts" : texts[0].description,
         }
 
         return JsonResponse(description, status=201)

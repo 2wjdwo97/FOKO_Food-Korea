@@ -31,6 +31,7 @@ class User(models.Model):
     user_spicy = models.CharField(max_length=1, choices=DEGREE)
     country_no = models.ForeignKey(Country, on_delete=models.CASCADE, db_column='country_no')
     is_active = models.BooleanField(default=False)
+    is_first = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'user_id'
     REQUIRED_FIELDS = ['user_name', 'user_birth', 'user_spicy', 'country_no']
