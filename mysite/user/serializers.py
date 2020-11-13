@@ -22,7 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
                   'user_spicy',
                   'country_no']
 
-# json example
+# 회원가입
 # {
 # 	"user_id" : "pkm1015",
 # 	"user_pw" : "1015pkm",
@@ -33,14 +33,23 @@ class UserSerializer(serializers.ModelSerializer):
 # 	"user_spicy" : 4,
 # 	"country_no" : 37
 # }
-
+# 개인 설정
 # {
 #    "user_no" : 11,
 #    "food_class_no" : [16, 27],
 #    "tag_no" : [1, 6, 17, 31],
 #    "allergy_no" : [6, 18]
 # }
-
+# 개인 설정 변경
+# {
+#    "user_no" : 1,
+# 	 "user_spicy" : 1,
+# 	 "country_no" : 1,
+#    "food_class_no" : [16, 27],
+#    "tag_no" : [1, 6, 17, 31],
+#    "allergy_no" : [6, 18]
+# }
+# 비밀번호 변경
 # {
 # 	"user_no": 1,
 # 	"user_pw": "1015pkm",

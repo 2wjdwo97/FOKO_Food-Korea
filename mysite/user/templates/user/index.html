@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #jb-container {
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-content {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-sidebar {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-footer {
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      @media ( min-width: 481px ) {
+        #jb-container {
+          width: 940px;
+        }
+        #jb-content {
+          width: 580px;
+          float: left;
+        }
+        #jb-sidebar {
+          width: 260px;
+          float: right;
+        }
+        #jb-footer {
+          clear: both;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="jb-container">
+      <div id="jb-header">
+        <h1>Welcome to FOORI</h1>
+      </div>
+      <div id="jb-content">
+        <h2>Thank you!</h2>
+        <p>Your account has been registered.</p>
+      </div>
+       <div id="jb-sidebar">
+
+      </div>
+      <div id="jb-footer">
+        <p>Copyright 2020. foori</p>
+      </div>
+    </div>
+  </body>
+</html>

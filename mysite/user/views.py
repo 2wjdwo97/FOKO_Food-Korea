@@ -18,7 +18,7 @@ from rest_framework.parsers import JSONParser
 
 from food.models import FoodClass, AllergyClass
 from review.models import Tag, MapUserTag
-from .models import MapUserFoodClass, MapUserAllergy, User
+from .models import MapUserFoodClass, MapUserAllergy, User, Country
 from .serializers import UserSerializer
 from .tokens import account_activation_token
 from .text import msg_Email
@@ -76,10 +76,11 @@ def activate(request, uidb64, token):
         user = User.objects.get(user_no=uid)
 
         if user is not None and account_activation_token.check_token(user, token):
-            user.is_active = True
+            user.is_active = False
             user.save()
             login(request)
-            return JsonResponse({"message": "AUTH_SUCCESS"}, status=200)
+            return render(request, 'user/index.html')
+            # return JsonResponse({"message": "AUTH_SUCCESS"}, status=200)
 
         return JsonResponse({"message": "AUTH_FAIL"}, status=400)
 
@@ -87,6 +88,29 @@ def activate(request, uidb64, token):
         return JsonResponse({"message": "INVALID_KEY"}, status=400)
     except ValidationError:
         return JsonResponse({"message": "TYPE_ERROR"}, status=400)
+
+
+# 유저 정보 삭제
+@csrf_exempt
+def delete_user(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        try:
+            user_no = data['user_no']
+            user = User.objects.get(user_no=user_no)
+
+            # 비밀번호 확인
+            if not bcrypt.checkpw(data['user_pw'].encode('utf-8'), user.user_pw.encode('utf-8')):
+                return JsonResponse({"message": "INVALID_PASSWORD"}, status=401)
+
+            # 계정 삭제
+            user.delete()
+
+            return JsonResponse({"message": "DELETE_SUCCESS"}, status=200)
+
+        except KeyError as ke:
+            print(ke)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
 # 로그인
@@ -224,28 +248,7 @@ def set_user_taste(request):
         data = JSONParser().parse(request)
 
         try:
-            user = data['user_no']
-            food_classes = data['food_class_no']
-            tags = data['tag_no']
-            allergy_classes = data['allergy_no']
-
-            for food_class in food_classes:
-                MapUserFoodClass(
-                    user_no=User.objects.get(user_no=user),
-                    food_class_no=FoodClass.objects.get(food_class_no=food_class),
-                ).save()
-
-            for tag in tags:
-                MapUserTag(
-                    user_no=User.objects.get(user_no=user),
-                    tag_no=Tag.objects.get(tag_no=tag),
-                ).save()
-
-            for allergy_class in allergy_classes:
-                MapUserAllergy(
-                    user_no=User.objects.get(user_no=user),
-                    allergy_no=AllergyClass.objects.get(allergy_no=allergy_class),
-                ).save()
+            save_taste(data=data)
 
             return JsonResponse({"message": "TASTE_SAVED"}, status=200)
 
@@ -254,25 +257,53 @@ def set_user_taste(request):
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
-# 유저 정보 가져오기
+# 유저 정보 수정
 @csrf_exempt
-def manage(request, pk):
-    user_info = User.objects.get(pk=pk)
-
-    if request.method == "GET":
-        serializer = UserSerializer(user_info)
-        return JsonResponse(serializer.data, safe=False)
-
-    # TODO 회원 정보 수정
-    elif request.method == 'PUT':
+def modify_user(request):
+    if request.method == 'POST':
         data = JSONParser().parse(request)
-        serializer = UserSerializer(user_info, data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+        try:
+            user_no = data['user_no']
+            user = User.objects.get(user_no=user_no)
 
-    # TODO 회원 정보 삭제
-    elif request.method == 'DELETE':
-        # user_info.delete()
-        return HttpResponse(status=202)
+            # 맵기, 국가 변경
+            user.user_spicy = data['user_spicy']
+            user.country_no = Country.objects.get(country_no=data['country_no'])
+            user.save()
+
+            # 알레르기, 객관적/주관적 태그 변경
+            MapUserFoodClass.objects.filter(user_no=user_no).delete()
+            MapUserTag.objects.filter(user_no=user_no).delete()
+            MapUserAllergy.objects.filter(user_no=user_no).delete()
+            save_taste(data=data)
+
+            return JsonResponse({"message": "MODIFY_SUCCESS"}, status=200)
+
+        except KeyError as ke:
+            print(ke)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
+
+
+def save_taste(data):
+    user = data['user_no']
+    food_classes = data['food_class_no']
+    tags = data['tag_no']
+    allergy_classes = data['allergy_no']
+
+    for food_class in food_classes:
+        MapUserFoodClass(
+            user_no=User.objects.get(user_no=user),
+            food_class_no=FoodClass.objects.get(food_class_no=food_class),
+        ).save()
+
+    for tag in tags:
+        MapUserTag(
+            user_no=User.objects.get(user_no=user),
+            tag_no=Tag.objects.get(tag_no=tag),
+        ).save()
+
+    for allergy_class in allergy_classes:
+        MapUserAllergy(
+            user_no=User.objects.get(user_no=user),
+            allergy_no=AllergyClass.objects.get(allergy_no=allergy_class),
+        ).save()

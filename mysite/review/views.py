@@ -3,11 +3,10 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
-from user.models import MapUserEat
+from user.models import User, MapUserEat
 from food.models import Food
 from review.models import Review, Tag, MapFoodTag
-from food.serializers import FoodSerializer
-from review.serializers import ReviewSerializer, MapFoodUserSerializer
+from review.serializers import ReviewSerializer
 
 
 # 모든 리뷰 가져오기
@@ -39,7 +38,7 @@ def get_user_review(request):
 
 # 리뷰 저장
 @csrf_exempt
-def save(request):
+def save_review(request):
     if request.method == "POST":
         try:
             data = JSONParser().parse(request)
@@ -91,11 +90,32 @@ def save(request):
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
+# 사용자가 먹은 음식 저장
+@csrf_exempt
+def save_eaten_food(request):
+    try:
+        if request.method == "POST":
+            data = JSONParser().parse(request)
+            user_no = data['user_no']
+            foods = data['food_no']
+
+            for food_no in foods:
+                MapUserEat(
+                    user_no=User.objects.get(user_no=user_no),
+                    food_no=Food.objects.get(food_no=food_no)
+                ).save()
+
+        return JsonResponse({"message": "SAVE_SUCCESS"}, safe=False, status=200)
+
+    except KeyError:
+        return JsonResponse({"message": "INVALID_KEY"}, status=400)
+
+
 # 사용자가 먹은 음식 전체 가져오기
 @csrf_exempt
 def get_eaten_food(request):
     try:
-        if request.method == "POST":    # TODO access_token
+        if request.method == "POST":
             data = JSONParser().parse(request)
 
             # 최신순으로 사용자가 먹은 음식 가져오기
