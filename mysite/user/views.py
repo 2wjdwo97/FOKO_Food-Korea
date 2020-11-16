@@ -76,7 +76,7 @@ def activate(request, uidb64, token):
         user = User.objects.get(user_no=uid)
 
         if user is not None and account_activation_token.check_token(user, token):
-            user.is_active = False
+            user.is_active = True
             user.save()
             login(request)
             return render(request, 'user/index.html')
@@ -137,6 +137,8 @@ def login(request):
             # token = token.decode('utf-8')
 
             if user.is_first == 1:
+                user.is_first = 0
+                user.save()
                 return JsonResponse({"user_no": user.user_no}, status=201)
             else:
                 return JsonResponse({"user_no": user.user_no}, status=200)

@@ -45,7 +45,7 @@ def save_review(request):
             serializer = ReviewSerializer(data=data)
 
             user_no = data['user_no']
-            food_no = data['food_no']
+            food_no = Food.objects.get(food_name=data['food_name']).food_no
 
             # 먹은 음식의 후기 작성 여부 변경
             eaten_food = MapUserEat.objects.filter(user_no=user_no).get(food_no=food_no)
@@ -97,12 +97,14 @@ def save_eaten_food(request):
         if request.method == "POST":
             data = JSONParser().parse(request)
             user_no = data['user_no']
-            foods = data['food_no']
+            foods = data['food_name']
 
-            for food_no in foods:
+            # MapUserEat(user_no=User.objects.get(user_no=user_no), food_no
+
+            for food_name in foods:
                 MapUserEat(
                     user_no=User.objects.get(user_no=user_no),
-                    food_no=Food.objects.get(food_no=food_no)
+                    food_no=Food.objects.get(food_name=food_name)
                 ).save()
 
         return JsonResponse({"message": "SAVE_SUCCESS"}, safe=False, status=200)
@@ -121,14 +123,14 @@ def get_eaten_food(request):
             # 최신순으로 사용자가 먹은 음식 가져오기
             query_set = MapUserEat.objects.filter(user_no=data['user_no']).order_by('-id')
 
-            foods = query_set.values_list('food_no', flat=True)
-            is_written = query_set.values_list('is_written', flat=True)
+            foods = query_set.filter(is_written=False).values_list('food_no', flat=True)
+            # is_written = query_set.values_list('is_written', flat=True)
 
             eaten_food = []
             for i in range(len(foods)):
                 food = Food.objects.get(food_no=foods[i])
                 json = {
-                    "is_written": is_written[i],
+                    # "is_written": is_written[i],
                     "food_name": food.food_name,
                     # "food_dsc": food.food_dsc,
                     # "food_star": food.food_star,

@@ -45,7 +45,6 @@ def getSimilarTextInBaseList(input_text, base_list, ratio_limit):
 def getSimilarTextInBaseList(input_texts, base_list, ratio_limit):
     food_list = []
     start_idx = 0
-    cur_ratio = ratio_limit
 
     while start_idx < len(input_texts):
         compare_list = base_list
@@ -59,6 +58,10 @@ def getSimilarTextInBaseList(input_texts, base_list, ratio_limit):
             crop_start = crop_end - len(input_texts[end_idx])
             compare_list, ratio_list = getFoodList(word, compare_list, crop_start, crop_end, 0.6)
 
+            if len(compare_list) == 0:
+                break
+
+            cur_ratio = ratio_limit
             for idx, food in enumerate(compare_list):
                 if len(food) == len(word) and ratio_list[idx] >= cur_ratio:
                     temp_food = food
