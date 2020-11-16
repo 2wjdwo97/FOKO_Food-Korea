@@ -1,7 +1,7 @@
 from django.db import models
 
 from food.models import Food
-from user.models import DEGREE, User
+from user.models import User
 
 
 class Review(models.Model):
@@ -9,8 +9,8 @@ class Review(models.Model):
     user_no = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_no')
     food_no = models.ForeignKey(Food, on_delete=models.CASCADE, db_column='food_no')
     rev_date = models.DateTimeField(auto_now_add=True)
-    rev_star = models.CharField(max_length=1, choices=DEGREE)
-    rev_spicy = models.CharField(max_length=1, choices=DEGREE)
+    rev_star = models.FloatField(default=0)
+    rev_spicy = models.FloatField(default=0)
     rev_contents = models.TextField(null=True)
 
     class Meta:

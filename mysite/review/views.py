@@ -26,9 +26,12 @@ def get_user_review(request):
             user_no = data['user_no']
 
             reviews = Review.objects.filter(user_no=user_no)
+            review_list = []
             if reviews.exists():
-                reviews = list(reviews.values())
-                return JsonResponse(reviews, safe=False, status=200)
+                for review in reviews.values():
+                    review['food_name'] = Food.objects.get(food_no=review['food_no_id']).food_name
+                    review_list.append(review)
+                return JsonResponse(review_list, safe=False, status=200)
             else:
                 return JsonResponse([], safe=False, status=201)
 
@@ -113,7 +116,7 @@ def save_eaten_food(request):
         return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
-# 사용자가 먹은 음식 전체 가져오기
+# 사용자가 먹은 음식 가져오기
 @csrf_exempt
 def get_eaten_food(request):
     try:
@@ -132,8 +135,8 @@ def get_eaten_food(request):
                 json = {
                     # "is_written": is_written[i],
                     "food_name": food.food_name,
-                    # "food_dsc": food.food_dsc,
-                    # "food_star": food.food_star,
+                    "food_star": food.food_star,
+                    "food_dsc": food.food_dsc,
                     # "food_class_no": food.food_class_no.food_class_no
                 }
                 eaten_food.append(json)

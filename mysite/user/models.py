@@ -5,13 +5,6 @@ from django.utils import timezone
 from food.models import Food, FoodClass, AllergyClass
 
 
-DEGREE = (('1', 'very bad'),
-          ('2', 'bad'),
-          ('3', 'so so'),
-          ('4', 'good'),
-          ('5', 'very good'))
-
-
 class Country(models.Model):
     country_no = models.AutoField(primary_key=True)
     country_ko_name = models.CharField(max_length=50)
@@ -28,7 +21,7 @@ class User(models.Model):
     user_email = models.EmailField(unique=True)
     user_name = models.CharField(max_length=50)
     user_birth = models.DateField(null=True, blank=True)
-    user_spicy = models.CharField(max_length=1, choices=DEGREE)
+    user_spicy = models.FloatField(default=0)
     country_no = models.ForeignKey(Country, on_delete=models.CASCADE, db_column='country_no')
     is_active = models.BooleanField(default=False)
     is_first = models.BooleanField(default=True)

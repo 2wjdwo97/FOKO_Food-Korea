@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
 from food.models import Food, Ingredient, MapFoodIngre
+from food.views import get_foods_by_list
 from user.models import User, MapUserAllergy, MapUserFoodClass
 from review.models import Review, MapFoodTag, MapUserTag
 
@@ -58,26 +59,30 @@ def recommend_ocr(request):
                 subj_tags = np.unique(food_tag_qs.values_list('tag_no', flat=True))         # 음식의 주관적 태그
                 food_tags = np.concatenate((obj_tag, subj_tags), axis=0)                    # 주관적 + 객관적
 
-                selected_tag_ratio = round(food_tag_qs.count() * SELECTED_TAGS_RATIO)       # 사용자 선택 태그 반영 비율
+                if food_tag_qs.count() != 0:
+                    selected_tag_ratio = round(food_tag_qs.count() * SELECTED_TAGS_RATIO)       # 사용자 선택 태그 반영 비율
+                    if selected_tag_ratio < 1:
+                        selected_tag_ratio = 1
+
                 len_food_tag = len(food_tags)
 
                 tags_score = np.zeros(len_food_tag)   # 음식 태그별 점수
                 tags_weight = np.zeros(len_food_tag)  # 음식 태그별 가중치
 
-                # 음식의 객관적 태그와 사용자가 선택한 객관적 태그 비교
+                # 1. 음식의 객관적 태그와 사용자가 선택한 객관적 태그 비교
                 user_obj_tags = MapUserFoodClass.objects.filter(user_no=user_no).values_list('food_class_no', flat=True)
                 if food_tags[0] in user_obj_tags:
                     tags_score[0] = 4.5
                     tags_weight[0] = selected_tag_ratio
 
-                # 음식의 태그와 자신의 태그 비교
+                # 2. 음식의 주관적 태그와 사용자가 선택한 주관적 태그 비교
                 user_review = Review.objects.filter(user_no=user_no).values_list('rev_no', flat=True)
 
-                # weight 계산 (태그 개수)
                 for j in range(1, len_food_tag):
+                    # weight 계산 (태그 개수)
                     tags_weight[j] = food_tag_qs.filter(tag_no=food_tags[j]).count()
 
-                    # 1. 음식의 주관적 태그와 자신이 작성한 후기에서 포함된 주관적 태그 비교
+                    # 2-1. 음식의 주관적 태그와 자신이 작성한 후기에서 포함된 주관적 태그 비교
                     star, cnt = 0, 0
                     for k in range(len(user_review)):
                         rev_no = MapFoodTag.objects.filter(rev_no=user_review[k]).filter(tag_no=food_tags[j])
@@ -88,12 +93,12 @@ def recommend_ocr(request):
                             cnt += 1
 
                     if cnt != 0:
-                        star = round(star/cnt, 2)
+                        star = star/cnt
                         tags_score[j] = star
 
-                    # 2. 음식의 주관적 태그와 사용자가 선택한 주관적 태그 비교
+                    # 2-2. 음식의 주관적 태그와 사용자가 선택한 주관적 태그 비교
                     if MapUserTag.objects.filter(user_no=user_no).filter(tag_no=food_tags[j]).values_list('tag_no', flat=True):
-                        tags_score[j] = round((tags_score[j] + (4.5 * selected_tag_ratio)) / (cnt + selected_tag_ratio), 2)
+                        tags_score[j] = (tags_score[j] + (4.5 * selected_tag_ratio)) / (cnt + selected_tag_ratio)
 
                 # print(tags_score)
                 # print(tags_weight)
@@ -108,12 +113,24 @@ def recommend_ocr(request):
                 if sum_cnt != 0:
                     foods_score[i] = sum_score / sum_cnt
 
+            # print(foods)
+            # print(foods_score)
+
             idx_sorted_score = np.argsort(-foods_score)
             foods = np.array(foods)[idx_sorted_score]
-            # print(foods_score)
-            # print(foods)
 
-            return JsonResponse({"message": "SUCCESS", "foods": foods.tolist()}, status=200)
+            data_foods = get_foods_by_list(foods)
+            # food_names = []
+            # for i in range(len(foods)):
+            #     food_names.append(Food.objects.get(food_no=foods[i]).food_name)
+            #
+            # data_foods = {
+            #     # "message": "SUCCESS",
+            #     # "food_no": foods.tolist(),
+            #     "food_name": food_names
+            # }
+
+            return JsonResponse(data_foods, safe=False, status=200)
 
         except KeyError as ke:
             print(ke)
