@@ -9,36 +9,51 @@ from review.models import Tag, MapFoodTag
 from .models import Food, MapFoodIngre, Ingredient, FoodClass, AllergyClass
 from .serializers import FoodSerializer
 
+match_btn_foodclass = {
+    1: [1, 2],            # 밥/김밥/초밥류
+    2: [3, 13, 14, 15],   # 죽/스프/국탕/찌개/전골류
+    3: [4],               # 면/만두류
+    4: [18],              # 볶음류
+    5: [9, 20],           # 튀김류
+    6: [17],              # 구이류
+    7: [6, 7, 8, 9, 10],  # 빵/버거/피자/샌드위치류
+    8: [19],              # 조림류
+    9: [16],              # 찜류
+    10: [12]              # 음료/차류
+}
+
 
 @csrf_exempt
-def get_by_review_num(request):
+def get_most_reviewed(request):
     if request.method == 'POST':
         try:
             data = JSONParser().parse(request)
-            food_class_no = data['food_class_no']
+            button_no = data['button_no']
 
-            if food_class_no == 1:
-                foods = Food.objects.filter(food_class_no=1) | Food.objects.filter(food_class_no=2)
-            elif food_class_no == 2:
-                foods = Food.objects.filter(food_class_no=3) | Food.objects.filter(food_class_no=13) | Food.objects.filter(food_class_no=14) | Food.objects.filter(food_class_no=15)
-            elif food_class_no == 3:
-                foods = Food.objects.filter(food_class_no=4)
-            elif food_class_no == 4:
-                foods = Food.objects.filter(food_class_no=18)
-            elif food_class_no == 5:
-                foods = Food.objects.filter(food_class_no=9) | Food.objects.filter(food_class_no=20)
-            elif food_class_no == 6:
-                foods = Food.objects.filter(food_class_no=17)
-            elif food_class_no == 7:
-                foods = Food.objects.filter(food_class_no=6) | Food.objects.filter(food_class_no=7) | Food.objects.filter(food_class_no=8) | Food.objects.filter(food_class_no=9) | Food.objects.filter(food_class_no=10)
-            elif food_class_no == 8:
-                foods = Food.objects.filter(food_class_no=19)
-            elif food_class_no == 9:
-                foods = Food.objects.filter(food_class_no=16)
-            elif food_class_no == 10:
-                foods = Food.objects.filter(food_class_no=12)
+            foods = Food.objects.none()
+            for food_class_no in match_btn_foodclass[button_no]:
+                foods = foods | Food.objects.filter(food_class_no=food_class_no)
 
             foods = foods.order_by('-food_review_count')
+
+            return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
+
+        except KeyError:
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
+
+
+@csrf_exempt
+def get_highest_rated(request):
+    if request.method == 'POST':
+        try:
+            data = JSONParser().parse(request)
+            button_no = data['button_no']
+
+            foods = Food.objects.none()
+            for food_class_no in match_btn_foodclass[button_no]:
+                foods = foods | Food.objects.filter(food_class_no=food_class_no)
+
+            foods = foods.order_by('-food_star')
 
             return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
 
@@ -85,7 +100,7 @@ def get_foods_by_list(foods):
     return data_foods
 
 
-def calc_tags(food_no):
+def calc_allergys(food_no):
     allergies = []
     ingredients = MapFoodIngre.objects.filter(food_no=food_no).values_list('ingre_no', flat=True)
 
@@ -102,7 +117,7 @@ def calc_tags(food_no):
     return allergies
 
 
-def calc_allergys(food_no):
+def calc_tags(food_no):
     # 음식에 포함된 태그(3가지) 리턴
     # 객관적 태그 추가
     tags = [Food.objects.get(food_no=food_no).food_class_no.food_class_no]
