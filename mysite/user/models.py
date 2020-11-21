@@ -14,15 +14,28 @@ class Country(models.Model):
         db_table = 'data_countries'
 
 
+class Language(models.Model):
+    lang_no = models.AutoField(primary_key=True)
+    lang_en_name = models.CharField(max_length=20)
+    lang_code = models.CharField(max_length=5)
+
+    class Meta:
+        db_table = 'data_languages'
+
+
 class User(models.Model):
     user_no = models.AutoField(primary_key=True)
     user_id = models.CharField(unique=True, max_length=20)
     user_pw = models.CharField(max_length=128)
     user_email = models.EmailField(unique=True)
+
     user_name = models.CharField(max_length=50)
     user_birth = models.DateField(null=True, blank=True)
     user_spicy = models.FloatField(default=0)
+
     country_no = models.ForeignKey(Country, on_delete=models.CASCADE, db_column='country_no')
+    lang_no = models.ForeignKey(Language, default=8, on_delete=models.CASCADE, db_column='lang_no')
+
     is_active = models.BooleanField(default=False)
     is_first = models.BooleanField(default=True)
 
