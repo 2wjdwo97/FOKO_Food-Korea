@@ -72,6 +72,7 @@ def get_foods_by_queryset(foods):
             "food_star": food.food_star,
             "food_review_count": food.food_review_count,
             "food_dsc": food.food_dsc,
+            "food_img_url": food.food_img_url,
             "tag_no": tags,
             "allergy_no": allergies
         }
@@ -92,6 +93,7 @@ def get_foods_by_list(foods):
             "food_star": food.food_star,
             "food_review_count": food.food_review_count,
             "food_dsc": food.food_dsc,
+            "food_img_url": food.food_img_url,
             "tag_no": tags,
             "allergy_no": allergies
         }
