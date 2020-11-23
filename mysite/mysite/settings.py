@@ -11,9 +11,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # keep the secret key in 'mysite.setting_secret'
 SECRET_KEY = setting_secret.secret_dict['SECRET_KEY']
-
-EMAIL_BACKEND = setting_secret.EMAIL['EMAIL_BACKEND']
-
 EMAIL_BACKEND = setting_secret.EMAIL['EMAIL_BACKEND']
 EMAIL_USE_TLS = setting_secret.EMAIL['EMAIL_USE_TLS']
 EMAIL_PORT = setting_secret.EMAIL['EMAIL_PORT']

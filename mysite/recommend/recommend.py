@@ -46,7 +46,7 @@ def recommendFood(user_no, foods):
         subj_tags = np.unique(food_tag_qs.values_list('tag_no', flat=True))         # 음식의 주관적 태그
         food_tags = np.concatenate((obj_tag, subj_tags), axis=0)                    # 주관적 + 객관적
 
-        selected_tag_ratio = 0
+        selected_tag_ratio = 1
         if food_tag_qs.count() != 0:
             selected_tag_ratio = round(food_tag_qs.count() * SELECTED_TAGS_RATIO)       # 사용자 선택 태그 반영 비율
             if selected_tag_ratio < 1:

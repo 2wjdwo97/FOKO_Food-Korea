@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
 from user.models import User, MapUserEat
+from food.views import get_foods_by_list
 from food.models import Food
 from review.models import Review, Tag, MapFoodTag
 from review.serializers import ReviewSerializer
@@ -130,17 +131,7 @@ def get_eaten_food(request):
             foods = query_set.filter(is_written=False).values_list('food_no', flat=True)
             # is_written = query_set.values_list('is_written', flat=True)
 
-            eaten_food = []
-            for i in range(len(foods)):
-                food = Food.objects.get(food_no=foods[i])
-                json = {
-                    # "is_written": is_written[i],
-                    "food_name": food.food_name,
-                    "food_star": food.food_star,
-                    "food_dsc": food.food_dsc,
-                    # "food_class_no": food.food_class_no.food_class_no
-                }
-                eaten_food.append(json)
+            eaten_food = get_foods_by_list(foods)
 
             return JsonResponse(eaten_food, safe=False, status=200)
 

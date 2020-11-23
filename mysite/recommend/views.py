@@ -16,15 +16,6 @@ def recommend_ocr(request):
 
             foods, __, __ = recommendFood(user_no, foods)
             data_foods = get_foods_by_list(foods)
-            # food_names = []
-            # for i in range(len(foods)):
-            #     food_names.append(Food.objects.get(food_no=foods[i]).food_name)
-            #
-            # data_foods = {
-            #     # "message": "SUCCESS",
-            #     # "food_no": foods.tolist(),
-            #     "food_name": food_names
-            # }
 
             return JsonResponse(data_foods, safe=False, status=200)
 
