@@ -139,9 +139,15 @@ def login(request):
             if user.is_first == 1:
                 user.is_first = 0
                 user.save()
-                return JsonResponse({"user_no": user.user_no}, status=201)
+                response = JsonResponse({"user_no": user.user_no}, status=201)
+                response.set_cookie("user_number", user.user_no)
+                return response
+#                return JsonResponse({"user_no": user.user_no}, status=201)
             else:
-                return JsonResponse({"user_no": user.user_no}, status=200)
+                response = JsonResponse({"user_no": user.user_no}, status=200)
+                response.set_cookie("user_number", user.user_no)
+                return response
+#                return JsonResponse({"user_no": user.user_no}, status=200)
 
         except KeyError as ke:
             print(ke)

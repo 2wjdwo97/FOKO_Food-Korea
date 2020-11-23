@@ -6,10 +6,12 @@ from PIL import Image
 from .forms import ReceiveImageForm
 from food.models import Food, AllergyClass, FoodClass, MapFoodIngre, MapFoodIngreAdd, Ingredient
 from ocr.stringDist import matchStr
+from recommend.recommend import recommendFood
 import copy
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/ubuntu/proj/CRAFT_image/My.json"
 from google.cloud import vision
+from google.cloud import translate_v2 as translate
 
 
 @csrf_exempt
@@ -31,19 +33,29 @@ def imageupload(request):
         match_list = matchStr(texts[0].description, food_list, ratio_limit = 0.8)
 
         # get food description from models.py
+        client_t = translate.Client()
+
         food_korName = match_list
+        food_no = []
         food_engName = []
         food_description = []
+        food_img_url = []
         food_ingredients = []
         food_allergies = []
+        recommend_food = []
 
         for name in match_list:
-            food_engName.append(name)
+            food_engName.append(client_t.translate(name, target_language='en')['translatedText'])
 
             db_Food = Food.objects.get(food_name=name)
-            food_description.append(db_Food.food_dsc)
+            food_img_url.append(db_Food.food_img_url)
+
+            description = db_Food.food_dsc
+            food_description.append(client_t.translate(description, target_language='en')['translatedText'])
+#            food_description.append(translator.translate(description).text)
 
             food_number = db_Food.food_no
+            food_no.append(food_number)
 
             ingre_numbers = MapFoodIngre.objects.filter(food_no=food_number).values_list('ingre_no', flat=True)
             db_FoodIngreAdd = MapFoodIngreAdd.objects.filter(food_no=food_number)
@@ -64,14 +76,28 @@ def imageupload(request):
 
             food_ingredients.append(ingredients)
             food_allergies.append(allergies)
+        user_number = -1
+        # get food rank
+        if request.COOKIES.get('user_number'):
+            user_number = request.COOKIES['user_number']
+            __, sorted_score, idx_sorted_score = recommendFood(user_number, food_no)
 
+            for i in range(0, 3):
+                if sorted_score[i] < -3.5:
+                    recommend_food.append(food_no[idx_sorted_score[i]])
+                else:
+                    break
+        cookies = list(request.COOKIES.keys())
         description = {
             "food_korName": food_korName,
             "food_engName": food_engName,
             "food_description": food_description,
             "food_ingredients": food_ingredients,
             "food_allergy": food_allergies,
-            "texts" : texts[0].description,
+            "recommend_food": recommend_food,
+            "food_img_url": food_img_url,
+            "user_number" : user_number,
+            "cookies": cookies,
         }
 
         return JsonResponse(description, status=201)

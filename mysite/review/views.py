@@ -49,6 +49,7 @@ def save_review(request):
 
             user_no = data['user_no']
             food_no = Food.objects.get(food_name=data['food_name']).food_no
+            serializer.initial_data['food_no'] = food_no
 
             # 먹은 음식의 후기 작성 여부 변경
             eaten_food = MapUserEat.objects.filter(user_no=user_no).get(food_no=food_no)
@@ -100,15 +101,15 @@ def save_eaten_food(request):
         if request.method == "POST":
             data = JSONParser().parse(request)
             user_no = data['user_no']
-            foods = data['food_name']
-
-            # MapUserEat(user_no=User.objects.get(user_no=user_no), food_no
+            foods = data['food_name']   # food list
 
             for food_name in foods:
-                MapUserEat(
-                    user_no=User.objects.get(user_no=user_no),
-                    food_no=Food.objects.get(food_name=food_name)
-                ).save()
+                food = Food.objects.get(food_name=food_name)
+                if not MapUserEat.objects.filter(user_no=user_no).filter(food_no=food.food_no).exists():
+                    MapUserEat(
+                        user_no=User.objects.get(user_no=user_no),
+                        food_no=Food.objects.get(food_name=food_name)
+                    ).save()
 
         return JsonResponse({"message": "SAVE_SUCCESS"}, safe=False, status=200)
 
