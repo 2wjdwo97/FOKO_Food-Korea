@@ -30,7 +30,9 @@ def get_user_review(request):
             review_list = []
             if reviews.exists():
                 for review in reviews.values():
-                    review['food_name'] = Food.objects.get(food_no=review['food_no_id']).food_name
+                    food = Food.objects.get(food_no=review['food_no_id'])
+                    review['food_name'] = food.food_name
+                    review['food_img_url'] = food.food_img_url
                     review_list.append(review)
                 return JsonResponse(review_list, safe=False, status=200)
             else:
@@ -74,9 +76,11 @@ def save_review(request):
             # 음식 정보 업데이트 (평균 별점, 후기 수)
             food = Food.objects.get(food_no=food_no)
             star = food.food_star
+            spicy = food.food_spicy
             cnt = food.food_review_count
 
-            food.food_star = round(((star * cnt) + int(4)) / (cnt + 1), 1)
+            food.food_spicy = round(((spicy * cnt) + serializer.validated_data['rev_spicy']) / (cnt + 1), 1)
+            food.food_star = round(((star * cnt) + serializer.validated_data['rev_star']) / (cnt + 1), 1)
             food.food_review_count = cnt + 1
             food.save()
 

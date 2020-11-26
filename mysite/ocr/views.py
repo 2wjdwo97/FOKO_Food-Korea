@@ -8,10 +8,7 @@ from food.models import Food, AllergyClass, FoodClass, MapFoodIngre, MapFoodIngr
 from ocr.stringDist import matchStr
 from recommend.recommend import recommendFood
 import copy
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/ubuntu/proj/CRAFT_image/My.json"
-from google.cloud import vision
-from google.cloud import translate_v2 as translate
+from .googleCloudService import translate, extractText
 
 
 @csrf_exempt
@@ -21,10 +18,7 @@ def imageupload(request):
         form = ReceiveImageForm(request.POST, request.FILES)
         im = request.FILES['file'].read()
 
-        client = vision.ImageAnnotatorClient()
-        image = vision.Image(content=im)
-        response = client.text_detection(image=image)
-        texts = response.text_annotations
+        texts = extractText(im)
 
         # get food list from models.py
         food_list = list(Food.objects.values_list('food_name', flat=True))
@@ -33,7 +27,6 @@ def imageupload(request):
         match_list = matchStr(texts[0].description, food_list, ratio_limit = 0.8)
 
         # get food description from models.py
-        client_t = translate.Client()
 
         food_korName = match_list
         food_no = []
@@ -42,17 +35,24 @@ def imageupload(request):
         food_img_url = []
         food_ingredients = []
         food_allergies = []
-        recommend_food = []
+        recommend_idx = []
+        food_star = []
+        food_spicy = []
 
         for name in match_list:
-            food_engName.append(client_t.translate(name, target_language='en')['translatedText'])
+            # append engName
+            food_engName.append(translate(name))
 
             db_Food = Food.objects.get(food_name=name)
+            # append img_url
             food_img_url.append(db_Food.food_img_url)
-
+            # append star
+            food_star.append(db_food.food_star)
+            # append spicy
+            food_spicy.append(db_food.food_spicy)
             description = db_Food.food_dsc
-            food_description.append(client_t.translate(description, target_language='en')['translatedText'])
-#            food_description.append(translator.translate(description).text)
+            # append description
+            food_description.append(translate(description))
 
             food_number = db_Food.food_no
             food_no.append(food_number)
@@ -73,24 +73,34 @@ def imageupload(request):
                     allergy = AllergyClass.objects.get(allergy_no=int(allergy_number)).allergy_en_name
                     if allergy not in allergies:
                         allergies.append(allergy)
-
+            # append ingredients
             food_ingredients.append(ingredients)
+            # append allergies
             food_allergies.append(allergies)
         user_number = -1
-        # get food rank
-        if request.COOKIES.get('user_number'):
-            user_number = request.COOKIES['user_number']
-            __, sorted_score, idx_sorted_score = recommendFood(user_number, food_no)
 
-            for i in range(0, 3):
-                if sorted_score[i] < -3.5:
-                    recommend_food.append(food_no[idx_sorted_score[i]])
-                else:
-                    break
+        # get food rank
+#        if request.COOKIES.get('user_number'):
+#            user_number = request.COOKIES['user_number']
+        user_number = 5
+        __, sorted_score, idx_sorted_score = recommendFood(user_number, food_no)
+
+#        for i in range(0, 3):
+#            if sorted_score[i] < -3.5:
+#                recommend_idx.append(idx_sorted_score[i])
+#            else:
+#                break
+        recommend_idx = [idx_sorted_score[i] for i in range(0, 3) if sorted_score[i] < -3.5]
+        recommend_food = [0] * len(food_korName)
+        for i, idx in enumerate(recommend_idx):
+            recommend_food[idx] = i + 1
+
         cookies = list(request.COOKIES.keys())
         description = {
             "food_korName": food_korName,
             "food_engName": food_engName,
+            "food_star": food_star,
+            "food_spicy": food_spicy,
             "food_description": food_description,
             "food_ingredients": food_ingredients,
             "food_allergy": food_allergies,
