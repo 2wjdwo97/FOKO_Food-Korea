@@ -7,8 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
 from ocr import googleCloudService
-from review.models import MapFoodTag, Review
+from review.models import Tag, MapFoodTag, Review
 from .models import Food, MapFoodIngre, Ingredient
+from .serializers import GetFoodSerializer
 
 match_btn_foodclass = {
     1: [1, 2],            # 밥/김밥/초밥류
@@ -108,21 +109,14 @@ def get_highest_rated(request):
 
 def get_foods_by_queryset(foods):
     data_foods = []
-    for food in foods:
-        tags = calc_tags(food.food_no)
-        allergies = calc_allergys(food.food_no)
+    for food in foods.values():
+        tags = calc_tags(food['food_no'])
+        allergies = calc_allergys(food['food_no'])
 
-        data = {
-            "food_name": food.food_name,
-            "translated_name": googleCloudService.translate(food.food_name),
-            "food_star": food.food_star,
-            "food_review_count": food.food_review_count,
-            "food_dsc": food.food_dsc,
-            "food_img_url": food.food_img_url,
-            "tag_no": tags,
-            "allergy": allergies
-        }
-        data_foods.append(data)
+        # food['translated_name'] = googleCloudService.translate(food.food_name)
+        food['tag_no'] = tags
+        food['allergy'] = allergies
+        data_foods.append(food)
 
     return data_foods
 
@@ -133,19 +127,11 @@ def get_foods_by_list(foods):
         tags = calc_tags(food_no)
         allergies = calc_allergys(food_no)
 
-        food = Food.objects.get(food_no=food_no)
-        data = {
-            "food_name": food.food_name,
-            "translated_name": googleCloudService.translate(food.food_name),
-            "food_star": food.food_star,
-            "food_spicy": food.food_spicy,
-            "food_review_count": food.food_review_count,
-            "food_dsc": food.food_dsc,
-            "food_img_url": food.food_img_url,
-            "tag_no": tags,
-            "allergy": allergies
-        }
-        data_foods.append(data)
+        food = GetFoodSerializer(Food.objects.get(food_no=food_no))
+        # food['translated_name'] = googleCloudService.translate(food.food_name)
+        food.data['tag_no'] = tags
+        food.data['allergy'] = allergies
+        data_foods.append(food.data)
 
     return data_foods
 
@@ -155,15 +141,12 @@ def calc_allergys(food_no):
     ingredients = MapFoodIngre.objects.filter(food_no=food_no).values_list('ingre_no', flat=True)
 
     for ingredient in ingredients:
-        # 음식에 포함된 식재료
-        # ingre_en_name = Ingredient.objects.get(ingre_no=ingredient).ingre_en_name
-        # ingredient_names.append(ingre_en_name)
-
         # 음식에 포함된 알레르기 정보
         allergy = Ingredient.objects.get(ingre_no=ingredient).allergy_no
-        if allergy.allery_no != 0 and allergy.allery_no not in allergies_no:
-            allergies_no.append(allergy.allery_no)
-            allergies_name.append(googleCloudService.translate(allergy.allery_en_name))
+        allergy_no = allergy.allergy_no
+        if allergy_no != 0 and allergy_no not in allergies_no:
+            allergies_no.append(allergy_no)
+            allergies_name.append(googleCloudService.translate(allergy.allergy_en_name))
 
     return allergies_name
 
@@ -171,22 +154,25 @@ def calc_allergys(food_no):
 # 음식에 포함된 태그(3가지) 리턴
 def calc_tags(food_no):
     # 객관적 태그
-    tags = [Food.objects.get(food_no=food_no).food_class_no.food_class_no]
+    tags = [Food.objects.get(food_no=food_no).food_class_no.food_class_en_name]
+    # tags = [googleCloudService.translate(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name)]
 
     # 주관적 태그
     food_tags_qs = MapFoodTag.objects.filter(food_no=food_no)
     if food_tags_qs.exists():
-        subj_tags = np.unique(food_tags_qs.values_list('tag_no', flat=True))
-        subj_tags_cnt = np.array(subj_tags)
+        subj_tags = food_tags_qs.distinct().values_list('tag_no', flat=True)
+        subj_tags_cnt = []
+
         for subj_tag in subj_tags:
-            np.append(subj_tags_cnt, food_tags_qs.filter(tag_no=subj_tag).count())
+            subj_tags_cnt.append(food_tags_qs.filter(tag_no=subj_tag).count())
 
-        idx_sorted_cnt = np.argsort(-subj_tags_cnt)
-        subj_tags = np.array(subj_tags)[idx_sorted_cnt]
+        idx_sorted_cnt = np.argsort(subj_tags_cnt)
+        subj_tags = np.array(subj_tags)[idx_sorted_cnt[::-1]]
 
+        # 3가지 선택
         for i in range(len(subj_tags)):
             if i > 1:
                 break
-            np.append(tags, subj_tags[i])
+            tags.append(googleCloudService.translate(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name))
 
-    return tags
+    return list(tags)
