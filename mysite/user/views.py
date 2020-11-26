@@ -5,21 +5,19 @@ import jwt
 
 from django.shortcuts import render, redirect
 from django.conf import settings
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ValidationError
-# from django.core.validators import validate_email
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.core.mail import EmailMessage
 from django.utils.encoding import force_bytes, force_text
-
 from rest_framework.parsers import JSONParser
 
 from food.models import FoodClass, AllergyClass
 from review.models import Tag, MapUserTag
-from .models import MapUserFoodClass, MapUserAllergy, User, Country
-from .serializers import UserSerializer
+from .models import User, Country, Language, MapUserFoodClass, MapUserAllergy
+from .serializers import UserSerializer, GetUserSerializer
 from .tokens import account_activation_token
 from .text import msg_Email
 
@@ -96,12 +94,14 @@ def delete_user(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         try:
-            user_no = data['user_no']
-            user = User.objects.get(user_no=user_no)
+            # 아이디 확인
+            if not User.objects.filter(user_id=data['user_id']).exists():
+                return JsonResponse({"message": "INVALID_ID"}, status=401)
 
             # 비밀번호 확인
+            user = User.objects.get(user_id=data['user_id'])
             if not bcrypt.checkpw(data['user_pw'].encode('utf-8'), user.user_pw.encode('utf-8')):
-                return JsonResponse({"message": "INVALID_PASSWORD"}, status=401)
+                return JsonResponse({"message": "INVALID_PASSWORD"}, status=402)
 
             # 계정 삭제
             user.delete()
@@ -133,21 +133,20 @@ def login(request):
             if user.is_active == 0:
                 return JsonResponse({"message": "NOT_ACTIVATE_ACCOUNT"}, status=403)
 
-            # token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
-            # token = token.decode('utf-8')
-
+            # 첫 로그인 확인
+            status = 200
             if user.is_first == 1:
                 user.is_first = 0
                 user.save()
-                response = JsonResponse({"user_no": user.user_no}, status=201)
-                response.set_cookie("user_number", user.user_no)
-                return response
-#                return JsonResponse({"user_no": user.user_no}, status=201)
-            else:
-                response = JsonResponse({"user_no": user.user_no}, status=200)
-                response.set_cookie("user_number", user.user_no)
-                return response
-#                return JsonResponse({"user_no": user.user_no}, status=200)
+                status = 201
+
+            # access token
+            token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
+            token = token.decode('utf-8')
+
+            response = JsonResponse({"user_no": user.user_no, "access_token": token}, status=status)
+            response.set_cookie("user_number", user.user_no)
+            return response
 
         except KeyError as ke:
             print(ke)
@@ -265,6 +264,30 @@ def set_user_taste(request):
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
+# 유저 정보 가져오기
+@csrf_exempt
+def get_user(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        try:
+            user_no = data['user_no']
+            user = User.objects.get(user_no=user_no)
+
+            food_class_no = MapUserFoodClass.objects.filter(user_no=user_no).values_list('food_class_no', flat=True)
+            tag_no = MapUserTag.objects.filter(user_no=user_no).values_list('tag_no', flat=True)
+            allergy_no = MapUserAllergy.objects.filter(user_no=user_no).values_list('allergy_no', flat=True)
+
+            serializer = GetUserSerializer(user)
+            response = serializer.data
+            response['food_class_no'] = list(food_class_no)
+            response['tag_no'] = list(tag_no)
+            response['allergy_no'] = list(allergy_no)
+
+            return JsonResponse(response, safe=False, status=200)
+
+        except KeyError as ke:
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
+
 # 유저 정보 수정
 @csrf_exempt
 def modify_user(request):
@@ -274,9 +297,10 @@ def modify_user(request):
             user_no = data['user_no']
             user = User.objects.get(user_no=user_no)
 
-            # 맵기, 국가 변경
+            # 맵기, 국가, 언어 변경
             user.user_spicy = data['user_spicy']
             user.country_no = Country.objects.get(country_no=data['country_no'])
+            user.lang_no = Language.objects.get(lang_no=data['lang_no'])
             user.save()
 
             # 알레르기, 객관적/주관적 태그 변경

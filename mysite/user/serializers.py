@@ -14,13 +14,30 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['user_id',
-                  'user_pw',
-                  'user_email',
-                  'user_name',
-                  'user_birth',
-                  'user_spicy',
-                  'country_no']
+        fields = [
+            'user_id',
+            'user_pw',
+            'user_email',
+            'user_name',
+            'user_birth',
+            'user_spicy',
+            'country_no'
+        ]
+
+
+class GetUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'user_id',
+            'user_email',
+            'user_name',
+            'user_birth',
+            'user_spicy',
+            'country_no',
+            'lang_no'
+        ]
+
 
 # 회원가입
 # {
@@ -45,6 +62,7 @@ class UserSerializer(serializers.ModelSerializer):
 #    "user_no" : 1,
 # 	 "user_spicy" : 1,
 # 	 "country_no" : 1,
+#    "lang_no": 2,
 #    "food_class_no" : [16, 27],
 #    "tag_no" : [1, 6, 17, 31],
 #    "allergy_no" : [6, 18]

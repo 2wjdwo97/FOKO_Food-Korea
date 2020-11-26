@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
+from ocr import googleCloudService
 from user.models import User, MapUserEat
 from food.views import get_foods_by_list
 from food.models import Food
@@ -32,6 +33,7 @@ def get_user_review(request):
                 for review in reviews.values():
                     food = Food.objects.get(food_no=review['food_no_id'])
                     review['food_name'] = food.food_name
+                    review['translated_name'] = googleCloudService.translate(food.food_name)
                     review['food_img_url'] = food.food_img_url
                     review_list.append(review)
                 return JsonResponse(review_list, safe=False, status=200)

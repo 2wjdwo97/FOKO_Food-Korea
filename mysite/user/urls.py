@@ -10,6 +10,7 @@ urlpatterns = [
     path('help/id/', views.find_id),
     path('help/pw/', views.find_pw),
 
+    path('get/', views.get_user),
     path('modify/', views.modify_user),
     path('modify/pw/', views.change_pw),
     path('delete/', views.delete_user)
