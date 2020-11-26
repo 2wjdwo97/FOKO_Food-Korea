@@ -151,7 +151,7 @@ def get_foods_by_list(foods):
 
 
 def calc_allergys(food_no):
-    allergies = []
+    allergies_name, allergies_no = [], []
     ingredients = MapFoodIngre.objects.filter(food_no=food_no).values_list('ingre_no', flat=True)
 
     for ingredient in ingredients:
@@ -160,11 +160,12 @@ def calc_allergys(food_no):
         # ingredient_names.append(ingre_en_name)
 
         # 음식에 포함된 알레르기 정보
-        allergy = googleCloudService.translate(Ingredient.objects.get(ingre_no=ingredient).allergy_no.allery_en_name)
-        if allergy != 0 and allergy not in allergies:
-            allergies.append(allergy)
+        allergy = Ingredient.objects.get(ingre_no=ingredient).allergy_no
+        if allergy.allery_no != 0 and allergy.allery_no not in allergies_no:
+            allergies_no.append(allergy.allery_no)
+            allergies_name.append(googleCloudService.translate(allergy.allery_en_name))
 
-    return allergies
+    return allergies_name
 
 
 # 음식에 포함된 태그(3가지) 리턴
