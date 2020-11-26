@@ -47,9 +47,9 @@ def imageupload(request):
             # append img_url
             food_img_url.append(db_Food.food_img_url)
             # append star
-            food_star.append(db_food.food_star)
+            food_star.append(db_Food.food_star)
             # append spicy
-            food_spicy.append(db_food.food_spicy)
+            food_spicy.append(db_Food.food_spicy)
             description = db_Food.food_dsc
             # append description
             food_description.append(translate(description))
