@@ -141,7 +141,7 @@ def login(request):
                 status = 201
 
             # access token
-            token = jwt.encode({'user_id': user.user_id}, settings.SECRET_KEY, algorithm='HS256')
+            token = jwt.encode({'user_no': user.user_no}, settings.SECRET_KEY, algorithm='HS256')
             token = token.decode('utf-8')
 
             response = JsonResponse({"user_no": user.user_no, "access_token": token}, status=status)
@@ -300,7 +300,7 @@ def modify_user(request):
             # 맵기, 국가, 언어 변경
             user.user_spicy = data['user_spicy']
             user.country_no = Country.objects.get(country_no=data['country_no'])
-            user.lang_no = Language.objects.get(lang_no=data['lang_no'])
+#            user.lang_no = Language.objects.get(lang_no=data['lang_no'])
             user.save()
 
             # 알레르기, 객관적/주관적 태그 변경

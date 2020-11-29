@@ -59,12 +59,12 @@ def get_today_special(request):
                     foods = foods[:TODAY_FOOD_CNT]
                     sorted_star = sorted_star[:TODAY_FOOD_CNT]
 
-                request = get_foods_by_list(foods)
-                for i in range(len(request)):
-                    request[i]["today_avg_star"] = sorted_star[i]
+                response = get_foods_by_list(foods)
+                for i in range(len(response)):
+                    response[i]["today_avg_star"] = sorted_star[i]
 
-                return JsonResponse(request, safe=False, status=200)    # 정상
-            return JsonResponse(request, safe=False, status=201)        # 하루동안 작성된 리뷰가 없는 경우
+                return JsonResponse(response, safe=False, status=200)   # 정상
+            return JsonResponse(None, safe=False, status=201)           # 하루동안 작성된 리뷰가 없는 경우
         except KeyError:
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
@@ -81,6 +81,7 @@ def get_most_reviewed(request):
                 foods = foods | Food.objects.filter(food_class_no=food_class_no)
 
             foods = foods.order_by('-food_review_count')
+            foods = foods[:10]
 
             return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
 
@@ -99,7 +100,7 @@ def get_highest_rated(request):
             for food_class_no in match_btn_foodclass[button_no]:
                 foods = foods | Food.objects.filter(food_class_no=food_class_no)
 
-            foods = foods.order_by('-food_star')
+            foods = foods.order_by('-food_star')[:10]
 
             return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
 
@@ -113,8 +114,9 @@ def get_foods_by_queryset(foods):
         tags = calc_tags(food['food_no'])
         allergies = calc_allergys(food['food_no'])
 
-        # food['translated_name'] = googleCloudService.translate(food.food_name)
-        food['tag_no'] = tags
+        food['food_dsc'] = googleCloudService.translate(food['food_dsc'])
+        food['translated_name'] = googleCloudService.translate(food['food_name'])
+        food['tag'] = tags
         food['allergy'] = allergies
         data_foods.append(food)
 
@@ -127,11 +129,12 @@ def get_foods_by_list(foods):
         tags = calc_tags(food_no)
         allergies = calc_allergys(food_no)
 
-        food = GetFoodSerializer(Food.objects.get(food_no=food_no))
-        # food['translated_name'] = googleCloudService.translate(food.food_name)
-        food.data['tag_no'] = tags
-        food.data['allergy'] = allergies
-        data_foods.append(food.data)
+        food = GetFoodSerializer(Food.objects.get(food_no=food_no)).data
+        food['food_dsc'] = googleCloudService.translate(food['food_dsc'])
+        food['translated_name'] = googleCloudService.translate(food['food_name'])
+        food['tag'] = tags
+        food['allergy'] = allergies
+        data_foods.append(food)
 
     return data_foods
 
@@ -152,10 +155,9 @@ def calc_allergys(food_no):
 
 
 # 음식에 포함된 태그(3가지) 리턴
-def calc_tags(food_no):
+def calc_tags(food_no, limit = 1):
     # 객관적 태그
-    tags = [Food.objects.get(food_no=food_no).food_class_no.food_class_en_name]
-    # tags = [googleCloudService.translate(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name)]
+    tags = [googleCloudService.translate(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name)]
 
     # 주관적 태그
     food_tags_qs = MapFoodTag.objects.filter(food_no=food_no)
@@ -171,7 +173,7 @@ def calc_tags(food_no):
 
         # 3가지 선택
         for i in range(len(subj_tags)):
-            if i > 1:
+            if i > limit:
                 break
             tags.append(googleCloudService.translate(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name))
 

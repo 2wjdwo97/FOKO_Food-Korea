@@ -4,6 +4,8 @@ from google.cloud import vision
 from google.cloud import translate_v2
 
 def translate(string):
+    if string == "" or string is None:
+        return ""
     client = translate_v2.Client()
     return client.translate(string, target_language='en')['translatedText']
 
