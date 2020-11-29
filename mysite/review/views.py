@@ -132,14 +132,16 @@ def get_eaten_food(request):
     try:
         if request.method == "POST":
             data = JSONParser().parse(request)
+            user_no = data['user_no']
+            lang_code = User.objects.get(user_no=user_no).lang_no.lang_code
 
             # 최신순으로 사용자가 먹은 음식 가져오기
-            query_set = MapUserEat.objects.filter(user_no=data['user_no']).order_by('-id')
+            query_set = MapUserEat.objects.filter(user_no=user_no).order_by('-id')
 
             foods = query_set.filter(is_written=False).values_list('food_no', flat=True)
             # is_written = query_set.values_list('is_written', flat=True)
 
-            eaten_food = get_foods_by_list(foods)
+            eaten_food = get_foods_by_list(foods, lang_code)
 
             return JsonResponse(eaten_food, safe=False, status=200)
 
