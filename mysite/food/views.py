@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 
 from ocr import googleCloudService
+from user.models import User
 from review.models import Tag, MapFoodTag, Review
 from .models import Food, MapFoodIngre, Ingredient
 from .serializers import GetFoodSerializer
@@ -28,8 +29,11 @@ TODAY_FOOD_CNT = 5
 
 @csrf_exempt
 def get_today_special(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         try:
+            data = JSONParser().parse(request)
+            user_no = data['user_no']
+
             # 오늘 날짜 구하기
             today = str(DateFormat(datetime.now()).format('Ymd'))
             year, month, day = today[0:4], today[4:6], today[6:8]
@@ -59,7 +63,8 @@ def get_today_special(request):
                     foods = foods[:TODAY_FOOD_CNT]
                     sorted_star = sorted_star[:TODAY_FOOD_CNT]
 
-                response = get_foods_by_list(foods)
+                lang_code = User.objects.get(user_no=user_no).lang_no.lang_code
+                response = get_foods_by_list(foods, lang_code)
                 for i in range(len(response)):
                     response[i]["today_avg_star"] = sorted_star[i]
 
@@ -74,6 +79,7 @@ def get_most_reviewed(request):
     if request.method == 'POST':
         try:
             data = JSONParser().parse(request)
+            user_no = data['user_no']
             button_no = data['button_no']
 
             foods = Food.objects.none()
@@ -82,7 +88,10 @@ def get_most_reviewed(request):
 
             foods = foods.order_by('-food_review_count')[:10]
 
-            return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
+            lang_code = User.objects.get(user_no=user_no).lang_no.lang_code
+            response = get_foods_by_queryset(foods, lang_code)
+
+            return JsonResponse(response, safe=False, status=200)
 
         except KeyError:
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
@@ -94,6 +103,7 @@ def get_highest_rated(request):
         try:
             data = JSONParser().parse(request)
             button_no = data['button_no']
+            user_no = data['user_no']
 
             foods = Food.objects.none()
             for food_class_no in match_btn_foodclass[button_no]:
@@ -101,20 +111,23 @@ def get_highest_rated(request):
 
             foods = foods.order_by('-food_star')[:10]
 
-            return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
+            lang_code = User.objects.get(user_no=user_no).lang_no.lang_code
+            response = get_foods_by_queryset(foods, lang_code)
+
+            return JsonResponse(response, safe=False, status=200)
 
         except KeyError:
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 
-def get_foods_by_queryset(foods):
+def get_foods_by_queryset(foods, lang_code):
     data_foods = []
     for food in foods.values():
-        tags = calc_tags(food['food_no'])
-        allergies = calc_allergys(food['food_no'])
+        tags = calc_tags(food['food_no'], lang_code)
+        allergies = calc_allergys(food['food_no'], lang_code)
 
-        food['food_dsc'] = googleCloudService.translate(food['food_dsc'])
-        food['translated_name'] = googleCloudService.translate(food['food_name'])
+        food['food_dsc'] = googleCloudService.translate_code(food['food_dsc'], lang_code)
+        food['translated_name'] = googleCloudService.translate_code(food['food_name'], lang_code)
         food['tag'] = tags
         food['allergy'] = allergies
         data_foods.append(food)
@@ -122,15 +135,15 @@ def get_foods_by_queryset(foods):
     return data_foods
 
 
-def get_foods_by_list(foods):
+def get_foods_by_list(foods, lang_code):
     data_foods = []
     for food_no in foods:
-        tags = calc_tags(food_no)
-        allergies = calc_allergys(food_no)
+        tags = calc_tags(food_no, lang_code)
+        allergies = calc_allergys(food_no, lang_code)
 
         food = GetFoodSerializer(Food.objects.get(food_no=food_no)).data
-        food['food_dsc'] = googleCloudService.translate(food['food_dsc'])
-        food['translated_name'] = googleCloudService.translate(food['food_name'])
+        food['food_dsc'] = googleCloudService.translate_code(food['food_dsc'], lang_code)
+        food['translated_name'] = googleCloudService.translate_code(food['food_name'], lang_code)
         food['tag'] = tags
         food['allergy'] = allergies
         data_foods.append(food)
@@ -138,7 +151,7 @@ def get_foods_by_list(foods):
     return data_foods
 
 
-def calc_allergys(food_no):
+def calc_allergys(food_no, lang_code):
     allergies_name, allergies_no = [], []
     ingredients = MapFoodIngre.objects.filter(food_no=food_no).values_list('ingre_no', flat=True)
 
@@ -148,15 +161,15 @@ def calc_allergys(food_no):
         allergy_no = allergy.allergy_no
         if allergy_no != 0 and allergy_no not in allergies_no:
             allergies_no.append(allergy_no)
-            allergies_name.append(googleCloudService.translate(allergy.allergy_en_name))
+            allergies_name.append(googleCloudService.translate_code(allergy.allergy_en_name, lang_code))
 
     return allergies_name
 
 
 # 음식에 포함된 태그(3가지) 리턴
-def calc_tags(food_no, limit = 1):
+def calc_tags(food_no, lang_code="en", limit=1):
     # 객관적 태그
-    tags = [googleCloudService.translate(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name)]
+    tags = [googleCloudService.translate_code(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name, lang_code)]
 
     # 주관적 태그
     food_tags_qs = MapFoodTag.objects.filter(food_no=food_no)
@@ -174,6 +187,6 @@ def calc_tags(food_no, limit = 1):
         for i in range(len(subj_tags)):
             if i > limit:
                 break
-            tags.append(googleCloudService.translate(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name))
+            tags.append(googleCloudService.translate_code(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name), lang_code)
 
     return list(tags)

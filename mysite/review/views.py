@@ -26,6 +26,7 @@ def get_user_review(request):
         try:
             data = JSONParser().parse(request)
             user_no = data['user_no']
+            lang_code = User.objects.get(user_no=user_no).lang_no.lang_code
 
             reviews = Review.objects.filter(user_no=user_no)
             review_list = []
@@ -33,7 +34,7 @@ def get_user_review(request):
                 for review in reviews.values():
                     food = Food.objects.get(food_no=review['food_no_id'])
                     review['food_name'] = food.food_name
-                    review['translated_name'] = googleCloudService.translate(food.food_name)
+                    review['translated_name'] = googleCloudService.translate(food.food_name, lang_code)
                     review['food_img_url'] = food.food_img_url
                     review_list.append(review)
 

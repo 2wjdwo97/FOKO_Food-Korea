@@ -144,7 +144,8 @@ def login(request):
             token = jwt.encode({'user_no': user.user_no}, settings.SECRET_KEY, algorithm='HS256')
             token = token.decode('utf-8')
 
-            response = JsonResponse({"user_no": user.user_no, "access_token": token}, status=status)
+            res = {"user_no": user.user_no, "user_lang": user.lang_no.lang_code, "access_token": token}
+            response = JsonResponse(res, status=status)
             response.set_cookie("user_number", user.user_no)
             return response
 
