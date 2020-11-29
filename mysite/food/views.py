@@ -126,8 +126,8 @@ def get_foods_by_queryset(foods, lang_code):
         tags = calc_tags(food['food_no'], lang_code)
         allergies = calc_allergys(food['food_no'], lang_code)
 
-        food['food_dsc'] = googleCloudService.translate_code(food['food_dsc'], lang_code)
-        food['translated_name'] = googleCloudService.translate_code(food['food_name'], lang_code)
+        food['food_dsc'] = googleCloudService.translate(food['food_dsc'], lang_code)
+        food['translated_name'] = googleCloudService.translate(food['food_name'], lang_code)
         food['tag'] = tags
         food['allergy'] = allergies
         data_foods.append(food)
@@ -142,8 +142,8 @@ def get_foods_by_list(foods, lang_code):
         allergies = calc_allergys(food_no, lang_code)
 
         food = GetFoodSerializer(Food.objects.get(food_no=food_no)).data
-        food['food_dsc'] = googleCloudService.translate_code(food['food_dsc'], lang_code)
-        food['translated_name'] = googleCloudService.translate_code(food['food_name'], lang_code)
+        food['food_dsc'] = googleCloudService.translate(food['food_dsc'], lang_code)
+        food['translated_name'] = googleCloudService.translate(food['food_name'], lang_code)
         food['tag'] = tags
         food['allergy'] = allergies
         data_foods.append(food)
@@ -161,7 +161,7 @@ def calc_allergys(food_no, lang_code):
         allergy_no = allergy.allergy_no
         if allergy_no != 0 and allergy_no not in allergies_no:
             allergies_no.append(allergy_no)
-            allergies_name.append(googleCloudService.translate_code(allergy.allergy_en_name, lang_code))
+            allergies_name.append(googleCloudService.translate(allergy.allergy_en_name, lang_code))
 
     return allergies_name
 
@@ -169,7 +169,7 @@ def calc_allergys(food_no, lang_code):
 # 음식에 포함된 태그(3가지) 리턴
 def calc_tags(food_no, lang_code="en", limit=1):
     # 객관적 태그
-    tags = [googleCloudService.translate_code(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name, lang_code)]
+    tags = [googleCloudService.translate(Food.objects.get(food_no=food_no).food_class_no.food_class_en_name, lang_code)]
 
     # 주관적 태그
     food_tags_qs = MapFoodTag.objects.filter(food_no=food_no)
@@ -187,6 +187,6 @@ def calc_tags(food_no, lang_code="en", limit=1):
         for i in range(len(subj_tags)):
             if i > limit:
                 break
-            tags.append(googleCloudService.translate_code(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name), lang_code)
+            tags.append(googleCloudService.translate(Tag.objects.get(tag_no=subj_tags[i]).tag_en_name, lang_code))
 
     return list(tags)
