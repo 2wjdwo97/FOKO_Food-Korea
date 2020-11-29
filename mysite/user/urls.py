@@ -13,6 +13,7 @@ urlpatterns = [
     path('get/', views.get_user),
     path('modify/', views.modify_user),
     path('modify/pw/', views.change_pw),
+    path('modify/language/', views.modify_language),
     path('delete/', views.delete_user)
     # path('logout/', views.logout, name='logout'),
 ]

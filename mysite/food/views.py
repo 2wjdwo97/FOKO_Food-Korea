@@ -80,8 +80,7 @@ def get_most_reviewed(request):
             for food_class_no in match_btn_foodclass[button_no]:
                 foods = foods | Food.objects.filter(food_class_no=food_class_no)
 
-            foods = foods.order_by('-food_review_count')
-            foods = foods[:10]
+            foods = foods.order_by('-food_review_count')[:10]
 
             return JsonResponse(get_foods_by_queryset(foods), safe=False, status=200)
 

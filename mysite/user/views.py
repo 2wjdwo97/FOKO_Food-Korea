@@ -288,6 +288,7 @@ def get_user(request):
         except KeyError as ke:
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
+
 # 유저 정보 수정
 @csrf_exempt
 def modify_user(request):
@@ -297,10 +298,9 @@ def modify_user(request):
             user_no = data['user_no']
             user = User.objects.get(user_no=user_no)
 
-            # 맵기, 국가, 언어 변경
+            # 맵기, 국가 변경
             user.user_spicy = data['user_spicy']
             user.country_no = Country.objects.get(country_no=data['country_no'])
-#            user.lang_no = Language.objects.get(lang_no=data['lang_no'])
             user.save()
 
             # 알레르기, 객관적/주관적 태그 변경
@@ -313,6 +313,23 @@ def modify_user(request):
 
         except KeyError as ke:
             print(ke)
+            return JsonResponse({"message": "INVALID_KEY"}, status=400)
+
+
+# 유저 언어 수정
+@csrf_exempt
+def modify_language(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        try:
+            user_no = data['user_no']
+            user = User.objects.get(user_no=user_no)
+            user.lang_no = Language.objects.get(lang_code=data['lang_code'])
+            user.save()
+
+            return JsonResponse({"message": "MODIFY_SUCCESS"}, status=200)
+
+        except KeyError as ke:
             return JsonResponse({"message": "INVALID_KEY"}, status=400)
 
 

@@ -36,6 +36,7 @@ def get_user_review(request):
                     review['translated_name'] = googleCloudService.translate(food.food_name)
                     review['food_img_url'] = food.food_img_url
                     review_list.append(review)
+
                 return JsonResponse(review_list, safe=False, status=200)
             else:
                 return JsonResponse([], safe=False, status=201)
