@@ -4,19 +4,11 @@ from google.cloud import vision
 from google.cloud import translate_v2
 
 
-def translate(string):
-    if string == "" or string is None:
-        return ""
-    client = translate_v2.Client()
-    return client.translate(string, target_language='en')['translatedText']
-
-
-def translate_code(string, code):
+def translate(string, code='en'):
     if string == "" or string is None:
         return ""
     client = translate_v2.Client()
     return client.translate(string, target_language=code)['translatedText']
-
 
 def extractText(im):
     client = vision.ImageAnnotatorClient()

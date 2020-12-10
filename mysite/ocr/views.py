@@ -6,6 +6,7 @@ from rest_framework.parsers import JSONParser
 from PIL import Image
 from .forms import ReceiveImageForm
 from food.models import Food, AllergyClass, FoodClass, MapFoodIngre, MapFoodIngreAdd, Ingredient
+from user.models import User, Language
 from ocr.stringDist import matchStr
 from recommend.recommend import recommendFood
 from food.views import calc_tags
@@ -29,8 +30,14 @@ def imageupload(request):
         # get match(between text list & food list) libst
         match_list = matchStr(texts[0].description, food_list, ratio_limit = 0.8)
 
-        # get food description from models.py
+        # get user number
+        access_token = request.headers['access-token']
+        user_number = jwt.decode(access_token, settings.SECRET_KEY, algorithm='HS256')['user_no']
 
+        # get user language code
+        lang_code = User.objects.get(user_no=user_number).lang_no.lang_code
+
+        # get food description from models.py
         food_korName = match_list
         food_no = []
         food_engName = []
@@ -45,7 +52,7 @@ def imageupload(request):
 
         for name in match_list:
             # append engName
-            food_engName.append(translate(name))
+            food_engName.append(translate(name, lang_code))
 
             db_Food = Food.objects.get(food_name=name)
             # append img_url
@@ -56,10 +63,10 @@ def imageupload(request):
             food_spicy.append(db_Food.food_spicy)
             description = db_Food.food_dsc
             # append description
-            food_description.append(translate(description))
+            food_description.append(translate(description, lang_code))
             food_number = db_Food.food_no
 
-            food_tags.append(calc_tags(food_number, 0))
+            food_tags.append(calc_tags(food_number, lang_code, 0))
             food_no.append(food_number)
 
             ingre_numbers = MapFoodIngre.objects.filter(food_no=food_number).values_list('ingre_no', flat=True)
@@ -71,20 +78,18 @@ def imageupload(request):
             allergies = []
             for ingre_number in ingre_numbers:
                 db_Ingre = Ingredient.objects.get(ingre_no=ingre_number)
-                ingredients.append(db_Ingre.ingre_en_name)
+                ingredients.append(translate(db_Ingre.ingre_en_name, lang_code))
 
                 allergy_number = db_Ingre.allergy_no.allergy_no
                 if allergy_number != 0:
                     allergy = AllergyClass.objects.get(allergy_no=int(allergy_number)).allergy_en_name
                     if allergy not in allergies:
-                        allergies.append(allergy)
+                        allergies.append(translate(allergy, lang_code))
             # append ingredients
             food_ingredients.append(ingredients)
             # append allergies
             food_allergies.append(allergies)
 
-        access_token = request.headers['access-token']
-        user_number = jwt.decode(access_token, settings.SECRET_KEY, algorithm='HS256')['user_no']
 
         # get food rank
 #        if request.COOKIES.get('user_number'):
